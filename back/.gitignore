@@ -1,3 +1,7 @@
 node_modules
 bundle.js
+<<<<<<< HEAD
 bundle.js.map
+=======
+bundel.js.map
+>>>>>>> 7a11f2ea2be4c5daa61b6285687a9ab7448ffaee

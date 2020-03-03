@@ -1,20 +1,9 @@
-import React, { useState, useEffect } from "react"
-
-
-import "../../style/slider.css"
-
-
-
-
-
-
+import React from "react"
 
 const carrousel = () => {
 
-
-
     return (
-        <div id="carouselExampleControls" className={`carousel slide slidecarrousel`} data-ride="carousel">
+        <div id="carouselExampleControls" className={`carousel slide`} data-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active">
                     <img className="d-block w-100" src="https://blog.borderio.com/wp-content/uploads/2017/11/vinos-oxidados-y-picados.jpg" alt="First slide" />
@@ -38,6 +27,5 @@ const carrousel = () => {
             </a>
         </div>)
 }
-
 
 export default carrousel
