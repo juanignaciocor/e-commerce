@@ -1,20 +1,17 @@
 import React from "react"
-//import { Route, Switch } from "react-router-dom"
+
+import { Route, Switch } from "react-router-dom"
+import CarrouselContainer from '../containers/CarrouselContainer'
+import NavbarContainer from "../containers/NavbarContainer";
+
+
 
 export default () => {
 
     return (
         <div>
-
-            <h1>Estoy en el main</h1>
-
+            <NavbarContainer />
+            <CarrouselContainer />
         </div>
     )
-
-
-
-
-
-
-
 }

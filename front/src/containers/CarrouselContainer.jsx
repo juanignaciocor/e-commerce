@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import Navbar from "../components/Navbar";
+import Carrousel from "../components/Carrousel";
 
-class NavbarContainer extends Component {
+class CarrouselContainer extends Component {
     constructor(props){
       super(props);
       
@@ -9,9 +9,9 @@ class NavbarContainer extends Component {
   
     render () {
       return (
-        <Navbar />
+        <Carrousel />
       )
     }
   }
 
-export default NavbarContainer;
+export default CarrouselContainer;
