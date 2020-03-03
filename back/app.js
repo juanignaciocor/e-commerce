@@ -3,7 +3,10 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const Router = require("./routes/index")
-const { User, Favorites } = require('./models/index.js');
+const {
+    User,
+    Favorites
+} = require('./models/index.js');
 
 var cookieParser = require('cookie-parser');
 var session = require("express-session");
@@ -15,26 +18,38 @@ const app = express();
 
 ////////
 app.use(express.static(__dirname + "/public"))
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
 
 app.use(cookieParser());
 app.use(passport.initialize());
-app.use(session({ secret: "cats" }));
+app.use(session({
+    secret: "cats"
+}));
 app.use(passport.session());
 
 
 passport.use(new LocalStrategy(
     function (username, password, done) {
 
-        User.findOne({ where: { username: username } })
+        User.findOne({
+                where: {
+                    username: username
+                }
+            })
             .then(user => {
                 if (!user) {
-                    return done(null, false, { message: 'Incorrect username.' });
+                    return done(null, false, {
+                        message: 'Incorrect username.'
+                    });
                 }
                 if (!user.validPassword(password)) {
-                    return done(null, false, { message: 'Incorrect password.' });
+                    return done(null, false, {
+                        message: 'Incorrect password.'
+                    });
                 }
                 return done(null, user);
             })
@@ -62,7 +77,10 @@ app.use("/", Router)
 app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/public/' + 'index.html')
 })
-db.sync({ logging: false, force: false })
+db.sync({
+        logging: false,
+        force: true
+    })
     .then(function () {
         // asegurate de reemplazar el nombre de abajo con tu app de express
         app.listen(3000, function () {
