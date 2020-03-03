@@ -3,7 +3,6 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const Router = require("./routes/index")
-//var createError = require('http-errors');
 const { User, Favorites } = require('./models/index.js');
 
 var cookieParser = require('cookie-parser');
@@ -43,6 +42,7 @@ passport.use(new LocalStrategy(
     }
 ));
 
+// esto es para actualizar el status
 
 passport.serializeUser(function (user, done) {
     done(null, user.id);
@@ -62,7 +62,7 @@ app.use("/", Router)
 app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/public/' + 'index.html')
 })
-db.sync({ logging: false, force: true })
+db.sync({ logging: false, force: false })
     .then(function () {
         // asegurate de reemplazar el nombre de abajo con tu app de express
         app.listen(3000, function () {
