@@ -1,6 +1,4 @@
 import React from "react"
-
-
 import { Route, Switch } from "react-router-dom"
 import CarrouselContainer from '../containers/CarrouselContainer'
 import NavbarContainer from "../containers/NavbarContainer";
@@ -12,8 +10,11 @@ export default () => {
 
     return (
         <div>
-
             <NavbarContainer />
+            <Switch>
+                <Route exact path="/" component={ CarrouselContainer }></Route>
+            </Switch>
+            <FooterContainer />
         </div >
     )
 }
