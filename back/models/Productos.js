@@ -6,56 +6,42 @@ Producto.init({
     nombre: {
         type: S.STRING,
         allowNull: false,
-
     },
     descripcion: {
-
-        type: S.TEXT
-
-
+        type: S.TEXT,
+        allowNull: false
     },
     precio: {
-
-
-        type: S.FLOAT
-
+        type: S.FLOAT,
+        allowNull: false
     },
     imagen: {
-
-        type: S.STRING
-
-
+        type: S.STRING,
+        allowNull: false
     },
-    typo: {
-        type: S.STRING
-
-
+    tipo: {
+        type: S.STRING,
+        allowNull: false
     },
     cepa: {
-
-        type: S.STRING
-
+        type: S.STRING,
+        allowNull: false
     },
     stock: {
-
-        type: S.INTEGER
-
-
-
+        type: S.INTEGER,
+        allowNull: false
     },
     bodega: {
-
-        type: S.STRING
-
+        type: S.STRING,
+        allowNull: false
     },
     provincia: {
-
-        type: S.STRING
+        type: S.STRING,
+        allowNull: false
     },
-    alchool: {
-        type: S.FLOAT
-
-
+    alcohol: {
+        type: S.FLOAT,
+        allowNull: false
     }
 
 
