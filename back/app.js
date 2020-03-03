@@ -43,6 +43,7 @@ passport.use(new LocalStrategy(
     }
 ));
 
+// esto es para actualizar el status
 
 passport.serializeUser(function (user, done) {
     done(null, user.id);
