@@ -62,7 +62,7 @@ app.use("/", Router)
 app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/public/' + 'index.html')
 })
-db.sync({ logging: false, force: false })
+db.sync({ logging: false, force: true })
     .then(function () {
         // asegurate de reemplazar el nombre de abajo con tu app de express
         app.listen(3000, function () {
