@@ -3,7 +3,6 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const Router = require("./routes/index")
-//var createError = require('http-errors');
 const { User, Favorites } = require('./models/index.js');
 
 var cookieParser = require('cookie-parser');
