@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
- export default ({ vinos }) => {
+export default ({ vinos }) => {
     return (
         <Fragment>
             <h3> VINOS</h3>
