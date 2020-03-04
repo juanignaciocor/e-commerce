@@ -1,6 +1,6 @@
 import React from "react"
 /******* Descomentar esto de abajo cuando sea necesario ******
-import { Link } from "react-router-dom"
+ import { Link } from "react-router-dom"
 */
 
 export default ({ }) => {

@@ -37263,7 +37263,7 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
 
 
 /******* Descomentar esto de abajo cuando sea necesario ******
-import { Link } from "react-router-dom"
+ import { Link } from "react-router-dom"
 */
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
