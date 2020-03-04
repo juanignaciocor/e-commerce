@@ -2,7 +2,7 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: #CFB16C;
+    background-color: #d9d2c8
 }
 
 #columns {
@@ -12,11 +12,26 @@ body {
     max-width: 1100px;
     margin: 50px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
     justify-items: center;
 }
+.navegador{
+
+    background-color: #F2F2F2;
+
+}
+.textoCentrado{
+
+    text-align: center;
 
 
+
+}
+.botones{
+
+    margin-right: 20px;
+
+}
 div#columns figure {
     background: #fefefe;
     border: 2px solid #fcfcfc;
@@ -29,7 +44,7 @@ div#columns figure {
     column-break-inside: avoid;
     transition-duration: 0.3s;
     max-width: 200px;
-    max-height: 400px;
+  
 }
 
 div#columns figure:hover{

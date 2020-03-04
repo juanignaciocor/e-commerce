@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default ({ vinos }) => {
     return (
         <Fragment>
-            <h3> VINOS</h3>
+            <h3 className="textoCentrado"> VINOS</h3>
             <div id="columns">
                 {vinos.map(vino => {
                     return (
