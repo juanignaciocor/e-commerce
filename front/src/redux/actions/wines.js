@@ -6,6 +6,11 @@ export const showWine = vinos => ({
     vinos
 });
 
-export const showsWines = vino => dispatch =>
-    axios.post('/api/wines/search', vino)
-        .then(vino => dispatch(showWine(vino.data)))
+export const showsWines = vino => dispatch => {
+    return(
+        axios.get(`/api/wines/search/${vino}`)
+        .then(res => res.data)
+        .then(vino => dispatch(showWine(vino)))
+        .catch(err => {throw new Error(err)})
+    )
+}

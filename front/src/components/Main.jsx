@@ -5,9 +5,8 @@ import NavbarContainer from "../containers/NavbarContainer";
 import FooterContainer from '../containers/FooterContainer';
 import RegisterContainer from "../containers/RegisterContainer";
 import LoginContainer from "../containers/LoginContainer";
+import VinosContainer from "../containers/VinosContainer";
 import SingleWineContainer from "../containers/SingleWineContainer"
-
-
 
 export default () => {
 
@@ -16,9 +15,10 @@ export default () => {
             <NavbarContainer />
             <Switch>
                 <Route exact path="/" component={CarrouselContainer}></Route>
+                <Route exact path="/wines/search" component={ VinosContainer }></Route>
+                <Route exact path="/wines/:id" component={SingleWineContainer}></Route>
                 <Route exact path="/register" component={RegisterContainer}></Route>
                 <Route exact path="/login" component={LoginContainer}></Route>
-                <Route exact path="/wines/:id" component={SingleWineContainer}></Route>
             </Switch>
             <FooterContainer />
         </div >
