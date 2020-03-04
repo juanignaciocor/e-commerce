@@ -38445,7 +38445,6 @@ var NavbarContainer = /*#__PURE__*/function (_Component) {
   _createClass(NavbarContainer, [{
     key: "onSearch",
     value: function onSearch(e) {
-      console.log(e);
       this.props.showsWines(e);
     }
   }, {
