@@ -6,10 +6,9 @@ import FooterContainer from '../containers/FooterContainer';
 import RegisterContainer from "../containers/RegisterContainer";
 import LoginContainer from "../containers/LoginContainer";
 import AllWines from "../containers/allWinesContainer"
-
-
 import VinosContainer from "../containers/VinosContainer";
 import SingleWineContainer from "../containers/SingleWineContainer"
+import CartContainer from "../containers/CartContainer"
 
 export default () => {
 
@@ -23,6 +22,7 @@ export default () => {
                 <Route exact path="/allWines" component={AllWines}></Route>
                 <Route exact path="/wines/search" component={VinosContainer}></Route>
                 <Route exact path="/wines/:id" component={SingleWineContainer}></Route>
+                <Route exact path="/cart" component={CartContainer}></Route>
             </Switch>
             <FooterContainer />
         </div >
