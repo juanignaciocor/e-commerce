@@ -5,6 +5,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Main from './components/main';
 import { Provider } from 'react-redux';
 import store from './redux/store/store';
+
+
 //Todavia no podemos utilizar el provider porque no tenemos reducers en el store
 // en el momento en el que empezemos a codear esto , borrar los comentarios
 
