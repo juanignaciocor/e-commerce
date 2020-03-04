@@ -37674,7 +37674,7 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
-      position: "absolute",
+      position: "relative",
       bottom: 0,
       height: "9.5vh",
       width: "100%",
@@ -37682,17 +37682,35 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    id: "lab_social_icon_footer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-header"
-  }, "Winery"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("blockquote", {
-    className: "blockquote mb-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-    className: "blockquote-footer"
-  }, "Someone famous in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("cite", {
-    title: "Source Title"
-  }, "Source Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text-center center-block"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.facebook.com/bootsnipp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    id: "social-fb",
+    className: "fa fa-facebook-square fa-3x social"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://twitter.com/bootsnipp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    id: "social-tw",
+    className: "fa fa-twitter-square fa-3x social"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://plus.google.com/+Bootsnipp-page"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    id: "social-gp",
+    className: "fa fa-google-plus-square fa-3x social"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "mailto:#"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    id: "social-em",
+    className: "fa fa-envelope-square fa-3x social"
+  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-copyright text-center py-3"
-  }, "\xA9 2020 Copyright: Equipo 5")))));
+  }, "\xA9 2020 Copyright: Equipo 5"))));
 });
 
 /***/ }),
