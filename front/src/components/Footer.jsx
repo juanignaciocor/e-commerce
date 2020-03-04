@@ -5,20 +5,20 @@ import { Link } from "react-router-dom"
 
 export default ({ }) => {
     return (
-        <div>
+        <div style={{ position: "absolute", bottom: 0, height: "9.5vh", width: "100%", display: "block" }}>
             <div className="card">
                 <div className="card-header">
-                    Quote
+                    Winery
         </div>
-                <div className="card-body">
-                    <blockquote className="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
-                            <div class="footer-copyright text-center py-3">© 2020 Copyright: <cite title="Source Title">Equipo 5, Palataforma5</cite>
-                            </div>
-                        </footer>
-                    </blockquote>
+                <div>
+                    {/* Aca van los iconos  */}
                 </div>
+                <blockquote className="blockquote mb-0">
+                    <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                        <div className="footer-copyright text-center py-3">© 2020 Copyright: Equipo 5
+                        </div>
+                    </footer>
+                </blockquote>
             </div>
         </div>
     )

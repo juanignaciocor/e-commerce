@@ -11,12 +11,12 @@ import LoginContainer from "../containers/LoginContainer";
 export default () => {
 
     return (
-        <div>
+        <div style={{ height: "100%", width: "100%" }}>
             <NavbarContainer />
             <Switch>
-                <Route exact path="/" component={ CarrouselContainer }></Route>
-                <Route exact path="/register" component={ RegisterContainer }></Route>
-                <Route exact path="/login" component={ LoginContainer }></Route>
+                <Route exact path="/" component={CarrouselContainer}></Route>
+                <Route exact path="/register" component={RegisterContainer}></Route>
+                <Route exact path="/login" component={LoginContainer}></Route>
             </Switch>
             <FooterContainer />
         </div >
