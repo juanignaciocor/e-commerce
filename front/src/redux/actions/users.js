@@ -1,12 +1,13 @@
 import axios from "axios"
+import { CREATE_USER, LOGGUE_USER } from "../store/constants"
 
 export const setUsuario = (user) => ({
-    type: "CREATE_USER",
+    type: CREATE_USER,
     user
 });
 
 export const logUser = (user) => ({
-    type: "LOGGUE_USER",
+    type: LOGGUE_USER,
     user
 });
 
