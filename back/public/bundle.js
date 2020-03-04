@@ -37297,6 +37297,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../containers/NavbarContainer */ "./src/containers/NavbarContainer.jsx");
 /* harmony import */ var _containers_FooterContainer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../containers/FooterContainer */ "./src/containers/FooterContainer.jsx");
 /* harmony import */ var _containers_RegisterContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../containers/RegisterContainer */ "./src/containers/RegisterContainer.jsx");
+/* harmony import */ var _containers_LoginContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../containers/LoginContainer */ "./src/containers/LoginContainer.jsx");
+
 
 
 
@@ -37312,6 +37314,10 @@ __webpack_require__.r(__webpack_exports__);
     exact: true,
     path: "/register",
     component: _containers_RegisterContainer__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/login",
+    component: _containers_LoginContainer__WEBPACK_IMPORTED_MODULE_6__["default"]
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_FooterContainer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 });
 
@@ -37689,6 +37695,117 @@ var FooterContainer = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
+/***/ "./src/containers/LoginContainer.jsx":
+/*!*******************************************!*\
+  !*** ./src/containers/LoginContainer.jsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_users__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/actions/users */ "./src/redux/actions/users.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+ // import Login from "../components/Login"
+
+
+
+var LoginContainer = /*#__PURE__*/function (_React$Component) {
+  _inherits(LoginContainer, _React$Component);
+
+  function LoginContainer() {
+    var _this;
+
+    _classCallCheck(this, LoginContainer);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(LoginContainer).call(this)), _this.state = {
+      email: "",
+      password: "",
+      error: false
+    };
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(LoginContainer, [{
+    key: "handleChange",
+    value: function handleChange(e) {
+      this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      var _this2 = this;
+
+      e.preventDefault();
+      var obj = {
+        email: e.target[0].value,
+        password: e.target[1].value
+      };
+      this.props.loguearUsuario(obj).then(function () {
+        _this2.setState({
+          error: false
+        });
+      })["catch"](function () {
+        _this2.setState({
+          error: true
+        });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Login, {
+        handleChange: this.handleChange,
+        handleSubmit: this.handleSubmit,
+        state: this.state
+      }));
+    }
+  }]);
+
+  return LoginContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {};
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    loguearUsuario: function loguearUsuario(usuario) {
+      return dispatch(Object(_redux_actions_users__WEBPACK_IMPORTED_MODULE_2__["loguearUsuario"])(usuario));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(LoginContainer));
+
+/***/ }),
+
 /***/ "./src/containers/NavbarContainer.jsx":
 /*!********************************************!*\
   !*** ./src/containers/NavbarContainer.jsx ***!
@@ -37940,9 +38057,52 @@ var crearUsuario = function crearUsuario(user) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _winesReducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./winesReducers */ "./src/redux/reducers/winesReducers.js");
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({// userReducer : userReducer
+ //import userReducers from "./userReducers"
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  //  userReducers : userReducers,
+  winesReducers: _winesReducers__WEBPACK_IMPORTED_MODULE_1__["default"]
 }));
+
+/***/ }),
+
+/***/ "./src/redux/reducers/winesReducers.js":
+/*!*********************************************!*\
+  !*** ./src/redux/reducers/winesReducers.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var initialUserState = {
+  vinosBusqueda: [],
+  vinosTodos: []
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialUserState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _store_constants__WEBPACK_IMPORTED_MODULE_0__["SEARCH_WINES"]:
+      return _objectSpread({}, state, {
+        vinosBusqueda: action.vinos
+      });
+
+    default:
+      return state;
+  }
+});
 
 /***/ }),
 
@@ -37950,7 +38110,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************************!*\
   !*** ./src/redux/store/constants.js ***!
   \**************************************/
-/*! exports provided: CREATE_USER, LOGGUE_USER, SEARCH_WINES */
+/*! exports provided: CREATE_USER, LOGGUE_USER, SEARCH_WINES, ALL_WINES */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37958,9 +38118,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_USER", function() { return CREATE_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGGUE_USER", function() { return LOGGUE_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_WINES", function() { return SEARCH_WINES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_WINES", function() { return ALL_WINES; });
 var CREATE_USER = "CREATE_USER";
 var LOGGUE_USER = "LOGGUE_USER";
 var SEARCH_WINES = "SEARCH_WINES";
+var ALL_WINES = "ALL_WINES";
 
 /***/ }),
 
