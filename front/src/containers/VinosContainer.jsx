@@ -5,31 +5,19 @@ import Vinos from "../components/Vinos";
 class VinosContainer extends Component {
     constructor(props){
       super(props);
-      this.onSearch = this.onSearch.bind(this)
     }
   
-    onSearch(e){
-        this.props.fetchSearchMovies(e)
-    }
- 
     render () {
       return (
-        <Vinos onSearch ={this.onSearch}/>
+        <Vinos vinos = {this.props.vinos}/>
       )
     }
   }
   
-const mapStateToProps = (state, ownProps) => {
+  const mapStateToProps = (state, ownProps) => {
     return {
-        vinos: state.vinos
+        vinos: state.winesReducers.vinosBusqueda
     };
-};
+  };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
-        vinos: state.vinos
-    };
-};
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(VinosContainer);
+export default connect(mapStateToProps, null)(VinosContainer);

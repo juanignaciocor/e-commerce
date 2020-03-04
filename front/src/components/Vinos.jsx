@@ -6,13 +6,15 @@ import { Link } from "react-router-dom";
         <Fragment>
             <h3> VINOS</h3>
             {vinos.map(vino => {
-                <Link to={`/vinos/${vino.id}`}>
-                    <div key={vino.id}>
+                return(
+                <Link to={`/vinos/${vino.id}`} key={vino.id}>
                         <img src={vino.imagen}></img>
+                    <div>
                         <p>{vino.nombre}</p>
-                        <p>Precio: ${vino.precio}</p>
+                        <p>Precio: ${vino.precio},00</p>
                     </div>
                 </Link>
+                )
             })}
         </Fragment>
     )
