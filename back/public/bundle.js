@@ -37197,18 +37197,27 @@ var carrousel = function carrousel() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-item active"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    style: {
+      height: "82vh"
+    },
     className: "d-block w-100",
     src: "https://blog.borderio.com/wp-content/uploads/2017/11/vinos-oxidados-y-picados.jpg",
     alt: "First slide"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    style: {
+      height: "82vh"
+    },
     className: "d-block w-100",
     src: "http://www.indesignclub.com/images/blueprint/articles/Interior-design-of-a-wine-cellar-in-the-private-residence-02.jpg",
     alt: "Second slide"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    style: {
+      height: "82vh"
+    },
     className: "d-block w-100",
     src: "http://www.indesignclub.com/images/blueprint/articles/Interior-design-of-a-wine-cellar-in-the-private-residence-04.jpg",
     alt: "Third slide"
@@ -37254,29 +37263,33 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
 
 
 /******* Descomentar esto de abajo cuando sea necesario ******
-import { Link } from "react-router-dom"
+ import { Link } from "react-router-dom"
 */
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   _objectDestructuringEmpty(_ref);
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      position: "absolute",
+      bottom: 0,
+      height: "9.5vh",
+      width: "100%",
+      display: "block"
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-header"
-  }, "Quote"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-body"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("blockquote", {
+  }, "Winery"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("blockquote", {
     className: "blockquote mb-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
     className: "blockquote-footer"
   }, "Someone famous in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("cite", {
     title: "Source Title"
   }, "Source Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "footer-copyright text-center py-3"
-  }, "\xA9 2020 Copyright: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("cite", {
-    title: "Source Title"
-  }, "Equipo 5, Palataforma5")))))));
+    className: "footer-copyright text-center py-3"
+  }, "\xA9 2020 Copyright: Equipo 5")))));
 });
 
 /***/ }),
@@ -37363,7 +37376,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      height: "100%",
+      width: "100%"
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/",
     component: _containers_CarrouselContainer__WEBPACK_IMPORTED_MODULE_2__["default"]
@@ -38140,52 +38158,73 @@ var loguearUsuario = function loguearUsuario(user) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _usersReducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./usersReducers */ "./src/redux/reducers/usersReducers.js");
+/* harmony import */ var _winesReducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./winesReducers */ "./src/redux/reducers/winesReducers.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './userReducers'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  userReducer: _usersReducers__WEBPACK_IMPORTED_MODULE_1__["default"]
+  userReducers: !(function webpackMissingModule() { var e = new Error("Cannot find module './userReducers'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
+  winesReducers: _winesReducers__WEBPACK_IMPORTED_MODULE_1__["default"]
 }));
 
 /***/ }),
 
-/***/ "./src/redux/reducers/usersReducers.js":
+/***/ "./src/redux/reducers/winesReducers.js":
 /*!*********************************************!*\
-  !*** ./src/redux/reducers/usersReducers.js ***!
+  !*** ./src/redux/reducers/winesReducers.js ***!
   \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+
 var initialUserState = {
-  logged: {}
+  vinosBusqueda: [],
+  vinosTodos: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialUserState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case "LOGGUE_USER":
+    case _store_constants__WEBPACK_IMPORTED_MODULE_0__["SEARCH_WINES"]:
       return _objectSpread({}, state, {
-        logged: action.user
-      });
-
-    case "LOGGUE_OUT_USER":
-      return _objectSpread({}, state, {
-        logged: {}
+        vinosBusqueda: action.vinos
       });
 
     default:
       return state;
   }
 });
+
+/***/ }),
+
+/***/ "./src/redux/store/constants.js":
+/*!**************************************!*\
+  !*** ./src/redux/store/constants.js ***!
+  \**************************************/
+/*! exports provided: CREATE_USER, LOGGUE_USER, SEARCH_WINES, ALL_WINES */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_USER", function() { return CREATE_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGGUE_USER", function() { return LOGGUE_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_WINES", function() { return SEARCH_WINES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_WINES", function() { return ALL_WINES; });
+var CREATE_USER = "CREATE_USER";
+var LOGGUE_USER = "LOGGUE_USER";
+var SEARCH_WINES = "SEARCH_WINES";
+var ALL_WINES = "ALL_WINES";
 
 /***/ }),
 
