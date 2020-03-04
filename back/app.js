@@ -79,7 +79,7 @@ app.get('/*', (req, res) => {
 })
 db.sync({
         logging: false,
-        force: true
+        force: false
     })
     .then(function () {
         // asegurate de reemplazar el nombre de abajo con tu app de express

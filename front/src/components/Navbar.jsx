@@ -15,7 +15,13 @@ export default () => {
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                             <a class="nav-link" href="#">Link</a>
+                            <Link to = "/register"><button type="button" class="btn btn-secondary">Registrarse </button></Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link to = "/register"><button type="button" class="btn btn-secondary">Log In </button></Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link to = "/register"><button type="button" class="btn btn-secondary">Log Out </button></Link>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
