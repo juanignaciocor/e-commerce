@@ -38091,16 +38091,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loguearUsuario", function() { return loguearUsuario; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
+
 
 var setUsuario = function setUsuario(user) {
   return {
-    type: "CREATE_USER",
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["CREATE_USER"],
     user: user
   };
 };
 var logUser = function logUser(user) {
   return {
-    type: "LOGGUE_USER",
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["LOGGUE_USER"],
     user: user
   };
 };

@@ -4,6 +4,9 @@ const router = express.Router();
 const db = require("../db/db")
 const passport = require('passport');
 const { Usuario } = require("../models/index")
+const wines = require("./wines")
+
+router.use('/api/wines', wines)
 
 router.post("/user/register", function(req,res){
     Usuario.create(req.body)
