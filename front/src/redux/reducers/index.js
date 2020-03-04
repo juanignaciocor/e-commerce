@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import winesReducers from "./winesReducers"
-import userReducers from "./userReducers"
+import userReducers from "./usersReducers"
 
 export default combineReducers({
-     userReducers : userReducers,
-     winesReducers : winesReducers
+     userReducers: userReducers,
+     winesReducers: winesReducers
 });
