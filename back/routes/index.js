@@ -10,6 +10,10 @@ router.post("/user/register", function(req,res){
         .then(res.send("Se creo el usuario"))
 })
 
+router.post('/user/login', passport.authenticate('local'), (req, res) => {
+    res.send(req.user)
+})
+
 /*
 <<<<<<< Este es el midelware de passport que vamos a usar mas adelante >>>>>>>
 

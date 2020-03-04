@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from "react-redux"
 import Register from "../components/Register"
 import {crearUsuario} from "../redux/actions/users"
+import { withRouter } from "react-router";
 
 
 class RegisterContainer extends React.Component{
@@ -28,6 +29,7 @@ class RegisterContainer extends React.Component{
         e.preventDefault();
         let obj = {nombre: e.target[0].value, apellido: e.target[1].value, fechaNacimiento: e.target[2].value, email: e.target[3].value, domicilio: e.target[4].value, username: e.target[5].value, password: e.target[6].value}
         this.props.crearUsuario(obj)
+            .then(() => this.props.history.push("/login"))
     }
 
     render(){
@@ -50,4 +52,4 @@ const mapDispatchToProps = (dispatch,ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RegisterContainer);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RegisterContainer));

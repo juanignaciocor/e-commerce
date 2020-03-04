@@ -18,7 +18,7 @@ export default () => {
                             <Link to = "/register"><button type="button" class="btn btn-secondary">Registrarse </button></Link>
                         </li>
                         <li class="nav-item">
-                            <Link to = "/register"><button type="button" class="btn btn-secondary">Log In </button></Link>
+                            <Link to = "/login"><button type="button" class="btn btn-secondary">Log In </button></Link>
                         </li>
                         <li class="nav-item">
                             <Link to = "/register"><button type="button" class="btn btn-secondary">Log Out </button></Link>

@@ -3,10 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const Router = require("./routes/index")
-const {
-    User,
-    Favorites
-} = require('./models/index.js');
+const {Usuario} = require('./models/index.js');
 
 var cookieParser = require('cookie-parser');
 var session = require("express-session");
@@ -32,29 +29,20 @@ app.use(session({
 app.use(passport.session());
 
 
-passport.use(new LocalStrategy(
-    function (username, password, done) {
-
-        User.findOne({
-                where: {
-                    username: username
-                }
-            })
-            .then(user => {
-                if (!user) {
-                    return done(null, false, {
-                        message: 'Incorrect username.'
-                    });
-                }
-                if (!user.validPassword(password)) {
-                    return done(null, false, {
-                        message: 'Incorrect password.'
-                    });
-                }
-                return done(null, user);
-            })
-            .catch(done);
-    }
+passport.use(new LocalStrategy({ usernameField: 'email' },
+  function(inputEmail, password, done) {
+    Usuario.findOne({ where: {email: inputEmail} })
+      .then(user => {
+        if (!user) {
+          return done(null, false, { message: 'Incorrect username.' });
+        }
+        if (!user.validPassword(password)) {
+          return done(null, false, { message: 'Incorrect password.' });
+        }
+        return done(null, user); //ESTA TODO OK!
+      })
+      .catch(done);
+  }
 ));
 
 // esto es para actualizar el status
