@@ -3,6 +3,12 @@ const bodyParser = require('body-parser');
 const router = express.Router();
 const db = require("../db/db")
 const passport = require('passport');
+const { Usuario } = require("../models/index")
+
+router.post("/user/register", function(req,res){
+    Usuario.create(req.body)
+        .then(res.send("Se creo el usuario"))
+})
 
 /*
 <<<<<<< Este es el midelware de passport que vamos a usar mas adelante >>>>>>>
