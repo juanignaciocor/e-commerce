@@ -3,7 +3,9 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const Router = require("./routes/index")
-const { Usuario } = require('./models/index.js');
+const {
+    Usuario
+} = require('./models/index.js');
 
 var cookieParser = require('cookie-parser');
 var session = require("express-session");
@@ -29,15 +31,25 @@ app.use(session({
 app.use(passport.session());
 
 
-passport.use(new LocalStrategy({ usernameField: 'email' },
+passport.use(new LocalStrategy({
+        usernameField: 'email'
+    },
     function (inputEmail, password, done) {
-        Usuario.findOne({ where: { email: inputEmail } })
+        Usuario.findOne({
+                where: {
+                    email: inputEmail
+                }
+            })
             .then(user => {
                 if (!user) {
-                    return done(null, false, { message: 'Incorrect username.' });
+                    return done(null, false, {
+                        message: 'Incorrect username.'
+                    });
                 }
                 if (!user.validPassword(password)) {
-                    return done(null, false, { message: 'Incorrect password.' });
+                    return done(null, false, {
+                        message: 'Incorrect password.'
+                    });
                 }
                 return done(null, user); //ESTA TODO OK!
             })
@@ -68,9 +80,9 @@ app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/public/' + 'index.html')
 })
 db.sync({
-    logging: false,
-    force: false
-})
+        logging: false,
+        force: false
+    })
     .then(function () {
         // asegurate de reemplazar el nombre de abajo con tu app de express
         app.listen(3000, function () {

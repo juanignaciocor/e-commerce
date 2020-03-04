@@ -37651,6 +37651,42 @@ var carrousel = function carrousel() {
 
 /***/ }),
 
+/***/ "./src/components/Cart.jsx":
+/*!*********************************!*\
+  !*** ./src/components/Cart.jsx ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var user = _ref.user;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), user.username ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito de ".concat(user.username)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "card"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    "class": "card-header"
+  }, "Nombre del producto del carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "card-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    "class": "card-title"
+  }, "Bodega"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    "class": "card-text"
+  }, "Precio del producto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "button",
+    "class": "btn btn-outline-danger"
+  }, "Remover del Carrito")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
+});
+
+/***/ }),
+
 /***/ "./src/components/Footer.jsx":
 /*!***********************************!*\
   !*** ./src/components/Footer.jsx ***!
@@ -37674,7 +37710,7 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
-      position: "absolute",
+      position: "relative",
       bottom: 0,
       height: "9.5vh",
       width: "100%",
@@ -37682,17 +37718,35 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    id: "lab_social_icon_footer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-header"
-  }, "Winery"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("blockquote", {
-    className: "blockquote mb-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-    className: "blockquote-footer"
-  }, "Someone famous in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("cite", {
-    title: "Source Title"
-  }, "Source Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text-center center-block"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.facebook.com/bootsnipp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    id: "social-fb",
+    className: "fa fa-facebook-square fa-3x social"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://twitter.com/bootsnipp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    id: "social-tw",
+    className: "fa fa-twitter-square fa-3x social"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://plus.google.com/+Bootsnipp-page"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    id: "social-gp",
+    className: "fa fa-google-plus-square fa-3x social"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "mailto:#"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    id: "social-em",
+    className: "fa fa-envelope-square fa-3x social"
+  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-copyright text-center py-3"
-  }, "\xA9 2020 Copyright: Equipo 5")))));
+  }, "\xA9 2020 Copyright: Equipo 5"))));
 });
 
 /***/ }),
@@ -37774,6 +37828,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _containers_allWinesContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../containers/allWinesContainer */ "./src/containers/allWinesContainer.jsx");
 /* harmony import */ var _containers_VinosContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../containers/VinosContainer */ "./src/containers/VinosContainer.jsx");
 /* harmony import */ var _containers_SingleWineContainer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../containers/SingleWineContainer */ "./src/containers/SingleWineContainer.jsx");
+/* harmony import */ var _containers_CartContainer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../containers/CartContainer */ "./src/containers/CartContainer.jsx");
+
 
 
 
@@ -37814,6 +37870,10 @@ __webpack_require__.r(__webpack_exports__);
     exact: true,
     path: "/wines/:id",
     component: _containers_SingleWineContainer__WEBPACK_IMPORTED_MODULE_9__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/cart",
+    component: _containers_CartContainer__WEBPACK_IMPORTED_MODULE_10__["default"]
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_FooterContainer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 });
 
@@ -37870,16 +37930,25 @@ __webpack_require__.r(__webpack_exports__);
     className: "nav-link",
     to: "/register"
   }, "Registrarse ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item botones"
+    className: "nav-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/register"
-  }, "Log In")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    to: "/login"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "button",
+    className: "btn btn-secondary"
+  }, "Log In "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item botones"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "nav-link",
     to: "/register"
   }, "Log Out ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "nav-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/cart"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "button",
+    className: "btn btn-secondary"
+  }, "Cart "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item dropdown"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link dropdown-toggle",
@@ -38088,7 +38157,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var vinoSeleccionado = _ref.vinoSeleccionado;
+  var vinoSeleccionado = _ref.vinoSeleccionado,
+      handlerClick = _ref.handlerClick;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "media"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -38103,7 +38173,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "mb-0"
   }, " Bodega: ", vinoSeleccionado.bodega), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "mb-0"
-  }, " Precio: $", vinoSeleccionado.precio), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, " Precio: $", vinoSeleccionado.precio, ",00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "mb-0"
   }, " Tipo: ", vinoSeleccionado.tipo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "mb-0"
@@ -38113,7 +38183,10 @@ __webpack_require__.r(__webpack_exports__);
     className: "mb-0"
   }, " Descripci\xF3n: ", vinoSeleccionado.descripcion), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "mb-0"
-  }, " Stock: ", vinoSeleccionado.stock))));
+  }, " Stock: ", vinoSeleccionado.stock), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: handlerClick,
+    className: "btnComprar"
+  }, "A\xF1adir al Carrito "))));
 });
 
 /***/ }),
@@ -38204,6 +38277,74 @@ var CarrouselContainer = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (CarrouselContainer);
+
+/***/ }),
+
+/***/ "./src/containers/CartContainer.jsx":
+/*!******************************************!*\
+  !*** ./src/containers/CartContainer.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _components_Cart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Cart */ "./src/components/Cart.jsx");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+var CartContainer = /*#__PURE__*/function (_React$Component) {
+  _inherits(CartContainer, _React$Component);
+
+  function CartContainer() {
+    _classCallCheck(this, CartContainer);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(CartContainer).call(this));
+  }
+
+  _createClass(CartContainer, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Cart__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        user: this.props.user
+      }));
+    }
+  }]);
+
+  return CartContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    user: state.userReducers.logged
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, null)(CartContainer)));
 
 /***/ }),
 
@@ -38587,12 +38728,13 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SingleWineContainer; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_SingleWine__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SingleWine */ "./src/components/SingleWine.jsx");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/actions/cart */ "./src/redux/actions/cart.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38603,13 +38745,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
 
 
 
@@ -38627,6 +38771,7 @@ var SingleWineContainer = /*#__PURE__*/function (_Component) {
     _this.state = {
       vinoSeleccionado: {}
     };
+    _this.handlerClick = _this.handlerClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -38644,10 +38789,21 @@ var SingleWineContainer = /*#__PURE__*/function (_Component) {
       });
     }
   }, {
+    key: "handlerClick",
+    value: function handlerClick(e) {
+      var obj = {
+        idProducto: this.state.vinoSeleccionado,
+        idUsuario: this.props.user,
+        cantidad: 1
+      };
+      this.props.createCartItem(obj);
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SingleWine__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        vinoSeleccionado: this.state.vinoSeleccionado
+        vinoSeleccionado: this.state.vinoSeleccionado,
+        handlerClick: this.handlerClick
       }));
     }
   }]);
@@ -38655,7 +38811,21 @@ var SingleWineContainer = /*#__PURE__*/function (_Component) {
   return SingleWineContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    user: state.userReducers.logged
+  };
+};
 
+var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    createCartItem: function createCartItem(item) {
+      return dispatch(Object(_redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__["createCartItem"])(item));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, mapDispatchToProps)(SingleWineContainer));
 
 /***/ }),
 
@@ -38846,6 +39016,42 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 /***/ }),
 
+/***/ "./src/redux/actions/cart.js":
+/*!***********************************!*\
+  !*** ./src/redux/actions/cart.js ***!
+  \***********************************/
+/*! exports provided: addCart, createCartItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addCart", function() { return addCart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createCartItem", function() { return createCartItem; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
+
+
+var addCart = function addCart(item) {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["ADD_CART"],
+    cart: item
+  };
+};
+var createCartItem = function createCartItem(item) {
+  return function (dispatch) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/cart/add', item).then(function (res) {
+      return res.data;
+    }).then(function (producto) {
+      return dispatch(addCart(producto));
+    }).then(function (err) {
+      return err;
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./src/redux/actions/users.js":
 /*!************************************!*\
   !*** ./src/redux/actions/users.js ***!
@@ -38885,10 +39091,10 @@ var crearUsuario = function crearUsuario(user) {
 };
 var loguearUsuario = function loguearUsuario(user) {
   return function (dispatch) {
-    return (console.log(user), axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/user/login', {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/user/login', {
       email: user.email,
       password: user.password
-    })).then(function (res) {
+    }).then(function (res) {
       return res.data;
     }).then(function (user) {
       return dispatch(logUser(user));
@@ -38951,6 +39157,49 @@ var searchAllWines = function searchAllWines() {
 
 /***/ }),
 
+/***/ "./src/redux/reducers/cartReducer.js":
+/*!*******************************************!*\
+  !*** ./src/redux/reducers/cartReducer.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var initialCartState = {
+  cart: []
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialCartState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case "ADD_CART":
+      return _objectSpread({}, state, {
+        cart: [].concat(_toConsumableArray(state.cart), [action.cart])
+      });
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
 /***/ "./src/redux/reducers/index.js":
 /*!*************************************!*\
   !*** ./src/redux/reducers/index.js ***!
@@ -38963,12 +39212,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _winesReducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./winesReducers */ "./src/redux/reducers/winesReducers.js");
 /* harmony import */ var _usersReducers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./usersReducers */ "./src/redux/reducers/usersReducers.js");
+/* harmony import */ var _cartReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./cartReducer */ "./src/redux/reducers/cartReducer.js");
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   userReducers: _usersReducers__WEBPACK_IMPORTED_MODULE_2__["default"],
-  winesReducers: _winesReducers__WEBPACK_IMPORTED_MODULE_1__["default"]
+  winesReducers: _winesReducers__WEBPACK_IMPORTED_MODULE_1__["default"],
+  cartReducers: _cartReducer__WEBPACK_IMPORTED_MODULE_3__["default"]
 }));
 
 /***/ }),
@@ -39060,7 +39312,7 @@ var initialUserState = {
 /*!**************************************!*\
   !*** ./src/redux/store/constants.js ***!
   \**************************************/
-/*! exports provided: CREATE_USER, LOGGUE_USER, SEARCH_WINES, ALL_WINES */
+/*! exports provided: CREATE_USER, LOGGUE_USER, SEARCH_WINES, ALL_WINES, ADD_CART */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39069,10 +39321,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGGUE_USER", function() { return LOGGUE_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_WINES", function() { return SEARCH_WINES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_WINES", function() { return ALL_WINES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CART", function() { return ADD_CART; });
 var CREATE_USER = "CREATE_USER";
 var LOGGUE_USER = "LOGGUE_USER";
 var SEARCH_WINES = "SEARCH_WINES";
 var ALL_WINES = "ALL_WINES";
+var ADD_CART = "ADD_CART";
 
 /***/ }),
 

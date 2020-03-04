@@ -1,13 +1,16 @@
 import React, { Component, Fragment } from "react";
 import SingleWine from "../components/SingleWine"
 import axios from "axios"
+import { connect } from "react-redux"
+import { createCartItem } from "../redux/actions/cart"
 
-export default class SingleWineContainer extends Component {
+class SingleWineContainer extends Component {
     constructor(props) {
         super(props)
         this.state = {
             vinoSeleccionado: {}
         }
+        this.handlerClick = this.handlerClick.bind(this)
     }
     componentDidMount() {
         return (
@@ -18,13 +21,33 @@ export default class SingleWineContainer extends Component {
                 })
         )
     }
+    handlerClick(e) {
+        let obj = { idProducto: this.state.vinoSeleccionado, idUsuario: this.props.user, cantidad: 1 }
+        this.props.createCartItem(obj)
+    }
 
     render() {
         return (
             <Fragment>
-                <SingleWine vinoSeleccionado={this.state.vinoSeleccionado} />
+                <SingleWine vinoSeleccionado={this.state.vinoSeleccionado} handlerClick={this.handlerClick} />
             </Fragment>
         )
     }
 }
 
+const mapStateToProps = (state, ownProps) => {
+    return {
+        user: state.userReducers.logged
+    }
+}
+
+
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        createCartItem: (item) => dispatch(createCartItem(item))
+    }
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SingleWineContainer)
