@@ -5,3 +5,5 @@ export const LOGGUE_USER = "LOGGUE_USER"
 export const SEARCH_WINES = "SEARCH_WINES"
 
 export const ALL_WINES = "ALL_WINES"
+
+export const ADD_CART = "ADD_CART"

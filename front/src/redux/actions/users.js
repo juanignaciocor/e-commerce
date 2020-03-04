@@ -15,9 +15,8 @@ export const crearUsuario = (user) => dispatch =>
     axios.post('/user/register', user)
         .then(user => dispatch(logUser(user.data)))
 
-export const loguearUsuario = (user) => dispatch =>(
-console.log(user),
-    axios.post('/user/login', {email: user.email, password: user.password}))
+export const loguearUsuario = (user) => dispatch =>
+    axios.post('/user/login', { email: user.email, password: user.password })
         .then(res => res.data)
         .then(user => dispatch(logUser(user)))
-        .catch(err => {throw new Error(err)})
+        .catch(err => { throw new Error(err) })
