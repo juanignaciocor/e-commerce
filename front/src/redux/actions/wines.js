@@ -8,4 +8,4 @@ export const showWine = vinos => ({
 
 export const showsWines = vino => dispatch =>
     axios.post('/api/wines/search', vino)
-        .then(user => dispatch(showWine(user.data)))
+        .then(vino => dispatch(showWine(vino.data)))
