@@ -36,10 +36,10 @@ passport.use(new LocalStrategy(
     function (username, password, done) {
 
         User.findOne({
-                where: {
-                    username: username
-                }
-            })
+            where: {
+                username: username
+            }
+        })
             .then(user => {
                 if (!user) {
                     return done(null, false, {
@@ -80,9 +80,9 @@ app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/public/' + 'index.html')
 })
 db.sync({
-        logging: false,
-        force: false
-    })
+    logging: false,
+    force: false
+})
     .then(function () {
         // asegurate de reemplazar el nombre de abajo con tu app de express
         app.listen(3000, function () {
