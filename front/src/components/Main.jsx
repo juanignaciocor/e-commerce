@@ -12,7 +12,7 @@ import SingleWineContainer from "../containers/SingleWineContainer"
 export default () => {
 
     return (
-        <div>
+        <div style={{ height: "100%", width: "100%" }}>
             <NavbarContainer />
             <Switch>
                 <Route exact path="/" component={CarrouselContainer}></Route>
