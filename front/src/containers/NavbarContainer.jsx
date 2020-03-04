@@ -10,7 +10,6 @@ class NavbarContainer extends Component {
   }
 
   onSearch(e){
-    console.log(e)
     this.props.showsWines(e)
   }
 
