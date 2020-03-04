@@ -9,12 +9,12 @@ export default ({ vinos }) => {
                 {vinos.map(vino => {
                     return (
                         <figure key={vino.id}>
-                            <Link to={`/vinos/${vino.id}`}>
+                            <Link to={`/wines/${vino.id}`}>
                                 <div >
                                     <img src={vino.imagen}></img>
                                     <figcaption>
                                         <p>{vino.nombre}</p>
-                                        <p>Precio: ${vino.precio}</p>
+                                        <p>Precio: ${vino.precio},00</p>
                                     </figcaption>
                                 </div>
                             </Link>
