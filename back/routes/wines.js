@@ -3,7 +3,6 @@ const router = express.Router();
 const { Producto } = require("../models/index")
 
 router.get("/search/:vino", function(req, res, next){
-    console.log('ESTOY EN EL GET')
     const vino = req.params.vino
     Producto.findAll({where: {tipo : vino}})
     .then( data => {
@@ -11,6 +10,18 @@ router.get("/search/:vino", function(req, res, next){
         res.json(data)
     })
     .catch(err => {throw new Error(err)})
+})
+
+router.get("/:id", function (req, res) {
+    const id = req.params.id;
+    Producto.findAll({
+        where: {
+            id
+        }
+    })
+        .then((vino) => {
+            res.status(200).send(vino)
+        })
 })
 
 module.exports = router
