@@ -22,7 +22,7 @@ class SingleWineContainer extends Component {
         )
     }
     handlerClick(e) {
-        let obj = { idProducto: this.state.vinoSeleccionado, idUsuario: this.props.user, cantidad: 1 }
+        let obj = { idProducto: this.state.vinoSeleccionado.id, idUsuario: this.props.user, cantidad: 1 }
         this.props.createCartItem(obj)
     }
 
