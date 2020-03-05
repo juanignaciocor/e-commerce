@@ -38017,13 +38017,13 @@ __webpack_require__.r(__webpack_exports__);
     className: "dropdown-menu",
     "aria-labelledby": "navbarDropdown"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "category/red",
+    to: "/category/red",
     className: "dropdown-item"
   }, "Tinto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "category/white",
+    to: "/category/white",
     className: "dropdown-item"
   }, "Blanco"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "category/rose",
+    to: "/category/rose",
     className: "dropdown-item"
   }, "Rosado")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "form-inline my-2 my-lg-0",
