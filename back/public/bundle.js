@@ -37874,7 +37874,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  //category/tinto
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       height: "100%",
@@ -37910,15 +37909,15 @@ __webpack_require__.r(__webpack_exports__);
     component: _containers_CartContainer__WEBPACK_IMPORTED_MODULE_10__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/category/tinto",
+    path: "/category/red",
     component: _containers_CategoryTintoContainer__WEBPACK_IMPORTED_MODULE_11__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/category/blanco",
+    path: "/category/white",
     component: _containers_CategoryBlancoContainer__WEBPACK_IMPORTED_MODULE_12__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/category/rosado",
+    path: "/category/rose",
     component: _containers_CategoryRosadoContainer__WEBPACK_IMPORTED_MODULE_13__["default"]
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_FooterContainer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 });
@@ -37941,7 +37940,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var onSearch = _ref.onSearch,
-      vinos = _ref.vinos;
+      vinos = _ref.vinos,
+      clearInput = _ref.clearInput,
+      onChange = _ref.onChange;
   var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: " navegador navbar  navbar-expand-lg navbar-light  "
@@ -38008,31 +38009,29 @@ __webpack_require__.r(__webpack_exports__);
     className: "dropdown-menu",
     "aria-labelledby": "navbarDropdown"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "category/tinto",
+    to: "category/red",
     className: "dropdown-item"
   }, "Tinto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "category/blanco",
+    to: "category/white",
     className: "dropdown-item"
   }, "Blanco"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "category/rosado",
+    to: "category/rose",
     className: "dropdown-item"
   }, "Rosado")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    className: "form-inline my-2 my-lg-0"
+    className: "form-inline my-2 my-lg-0",
+    onSubmit: onSearch
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "form-control mr-sm-2",
     type: "search",
     placeholder: "Search",
     "aria-label": "Search",
-    ref: ref
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/wines/search"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    ref: ref,
+    value: clearInput,
+    onChange: onChange
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-outline-success my-2 my-sm-0",
-    type: "submit",
-    onClick: function onClick(e) {
-      onSearch(ref.current.value);
-    }
-  }, "Search"))))));
+    type: "submit"
+  }, "Search")))));
 });
 
 /***/ }),
@@ -38222,6 +38221,8 @@ __webpack_require__.r(__webpack_exports__);
   }, " Tipo: ", vinoSeleccionado.tipo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "mb-0"
   }, " Cepa: ", vinoSeleccionado.cepa), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-0"
+  }, " Lugar de Origen: ", vinoSeleccionado.provincia), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "mb-0"
   }, " Graduaci\xF3n alcoh\xF3lica: ", vinoSeleccionado.alcohol, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "mb-0"
@@ -38825,8 +38826,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Navbar */ "./src/components/Navbar.jsx");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_wines__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../redux/actions/wines */ "./src/redux/actions/wines.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_wines__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/actions/wines */ "./src/redux/actions/wines.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38850,6 +38852,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var NavbarContainer = /*#__PURE__*/function (_Component) {
   _inherits(NavbarContainer, _Component);
 
@@ -38859,14 +38862,34 @@ var NavbarContainer = /*#__PURE__*/function (_Component) {
     _classCallCheck(this, NavbarContainer);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(NavbarContainer).call(this, props));
+    _this.state = {
+      clearInput: ""
+    };
     _this.onSearch = _this.onSearch.bind(_assertThisInitialized(_this));
+    _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(NavbarContainer, [{
     key: "onSearch",
     value: function onSearch(e) {
-      this.props.showsWines(e);
+      var _this2 = this;
+
+      e.preventDefault();
+      this.props.showsWines(this.state.clearInput).then(function () {
+        return _this2.setState({
+          clearInput: ''
+        });
+      }).then(function () {
+        _this2.props.history.push("/wines/search");
+      });
+    }
+  }, {
+    key: "onChange",
+    value: function onChange(e) {
+      this.setState({
+        clearInput: e.target.value
+      });
     }
   }, {
     key: "render",
@@ -38874,7 +38897,9 @@ var NavbarContainer = /*#__PURE__*/function (_Component) {
       var vinos = this.props.vinos;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
         onSearch: this.onSearch,
-        vinos: vinos
+        vinos: vinos,
+        onChange: this.onChange,
+        clearInput: this.state.clearInput
       });
     }
   }]);
@@ -38885,12 +38910,12 @@ var NavbarContainer = /*#__PURE__*/function (_Component) {
 var matchDispatchToProps = function matchDispatchToProps(dispatch, ownprops) {
   return {
     showsWines: function showsWines(vino) {
-      return dispatch(Object(_redux_actions_wines__WEBPACK_IMPORTED_MODULE_3__["showsWines"])(vino));
+      return dispatch(Object(_redux_actions_wines__WEBPACK_IMPORTED_MODULE_4__["showsWines"])(vino));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(null, matchDispatchToProps)(NavbarContainer));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(null, matchDispatchToProps)(NavbarContainer)));
 
 /***/ }),
 
