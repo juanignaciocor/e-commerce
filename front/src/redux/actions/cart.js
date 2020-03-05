@@ -17,11 +17,11 @@ export const removeCart = (remove) => ({
 
 });
 export const createCartItem = (item) => dispatch => {
+    console.log("llegue al aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacion",item)
     axios.post('/api/cart/add', item)
         .then(res => res.data)
-        .then(carrito => (console.log("++++++++++++++", carrito),
-            dispatch(addCart(carrito))))
-        .then(err => err)
+        .then(carrito => dispatch(addCart(carrito)))
+        .catch(err => console.log(err))
 }
 
 export const searchUserCart = (userId) => {

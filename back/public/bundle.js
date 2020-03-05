@@ -38233,28 +38233,28 @@ __webpack_require__.r(__webpack_exports__);
     className: "media"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: vinoSeleccionado.imagen,
-    className: "align-self-center mr-3",
+    className: "align-self-center mr-3 imagenSingle",
     alt: "botella-de-vino"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "media-body"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    className: "mt-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "mt-0 single"
   }, vinoSeleccionado.nombre), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Bodega: ", vinoSeleccionado.bodega), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Precio: $", vinoSeleccionado.precio, ",00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Tipo: ", vinoSeleccionado.tipo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Cepa: ", vinoSeleccionado.cepa), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Lugar de Origen: ", vinoSeleccionado.provincia), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Graduaci\xF3n alcoh\xF3lica: ", vinoSeleccionado.alcohol, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Descripci\xF3n: ", vinoSeleccionado.descripcion), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Stock: ", vinoSeleccionado.stock), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: handlerClick,
     className: "btnComprar"
@@ -39246,7 +39246,7 @@ var SingleWineContainer = /*#__PURE__*/function (_Component) {
     key: "handlerClick",
     value: function handlerClick(e) {
       var obj = {
-        idProducto: this.state.vinoSeleccionado,
+        idProducto: this.state.vinoSeleccionado.id,
         idUsuario: this.props.user,
         cantidad: 1
       };
@@ -39557,12 +39557,13 @@ var removeCart = function removeCart(remove) {
 };
 var createCartItem = function createCartItem(item) {
   return function (dispatch) {
+    console.log("llegue al aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacion", item);
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/cart/add', item).then(function (res) {
       return res.data;
     }).then(function (carrito) {
-      return console.log("++++++++++++++", carrito), dispatch(addCart(carrito));
-    }).then(function (err) {
-      return err;
+      return dispatch(addCart(carrito));
+    })["catch"](function (err) {
+      return console.log(err);
     });
   };
 };
