@@ -90,10 +90,12 @@
 /*!*************************!*\
   !*** ./assets/cart.svg ***!
   \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> <svg viewBox=\"0 -16 512.00018 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m396 440c5.519531 0 10-4.480469 10-10s-4.480469-10-10-10-10 4.480469-10 10 4.480469 10 10 10zm0 0\"/><path d=\"m230 440c5.519531 0 10-4.480469 10-10s-4.480469-10-10-10-10 4.480469-10 10 4.480469 10 10 10zm0 0\"/><path d=\"m509.882812 123.847656c-1.894531-2.429687-4.804687-3.847656-7.882812-3.847656h-360.003906l-22.792969-96.875c-3.210937-13.617188-15.222656-23.125-29.203125-23.125h-60c-16.542969 0-30 13.457031-30 30s13.457031 30 30 30h36.238281l74.558594 316.875c3.210937 13.617188 15.222656 23.125 29.203125 23.125h20.027344c-6.292969 8.363281-10.027344 18.753906-10.027344 30 0 27.570312 22.429688 50 50 50s50-22.429688 50-50c0-11.246094-3.734375-21.636719-10.027344-30h86.054688c-6.292969 8.363281-10.027344 18.753906-10.027344 30 0 27.570312 22.429688 50 50 50s50-22.429688 50-50c0-11.246094-3.734375-21.636719-10.027344-30h.027344c16.542969 0 30-13.457031 30-30s-13.457031-30-30-30h-242.238281l-9.414063-40h58.621094.019531.015625 145.992188.019531.019531 57.347656c13.785157 0 25.757813-9.34375 29.109376-22.726562l36.210937-144.847657c.746094-2.988281.074219-6.152343-1.820313-8.578125zm-35.691406 76.152344h-63.863281l7.5-60h71.363281zm-118.191406 20h31.671875l-7.5 60h-54.171875v-30c0-5.523438-4.476562-10-10-10s-10 4.476562-10 10v30h-54.171875l-7.5-60h31.671875c5.523438 0 10-4.476562 10-10s-4.476562-10-10-10h-34.171875l-7.5-60h71.671875v30c0 5.523438 4.476562 10 10 10s10-4.476562 10-10v-30h71.671875l-7.5 60h-34.171875c-5.523438 0-10 4.476562-10 10s4.476562 10 10 10zm-176.359375 60-14.117187-60h58.648437l7.5 60zm34.53125-140 7.5 60h-60.855469l-14.113281-60zm45.828125 290c0 16.542969-13.457031 30-30 30s-30-13.457031-30-30 13.457031-30 30-30 30 13.457031 30 30zm166 0c0 16.542969-13.457031 30-30 30s-30-13.457031-30-30 13.457031-30 30-30 30 13.457031 30 30zm10-70c5.515625 0 10 4.484375 10 10s-4.484375 10-10 10h-266c-4.660156 0-8.664062-3.171875-9.734375-7.710938l-78.1875-332.289062h-52.078125c-5.515625 0-10-4.484375-10-10s4.484375-10 10-10h60c4.660156 0 8.664062 3.171875 9.734375 7.710938l62.1875 264.292968c.003906.015625.007813.03125.011719.050782l15.988281 67.945312zm20.089844-87.582031c-1.117188 4.464843-5.109375 7.582031-9.710938 7.582031h-46.050781l7.5-60h61.367187zm0 0\"/><path d=\"m316 200c-5.519531 0-10 4.480469-10 10s4.480469 10 10 10 10-4.480469 10-10-4.480469-10-10-10zm0 0\"/></svg>");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "4b2dc479846e7ee7d55d78751b69e52f.svg");
 
 /***/ }),
 
@@ -38274,7 +38276,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/cart.svg */ "./assets/cart.svg");
-/* harmony import */ var _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_cart_svg__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -38304,7 +38305,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     }, " A\xF1adir a Carrito  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       className: "imgCarrito",
-      src: _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2___default.a
+      src: _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2__["default"]
     })))));
   })));
 });
@@ -39586,15 +39587,17 @@ var userRemoveCart = function userRemoveCart(userId, productoId) {
 /*!************************************!*\
   !*** ./src/redux/actions/users.js ***!
   \************************************/
-/*! exports provided: setUsuario, logUser, crearUsuario, loguearUsuario */
+/*! exports provided: setUsuario, logUser, logout, crearUsuario, loguearUsuario, deslogueandome */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setUsuario", function() { return setUsuario; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logUser", function() { return logUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "crearUsuario", function() { return crearUsuario; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loguearUsuario", function() { return loguearUsuario; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deslogueandome", function() { return deslogueandome; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
@@ -39609,6 +39612,12 @@ var setUsuario = function setUsuario(user) {
 var logUser = function logUser(user) {
   return {
     type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["LOGGUE_USER"],
+    user: user
+  };
+};
+var logout = function logout() {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["DESLOGUEO_USER"],
     user: user
   };
 };
@@ -39630,6 +39639,13 @@ var loguearUsuario = function loguearUsuario(user) {
       return dispatch(logUser(user));
     })["catch"](function (err) {
       throw new Error(err);
+    });
+  };
+};
+var deslogueandome = function deslogueandome() {
+  return function (dispatch, getState) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/user/logout").then(function (res) {
+      dispatch(logout());
     });
   };
 };
@@ -39823,11 +39839,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 var initialUserState = {
   logged: {}
@@ -39842,7 +39860,7 @@ var initialUserState = {
         logged: action.user
       });
 
-    case "LOGGUE_OUT_USER":
+    case _store_constants__WEBPACK_IMPORTED_MODULE_0__["DESLOGUEO_USER"]:
       return _objectSpread({}, state, {
         logged: {}
       });
@@ -39919,13 +39937,14 @@ var initialUserState = {
 /*!**************************************!*\
   !*** ./src/redux/store/constants.js ***!
   \**************************************/
-/*! exports provided: CREATE_USER, LOGGUE_USER, SEARCH_WINES, ALL_WINES, ADD_CART, ALL_TINTOS, ALL_ROSADOS, ALL_BLANCOS, SEARCH_CART, REMOVE_CART */
+/*! exports provided: CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, SEARCH_WINES, ALL_WINES, ADD_CART, ALL_TINTOS, ALL_ROSADOS, ALL_BLANCOS, SEARCH_CART, REMOVE_CART */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_USER", function() { return CREATE_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGGUE_USER", function() { return LOGGUE_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESLOGUEO_USER", function() { return DESLOGUEO_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_WINES", function() { return SEARCH_WINES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_WINES", function() { return ALL_WINES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CART", function() { return ADD_CART; });
@@ -39936,6 +39955,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_CART", function() { return REMOVE_CART; });
 var CREATE_USER = "CREATE_USER";
 var LOGGUE_USER = "LOGGUE_USER";
+var DESLOGUEO_USER = "DESLOGUEO_USER";
 var SEARCH_WINES = "SEARCH_WINES";
 var ALL_WINES = "ALL_WINES";
 var ADD_CART = "ADD_CART";
