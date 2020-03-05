@@ -28,6 +28,9 @@ export default ({ onSearch, vinos, clearInput, onChange }) => {
                         <li className="nav-item">
                             <Link to="/cart"><button type="button" className="btn btn-secondary">Cart </button></Link>
                         </li>
+                        <li className="nav-item botones">
+                            <Link className="nav-link" to="/allWines">Productos </Link>
+                        </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias</a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -40,7 +43,7 @@ export default ({ onSearch, vinos, clearInput, onChange }) => {
                     </ul>
                     <form className="form-inline my-2 my-lg-0" onSubmit={onSearch}>
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ref={ref} value={clearInput} onChange={onChange}></input>
-                       <button className="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
                     </form>
                 </div>
             </nav>

@@ -2,15 +2,22 @@ import React from "react"
 import { connect } from "react-redux"
 import { searchRosado } from "../redux/actions/wines"
 import Vinos from "../components/Vinos"
+import { createCartItem } from "../redux/actions/cart"
 
 class CategoryRosadoContainer extends React.Component {
     constructor() {
         super()
+        this.handlerClick = this.handlerClick.bind(this)
     }
 
     componentDidMount() {
         this.props.searchRosado()
+    }
 
+    handlerClick(vinoId) {
+        let obj = { idProducto: vinoId, idUsuario: this.props.user, cantidad: 1 }
+        this.props.createCartItem(obj)
+            (alert("Producto añadido a tu carrito"))
     }
 
     render() {
@@ -18,7 +25,7 @@ class CategoryRosadoContainer extends React.Component {
 
         return (
             <div>
-                <Vinos vinos={rosado}></Vinos>
+                <Vinos handlerClick={this.handlerClick} vinos={rosado} />
 
             </div>
 
@@ -29,17 +36,15 @@ class CategoryRosadoContainer extends React.Component {
 
 const mapStateToProps = function (state, ownProps) {
     return {
-        rosado: state.winesReducers.categoryRosados
+        rosado: state.winesReducers.categoryRosados,
+        user: state.userReducers.logged
     }
 };
 
-
-
-
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        searchRosado: () => (dispatch(searchRosado()))
-
+        searchRosado: () => (dispatch(searchRosado())),
+        createCartItem: (item) => dispatch(createCartItem(item))
     }
 
 }
