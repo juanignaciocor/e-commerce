@@ -37958,13 +37958,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/cart.svg */ "./assets/cart.svg");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var onSearch = _ref.onSearch,
       vinos = _ref.vinos,
       clearInput = _ref.clearInput,
-      onChange = _ref.onChange;
+      onChange = _ref.onChange,
+      user = _ref.user;
   var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: " navegador navbar  navbar-expand-lg navbar-light  "
@@ -37991,38 +37994,24 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item botones"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/"
-  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    to: "/register",
+    className: "nav-link"
+  }, "Register ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item botones"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/register"
-  }, "Registrarse ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/login"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    className: "btn btn-secondary"
-  }, "Log In "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    to: "/login",
+    className: "nav-link"
+  }, "Log In ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item botones"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/register"
-  }, "Log Out ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/cart"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    className: "btn btn-secondary"
-  }, "Cart "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    to: "/login",
+    className: "nav-link"
+  }, "Log Out")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item botones"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "nav-link",
     to: "/allWines"
-  }, "Productos ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "All Products ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item dropdown"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link dropdown-toggle",
@@ -38032,19 +38021,28 @@ __webpack_require__.r(__webpack_exports__);
     "data-toggle": "dropdown",
     "aria-haspopup": "true",
     "aria-expanded": "false"
-  }, "Categorias"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown-menu",
     "aria-labelledby": "navbarDropdown"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "category/red",
     className: "dropdown-item"
-  }, "Tinto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "Red"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "category/white",
     className: "dropdown-item"
-  }, "Blanco"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "White"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "category/rose",
     className: "dropdown-item"
-  }, "Rosado")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  }, "Rose")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/cart"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "button",
+    className: "btn btn-secondary",
+    id: "btnCartNav"
+  }, "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "imgCarrito",
+    src: _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }), " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "form-inline my-2 my-lg-0",
     onSubmit: onSearch
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -38056,7 +38054,7 @@ __webpack_require__.r(__webpack_exports__);
     value: clearInput,
     onChange: onChange
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn btn-outline-success my-2 my-sm-0",
+    className: "btn btn-outline-secondary my-2 my-sm-0",
     type: "submit"
   }, "Search")))));
 });
@@ -39042,7 +39040,12 @@ var NavbarContainer = /*#__PURE__*/function (_Component) {
   }]);
 
   return NavbarContainer;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]); // const mapStateToProps = (state, ownProps) => {
+//   return {
+//     user: state.userReducers.logged
+//   }
+// }
+
 
 var matchDispatchToProps = function matchDispatchToProps(dispatch, ownprops) {
   return {
