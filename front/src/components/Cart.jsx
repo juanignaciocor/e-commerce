@@ -1,54 +1,59 @@
 import React from "react"
 import { Link } from "react-router-dom";
 
-
-export default ({user, cart}) => {
-    if(user.username){
-        return(
+export default ({ user, cart, searchCart, removeClick }) => {
+    if (user.username) {
+        return (
             <div>
                 <label></label>
                 <h2>{`Carrito de ${user.username}`}</h2>
                 <hr></hr>
-                <div className = "container">
-                    {cart.map(item => {
-                    return (
-                        <figure key={item.id}>
-                            <Link to={`/wines/${item.productoId}`}>
-                                <div class="card">
-                                    <h5 class="card-header">Nombre del producto del carrito</h5>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Bodega</h5>
-                                        <p class="card-text">Precio del producto</p>
-                                        <button type="button" class="btn btn-outline-danger">Remover del Carrito</button>
+                <div className="container">
+                    {searchCart.map(item => {
+                        return (
+                            <figure key={item.producto.id}>
+
+                                <div className="card">
+
+                                    <h5 className="card-header">{item.producto.nombre}</h5>
+                                    <div className="card-body">
+                                        <h5 className="card-title">{`Bodega: ${item.producto.bodega}`}</h5>
+                                        <p className="card-text">{`Precio: ${item.producto.precio},00`}</p>
+                                        <button type="button"
+                                            className="btn btn-outline-danger"
+                                            onClick={() => removeClick(item.producto.id)}
+                                        >Remover del Carrito</button>
+                                        <Link to={`/wines/${item.producto.id}`}>  <img className="cartImagen" src={item.producto.imagen}></img></Link>
+
                                     </div>
                                 </div>
-                            </Link>
-                        </figure>
-                    )
-                    })}   
+
+                            </figure>
+                        )
+                    })}
                 </div >
                 <label></label>
             </div>
         )
-    }else{
+    } else {
         return (
             <div>
                 <label></label>
                 <h2>Carrito</h2>
                 <hr></hr>
-                    <div className = "container">
-                        <div class="card">
-                            <h5 class="card-header">Nombre del producto del carrito</h5>
-                            <div class="card-body">
-                                <h5 class="card-title">Bodega</h5>
-                                <p class="card-text">Precio del producto</p>
-                                <button type="button" class="btn btn-outline-danger">Remover del Carrito</button>
-                            </div>
+                <div className="container">
+                    <div class="card">
+                        <h5 class="card-header">Nombre del producto del carrito</h5>
+                        <div class="card-body">
+                            <h5 class="card-title">Bodega</h5>
+                            <p class="card-text">Precio del producto</p>
+                            <button type="button" class="btn btn-outline-danger">Remover del Carrito</button>
                         </div>
-                    </div >
+                    </div>
+                </div >
                 <label></label>
             </div>
-    
+
         )
     }
 }
