@@ -1,4 +1,5 @@
 const { Producto } = require("./models/index")
+
 //---------------------------------------------TINTOS--------------------------------------------------
 // MALBEC
 Producto.create({
@@ -399,7 +400,7 @@ Producto.create({
     nombre: "Luca Chardonnay. 750 ml",
     descripcion: "Apto para guarda de unos 5 años, La temperatura adecuada para su consumo es entre 10º y 12º C. Decantar por espacio de una hora antes de su servicio. Un maridaje especial seria chupe de camarones. Este plato arequipeño es un embajador de la comida peruana y lleva ingredientes como la leche, queso fresco y habas verdes que combinan perfecto con este vino.",
     precio: 1310,
-    imagen: "https://www.catadelvino.com/uploads/que-significa-la-categoria-de-vino-de-mesa-4917-1.jpg",//"https://cepadevinos.com/producto/luca-chardonnay/",
+    imagen: "https://cepadevinos.com/wp-content/uploads/2017/07/Luca_Chardonnay_dvowii.jpg",
     tipo: "Blanco",
     cepa: "Chardonnay",
     stock: 5,

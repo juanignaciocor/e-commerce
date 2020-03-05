@@ -37718,18 +37718,18 @@ __webpack_require__.r(__webpack_exports__);
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      class: "card"
+      "class": "card"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-      class: "card-header"
+      "class": "card-header"
     }, "Nombre del producto del carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      class: "card-body"
+      "class": "card-body"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-      class: "card-title"
+      "class": "card-title"
     }, "Bodega"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      class: "card-text"
+      "class": "card-text"
     }, "Precio del producto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "button",
-      class: "btn btn-outline-danger"
+      "class": "btn btn-outline-danger"
     }, "Remover del Carrito")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
   }
 });
@@ -37824,7 +37824,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "exampleInputEmail1"
+    "for": "exampleInputEmail1"
   }, "Correo Electronico"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     onChange: handleChange,
     type: "email",
@@ -37837,7 +37837,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "exampleInputPassword1"
+    "for": "exampleInputPassword1"
   }, "Contrase\xF1a"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     onChange: handleChange,
     type: "password",
@@ -37847,7 +37847,7 @@ __webpack_require__.r(__webpack_exports__);
     value: state.password,
     required: true
   })), state.error ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "alert alert-danger",
+    "class": "alert alert-danger",
     role: "alert"
   }, "Error: The email entered is not registered or the password is incorrect") : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
@@ -38089,7 +38089,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationServer01"
+    "for": "validationServer01"
   }, "Nombre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -38103,7 +38103,7 @@ __webpack_require__.r(__webpack_exports__);
   }, "Looks good!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationServer02"
+    "for": "validationServer02"
   }, "Apellido"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -38117,7 +38117,7 @@ __webpack_require__.r(__webpack_exports__);
   }, "Looks good!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationServerUsername"
+    "for": "validationServerUsername"
   }, "Fecha de Nacimiento"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -38136,7 +38136,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationServer03"
+    "for": "validationServer03"
   }, "Correo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -38150,7 +38150,7 @@ __webpack_require__.r(__webpack_exports__);
   }, "Please provide an Email.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationServer05"
+    "for": "validationServer05"
   }, "Domicilio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -38166,7 +38166,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationServer03"
+    "for": "validationServer03"
   }, "Nombre de Usuario"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -38180,7 +38180,7 @@ __webpack_require__.r(__webpack_exports__);
   }, "Please provide an Email.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationServer05"
+    "for": "validationServer05"
   }, "Contrase\xF1a"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -38203,7 +38203,7 @@ __webpack_require__.r(__webpack_exports__);
     required: true
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "form-check-label",
-    for: "invalidCheck3"
+    "for": "invalidCheck3"
   }, "Agree to terms and conditions"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "invalid-feedback"
   }, "You must agree before submitting."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -38915,7 +38915,7 @@ var LoginContainer = /*#__PURE__*/function (_React$Component) {
         });
       }).then(function () {
         return _this2.props.history.push("/");
-      }).catch(function () {
+      })["catch"](function () {
         _this2.setState({
           error: true
         });
@@ -39575,7 +39575,7 @@ var searchUserCart = function searchUserCart(userId) {
 };
 var userRemoveCart = function userRemoveCart(userId, productoId) {
   return function (dispatch, getState) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete("/api/cart/removeCart/".concat(userId, "/").concat(productoId)).then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]("/api/cart/removeCart/".concat(userId, "/").concat(productoId)).then(function (res) {
       dispatch(removeCart(res.data));
     });
   };
@@ -39629,7 +39629,7 @@ var loguearUsuario = function loguearUsuario(user) {
       return res.data;
     }).then(function (user) {
       return dispatch(logUser(user));
-    }).catch(function (err) {
+    })["catch"](function (err) {
       throw new Error(err);
     });
   };
@@ -39697,7 +39697,7 @@ var showsWines = function showsWines(vino) {
       return res.data;
     }).then(function (vino) {
       return dispatch(showWine(vino));
-    }).catch(function (err) {
+    })["catch"](function (err) {
       throw new Error(err);
     });
   };
