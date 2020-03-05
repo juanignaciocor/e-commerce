@@ -37856,6 +37856,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _containers_VinosContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../containers/VinosContainer */ "./src/containers/VinosContainer.jsx");
 /* harmony import */ var _containers_SingleWineContainer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../containers/SingleWineContainer */ "./src/containers/SingleWineContainer.jsx");
 /* harmony import */ var _containers_CartContainer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../containers/CartContainer */ "./src/containers/CartContainer.jsx");
+/* harmony import */ var _containers_CategoryTintoContainer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../containers/CategoryTintoContainer */ "./src/containers/CategoryTintoContainer.jsx");
+/* harmony import */ var _containers_CategoryBlancoContainer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../containers/CategoryBlancoContainer */ "./src/containers/CategoryBlancoContainer.jsx");
+/* harmony import */ var _containers_CategoryRosadoContainer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../containers/CategoryRosadoContainer */ "./src/containers/CategoryRosadoContainer.jsx");
+
+
+
 
 
 
@@ -37901,6 +37907,18 @@ __webpack_require__.r(__webpack_exports__);
     exact: true,
     path: "/cart",
     component: _containers_CartContainer__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/category/red",
+    component: _containers_CategoryTintoContainer__WEBPACK_IMPORTED_MODULE_11__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/category/white",
+    component: _containers_CategoryBlancoContainer__WEBPACK_IMPORTED_MODULE_12__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/category/rose",
+    component: _containers_CategoryRosadoContainer__WEBPACK_IMPORTED_MODULE_13__["default"]
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_FooterContainer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 });
 
@@ -37987,21 +38005,19 @@ __webpack_require__.r(__webpack_exports__);
     "data-toggle": "dropdown",
     "aria-haspopup": "true",
     "aria-expanded": "false"
-  }, "Dropdown"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Categorias"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown-menu",
     "aria-labelledby": "navbarDropdown"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "dropdown-item",
-    href: "#"
-  }, "Action"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "dropdown-item",
-    href: "#"
-  }, "Another action"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "dropdown-divider"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "dropdown-item",
-    href: "#"
-  }, "Something else here")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "category/red",
+    className: "dropdown-item"
+  }, "Tinto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "category/white",
+    className: "dropdown-item"
+  }, "Blanco"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "category/rose",
+    className: "dropdown-item"
+  }, "Rosado")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "form-inline my-2 my-lg-0",
     onSubmit: onSearch
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -38376,6 +38392,253 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, null)(CartContainer)));
+
+/***/ }),
+
+/***/ "./src/containers/CategoryBlancoContainer.jsx":
+/*!****************************************************!*\
+  !*** ./src/containers/CategoryBlancoContainer.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/actions/wines */ "./src/redux/actions/wines.js");
+/* harmony import */ var _components_Vinos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Vinos */ "./src/components/Vinos.jsx");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+var CategoryBlancoContainer = /*#__PURE__*/function (_React$Component) {
+  _inherits(CategoryBlancoContainer, _React$Component);
+
+  function CategoryBlancoContainer() {
+    _classCallCheck(this, CategoryBlancoContainer);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(CategoryBlancoContainer).call(this));
+  }
+
+  _createClass(CategoryBlancoContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.searchBlanco();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var blanco = this.props.blanco;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Vinos__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        vinos: blanco
+      }));
+    }
+  }]);
+
+  return CategoryBlancoContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    blanco: state.winesReducers.categoryBlancos
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    searchBlanco: function searchBlanco() {
+      return dispatch(Object(_redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__["searchBlanco"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(CategoryBlancoContainer));
+
+/***/ }),
+
+/***/ "./src/containers/CategoryRosadoContainer.jsx":
+/*!****************************************************!*\
+  !*** ./src/containers/CategoryRosadoContainer.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/actions/wines */ "./src/redux/actions/wines.js");
+/* harmony import */ var _components_Vinos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Vinos */ "./src/components/Vinos.jsx");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+var CategoryRosadoContainer = /*#__PURE__*/function (_React$Component) {
+  _inherits(CategoryRosadoContainer, _React$Component);
+
+  function CategoryRosadoContainer() {
+    _classCallCheck(this, CategoryRosadoContainer);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(CategoryRosadoContainer).call(this));
+  }
+
+  _createClass(CategoryRosadoContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.searchRosado();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var rosado = this.props.rosado;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Vinos__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        vinos: rosado
+      }));
+    }
+  }]);
+
+  return CategoryRosadoContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  console.log(ownProps);
+  return {
+    rosado: state.winesReducers.categoryRosados
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    searchRosado: function searchRosado() {
+      return dispatch(Object(_redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__["searchRosado"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(CategoryRosadoContainer));
+
+/***/ }),
+
+/***/ "./src/containers/CategoryTintoContainer.jsx":
+/*!***************************************************!*\
+  !*** ./src/containers/CategoryTintoContainer.jsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/actions/wines */ "./src/redux/actions/wines.js");
+/* harmony import */ var _components_Vinos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Vinos */ "./src/components/Vinos.jsx");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+var CategoryTintoContainer = /*#__PURE__*/function (_React$Component) {
+  _inherits(CategoryTintoContainer, _React$Component);
+
+  function CategoryTintoContainer() {
+    _classCallCheck(this, CategoryTintoContainer);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(CategoryTintoContainer).call(this));
+  }
+
+  _createClass(CategoryTintoContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.searchTinto();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var tinto = this.props.tinto;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Vinos__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        vinos: tinto
+      }));
+    }
+  }]);
+
+  return CategoryTintoContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    tinto: state.winesReducers.categoryTintos
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    searchTinto: function searchTinto() {
+      return dispatch(Object(_redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__["searchTinto"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(CategoryTintoContainer)); //const { allWines } = this.props
 
 /***/ }),
 
@@ -39164,15 +39427,21 @@ var loguearUsuario = function loguearUsuario(user) {
 /*!************************************!*\
   !*** ./src/redux/actions/wines.js ***!
   \************************************/
-/*! exports provided: showWine, allWines, showsWines, searchAllWines */
+/*! exports provided: showWine, allWines, allTintos, allBlancos, allRosados, showsWines, searchAllWines, searchTinto, searchBlanco, searchRosado */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showWine", function() { return showWine; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allWines", function() { return allWines; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allTintos", function() { return allTintos; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allBlancos", function() { return allBlancos; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allRosados", function() { return allRosados; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showsWines", function() { return showsWines; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchAllWines", function() { return searchAllWines; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchTinto", function() { return searchTinto; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchBlanco", function() { return searchBlanco; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchRosado", function() { return searchRosado; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
@@ -39190,6 +39459,24 @@ var allWines = function allWines(_allWines) {
     allWines: _allWines
   };
 };
+var allTintos = function allTintos(_allTintos) {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["ALL_TINTOS"],
+    allTintos: _allTintos
+  };
+};
+var allBlancos = function allBlancos(_allBlancos) {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["ALL_BLANCOS"],
+    allBlancos: _allBlancos
+  };
+};
+var allRosados = function allRosados(_allRosados) {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["ALL_ROSADOS"],
+    allRosados: _allRosados
+  };
+};
 var showsWines = function showsWines(vino) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/wines/search/".concat(vino)).then(function (res) {
@@ -39205,6 +39492,27 @@ var searchAllWines = function searchAllWines() {
   return function (dispatch, getState) {
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(" /api/wines/allWines").then(function (res) {
       dispatch(allWines(res.data));
+    });
+  };
+};
+var searchTinto = function searchTinto() {
+  return function (dispatch, getState) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(" /api/wines/category/tinto").then(function (res) {
+      dispatch(allTintos(res.data));
+    });
+  };
+};
+var searchBlanco = function searchBlanco() {
+  return function (dispatch, getState) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("  /api/wines/category/blanco").then(function (res) {
+      dispatch(allBlancos(res.data));
+    });
+  };
+};
+var searchRosado = function searchRosado() {
+  return function (dispatch, getState) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(" /api/wines/category/rosado").then(function (res) {
+      dispatch(allRosados(res.data));
     });
   };
 };
@@ -39338,7 +39646,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialUserState = {
   vinosBusqueda: [],
-  vinosTodos: []
+  vinosTodos: [],
+  categoryTintos: [],
+  categoryBlancos: [],
+  categoryRosados: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialUserState;
@@ -39355,6 +39666,21 @@ var initialUserState = {
         vinosTodos: action.allWines
       });
 
+    case _store_constants__WEBPACK_IMPORTED_MODULE_0__["ALL_TINTOS"]:
+      return Object.assign({}, state, {
+        categoryTintos: action.allTintos
+      });
+
+    case _store_constants__WEBPACK_IMPORTED_MODULE_0__["ALL_BLANCOS"]:
+      return Object.assign({}, state, {
+        categoryBlancos: action.allBlancos
+      });
+
+    case _store_constants__WEBPACK_IMPORTED_MODULE_0__["ALL_ROSADOS"]:
+      return Object.assign({}, state, {
+        categoryRosados: action.allRosados
+      });
+
     default:
       return state;
   }
@@ -39366,7 +39692,7 @@ var initialUserState = {
 /*!**************************************!*\
   !*** ./src/redux/store/constants.js ***!
   \**************************************/
-/*! exports provided: CREATE_USER, LOGGUE_USER, SEARCH_WINES, ALL_WINES, ADD_CART */
+/*! exports provided: CREATE_USER, LOGGUE_USER, SEARCH_WINES, ALL_WINES, ADD_CART, ALL_TINTOS, ALL_ROSADOS, ALL_BLANCOS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39376,11 +39702,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_WINES", function() { return SEARCH_WINES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_WINES", function() { return ALL_WINES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CART", function() { return ADD_CART; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_TINTOS", function() { return ALL_TINTOS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_ROSADOS", function() { return ALL_ROSADOS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_BLANCOS", function() { return ALL_BLANCOS; });
 var CREATE_USER = "CREATE_USER";
 var LOGGUE_USER = "LOGGUE_USER";
 var SEARCH_WINES = "SEARCH_WINES";
 var ALL_WINES = "ALL_WINES";
 var ADD_CART = "ADD_CART";
+var ALL_TINTOS = "ALL_TINTOS";
+var ALL_ROSADOS = "ALL_ROSADOS";
+var ALL_BLANCOS = "ALL_BLANCOS";
 
 /***/ }),
 
