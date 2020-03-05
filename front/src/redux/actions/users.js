@@ -1,5 +1,5 @@
 import axios from "axios"
-import { CREATE_USER, LOGGUE_USER } from "../store/constants"
+import { CREATE_USER, LOGGUE_USER, DESLOGUEO_USER } from "../store/constants"
 
 export const setUsuario = (user) => ({
     type: CREATE_USER,
@@ -11,6 +11,11 @@ export const logUser = (user) => ({
     user
 });
 
+export const logout = () => ({
+    type: DESLOGUEO_USER,
+
+});
+
 export const crearUsuario = (user) => dispatch =>
     axios.post('/user/register', user)
         .then(user => dispatch(logUser(user.data)))
@@ -20,3 +25,13 @@ export const loguearUsuario = (user) => dispatch =>
         .then(res => res.data)
         .then(user => dispatch(logUser(user)))
         .catch(err => { throw new Error(err) })
+
+
+export const logOut = () => {
+    return function (dispatch, getState) {
+        return axios.get("/user/logout")
+            .then((res) => {
+                dispatch(logout())
+            })
+    }
+}

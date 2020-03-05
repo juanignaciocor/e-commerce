@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import cart from "../../assets/cart.svg"
 
-export default ({ onSearch, vinos, clearInput, onChange, user }) => {
+export default ({ onSearch, vinos, clearInput, onChange, user, onLogout }) => {
     const ref = useRef(null)
     return (
 
@@ -20,8 +20,8 @@ export default ({ onSearch, vinos, clearInput, onChange, user }) => {
                         <li className="nav-item botones">
                             <Link to="/login" className="nav-link" >Log In </Link>
                         </li>
-                        <li className="nav-item botones">
-                            <Link to="/login" className="nav-link" >Log Out</Link>
+                        <li className="nav-item botones" onClick={onLogout} >
+                            <Link to="/login" className="nav-link"  >Log Out</Link>
                         </li>
                         <li className="nav-item botones">
                             <Link className="nav-link" to="/allWines">All Products </Link>
@@ -29,9 +29,9 @@ export default ({ onSearch, vinos, clearInput, onChange, user }) => {
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link to="category/red" className="dropdown-item" >Red</Link>
-                                <Link to="category/white" className="dropdown-item">White</Link>
-                                <Link to="category/rose" className="dropdown-item">Rose</Link>
+                                <Link to="/category/red" className="dropdown-item" >Red</Link>
+                                <Link to="/category/white" className="dropdown-item">White</Link>
+                                <Link to="/category/rose" className="dropdown-item">Rose</Link>
                             </div>
                         </li>
                     </ul>

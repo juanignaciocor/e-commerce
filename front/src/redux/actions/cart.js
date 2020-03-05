@@ -17,7 +17,6 @@ export const removeCart = (remove) => ({
 
 });
 export const createCartItem = (item) => dispatch => {
-    console.log("llegue al aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacion",item)
     axios.post('/api/cart/add', item)
         .then(res => res.data)
         .then(carrito => dispatch(addCart(carrito)))

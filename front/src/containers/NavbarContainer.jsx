@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
 import { showsWines } from "../redux/actions/wines"
+import { logOut } from "../redux/actions/users"
 
 
 class NavbarContainer extends Component {
@@ -13,6 +14,7 @@ class NavbarContainer extends Component {
     }
     this.onSearch = this.onSearch.bind(this)
     this.onChange = this.onChange.bind(this)
+    this.onLogout = this.onLogout.bind(this)
   }
 
   onSearch(e) {
@@ -26,11 +28,16 @@ class NavbarContainer extends Component {
   onChange(e) {
     this.setState({ clearInput: e.target.value })
   }
+  onLogout() {
+
+    this.props.logOut()
+
+  }
 
   render() {
     const { vinos } = this.props
     return (
-      <Navbar onSearch={this.onSearch} vinos={vinos} onChange={this.onChange} clearInput={this.state.clearInput} />
+      <Navbar onLogout={this.onLogout} onSearch={this.onSearch} vinos={vinos} onChange={this.onChange} clearInput={this.state.clearInput} />
     )
   }
 }
@@ -44,6 +51,9 @@ class NavbarContainer extends Component {
 const matchDispatchToProps = function (dispatch, ownprops) {
   return {
     showsWines: (vino) => dispatch(showsWines(vino)),
+    logOut: () => dispatch(logOut()),
+
+
   }
 }
 

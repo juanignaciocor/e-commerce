@@ -37688,7 +37688,6 @@ __webpack_require__.r(__webpack_exports__);
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito de ".concat(user.username)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "container"
     }, searchCart.map(function (item) {
-      console.log("************", item);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
         key: item.producto.id
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -37967,7 +37966,8 @@ __webpack_require__.r(__webpack_exports__);
       vinos = _ref.vinos,
       clearInput = _ref.clearInput,
       onChange = _ref.onChange,
-      user = _ref.user;
+      user = _ref.user,
+      onLogout = _ref.onLogout;
   var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: " navegador navbar  navbar-expand-lg navbar-light  "
@@ -38002,7 +38002,8 @@ __webpack_require__.r(__webpack_exports__);
     to: "/login",
     className: "nav-link"
   }, "Log In ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item botones"
+    className: "nav-item botones",
+    onClick: onLogout
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/login",
     className: "nav-link"
@@ -38025,13 +38026,13 @@ __webpack_require__.r(__webpack_exports__);
     className: "dropdown-menu",
     "aria-labelledby": "navbarDropdown"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "category/red",
+    to: "/category/red",
     className: "dropdown-item"
   }, "Red"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "category/white",
+    to: "/category/white",
     className: "dropdown-item"
   }, "White"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "category/rose",
+    to: "/category/rose",
     className: "dropdown-item"
   }, "Rose")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/cart"
@@ -38964,6 +38965,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_wines__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/actions/wines */ "./src/redux/actions/wines.js");
+/* harmony import */ var _redux_actions_users__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../redux/actions/users */ "./src/redux/actions/users.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38988,6 +38990,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var NavbarContainer = /*#__PURE__*/function (_Component) {
   _inherits(NavbarContainer, _Component);
 
@@ -39002,6 +39005,7 @@ var NavbarContainer = /*#__PURE__*/function (_Component) {
     };
     _this.onSearch = _this.onSearch.bind(_assertThisInitialized(_this));
     _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
+    _this.onLogout = _this.onLogout.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -39027,10 +39031,16 @@ var NavbarContainer = /*#__PURE__*/function (_Component) {
       });
     }
   }, {
+    key: "onLogout",
+    value: function onLogout() {
+      this.props.logOut();
+    }
+  }, {
     key: "render",
     value: function render() {
       var vinos = this.props.vinos;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        onLogout: this.onLogout,
         onSearch: this.onSearch,
         vinos: vinos,
         onChange: this.onChange,
@@ -39051,6 +39061,9 @@ var matchDispatchToProps = function matchDispatchToProps(dispatch, ownprops) {
   return {
     showsWines: function showsWines(vino) {
       return dispatch(Object(_redux_actions_wines__WEBPACK_IMPORTED_MODULE_4__["showsWines"])(vino));
+    },
+    logOut: function logOut() {
+      return dispatch(Object(_redux_actions_users__WEBPACK_IMPORTED_MODULE_5__["logOut"])());
     }
   };
 };
@@ -39560,7 +39573,6 @@ var removeCart = function removeCart(remove) {
 };
 var createCartItem = function createCartItem(item) {
   return function (dispatch) {
-    console.log("llegue al aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacion", item);
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/cart/add', item).then(function (res) {
       return res.data;
     }).then(function (carrito) {
@@ -39591,15 +39603,17 @@ var userRemoveCart = function userRemoveCart(userId, productoId) {
 /*!************************************!*\
   !*** ./src/redux/actions/users.js ***!
   \************************************/
-/*! exports provided: setUsuario, logUser, crearUsuario, loguearUsuario */
+/*! exports provided: setUsuario, logUser, logout, crearUsuario, loguearUsuario, logOut */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setUsuario", function() { return setUsuario; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logUser", function() { return logUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "crearUsuario", function() { return crearUsuario; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loguearUsuario", function() { return loguearUsuario; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logOut", function() { return logOut; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
@@ -39615,6 +39629,11 @@ var logUser = function logUser(user) {
   return {
     type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["LOGGUE_USER"],
     user: user
+  };
+};
+var logout = function logout() {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["DESLOGUEO_USER"]
   };
 };
 var crearUsuario = function crearUsuario(user) {
@@ -39635,6 +39654,13 @@ var loguearUsuario = function loguearUsuario(user) {
       return dispatch(logUser(user));
     })["catch"](function (err) {
       throw new Error(err);
+    });
+  };
+};
+var logOut = function logOut() {
+  return function (dispatch, getState) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/user/logout").then(function (res) {
+      dispatch(logout());
     });
   };
 };
@@ -39828,11 +39854,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 var initialUserState = {
   logged: {}
@@ -39847,7 +39875,7 @@ var initialUserState = {
         logged: action.user
       });
 
-    case "LOGGUE_OUT_USER":
+    case _store_constants__WEBPACK_IMPORTED_MODULE_0__["DESLOGUEO_USER"]:
       return _objectSpread({}, state, {
         logged: {}
       });
@@ -39924,13 +39952,14 @@ var initialUserState = {
 /*!**************************************!*\
   !*** ./src/redux/store/constants.js ***!
   \**************************************/
-/*! exports provided: CREATE_USER, LOGGUE_USER, SEARCH_WINES, ALL_WINES, ADD_CART, ALL_TINTOS, ALL_ROSADOS, ALL_BLANCOS, SEARCH_CART, REMOVE_CART */
+/*! exports provided: CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, SEARCH_WINES, ALL_WINES, ADD_CART, ALL_TINTOS, ALL_ROSADOS, ALL_BLANCOS, SEARCH_CART, REMOVE_CART */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_USER", function() { return CREATE_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGGUE_USER", function() { return LOGGUE_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESLOGUEO_USER", function() { return DESLOGUEO_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_WINES", function() { return SEARCH_WINES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_WINES", function() { return ALL_WINES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CART", function() { return ADD_CART; });
@@ -39941,6 +39970,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_CART", function() { return REMOVE_CART; });
 var CREATE_USER = "CREATE_USER";
 var LOGGUE_USER = "LOGGUE_USER";
+var DESLOGUEO_USER = "DESLOGUEO_USER";
 var SEARCH_WINES = "SEARCH_WINES";
 var ALL_WINES = "ALL_WINES";
 var ADD_CART = "ADD_CART";
