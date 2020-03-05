@@ -41,7 +41,7 @@ export default ({ onSearch, vinos }) => {
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ref={ref}></input>
-                        <Link to='/wines/search'><button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={(e) => { onSearch(ref.current.value) }}>Search</button></Link>
+                        <Link to='/wines/search'><button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={(e) => { onSearch(ref.current.value)}}>Search</button></Link>
                     </form>
                 </div>
             </nav>
