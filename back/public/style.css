@@ -44,4 +44,13 @@
 	font-size: medium;
 }
 
+#btnCartNav{
+	width: 80px;
+	padding: 1px;
+	color: black;
+	margin-right: 15px;
+	background-color: #ebe0d200;
+	border:none;
+}
+
     
