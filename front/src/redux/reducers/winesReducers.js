@@ -1,4 +1,4 @@
-import { SEARCH_WINES, ALL_WINES } from "../store/constants"
+import { SEARCH_WINES, ALL_WINES, ALL_TINTOS, ALL_BLANCOS, ALL_ROSADOS } from "../store/constants"
 
 
 
@@ -6,6 +6,9 @@ import { SEARCH_WINES, ALL_WINES } from "../store/constants"
 const initialUserState = {
     vinosBusqueda: [],
     vinosTodos: [],
+    categoryTintos: [],
+    categoryBlancos: [],
+    categoryRosados: []
 }
 
 export default function (state = initialUserState, action) {
@@ -15,6 +18,21 @@ export default function (state = initialUserState, action) {
         case ALL_WINES:
             return Object.assign({}, state, {
                 vinosTodos: action.allWines,
+
+            });
+        case ALL_TINTOS:
+            return Object.assign({}, state, {
+                categoryTintos: action.allTintos,
+
+            });
+        case ALL_BLANCOS:
+            return Object.assign({}, state, {
+                categoryBlancos: action.allBlancos,
+
+            });
+        case ALL_ROSADOS:
+            return Object.assign({}, state, {
+                categoryRosados: action.allRosados,
 
             });
         default:
