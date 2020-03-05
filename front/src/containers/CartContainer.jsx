@@ -12,7 +12,7 @@ class CartContainer extends React.Component{
     render(){
         return(
             <div>
-                <Cart user = {this.props.user}/>
+                <Cart user = {this.props.user} cart = {this.props.cart}/>
             </div>
         )
     }
@@ -21,7 +21,8 @@ class CartContainer extends React.Component{
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        user: state.userReducers.logged
+        user: state.userReducers.logged,
+        cart: state.cartReducers.cart
     }
 }
 

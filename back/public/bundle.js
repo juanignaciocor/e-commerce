@@ -37666,23 +37666,50 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var user = _ref.user;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), user.username ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito de ".concat(user.username)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    "class": "card-header"
-  }, "Nombre del producto del carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card-body"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    "class": "card-title"
-  }, "Bodega"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    "class": "card-text"
-  }, "Precio del producto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    "class": "btn btn-outline-danger"
-  }, "Remover del Carrito")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
+  var user = _ref.user,
+      cart = _ref.cart;
+
+  if (user.username) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito de ".concat(user.username)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container"
+    }, cart.map(function (item) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
+        key: item.id
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/wines/".concat(item.productoId)
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        "class": "card-header"
+      }, "Nombre del producto del carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "card-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        "class": "card-title"
+      }, "Bodega"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        "class": "card-text"
+      }, "Precio del producto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        "class": "btn btn-outline-danger"
+      }, "Remover del Carrito")))));
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
+  } else {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      "class": "card"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+      "class": "card-header"
+    }, "Nombre del producto del carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      "class": "card-body"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+      "class": "card-title"
+    }, "Bodega"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      "class": "card-text"
+    }, "Precio del producto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      "class": "btn btn-outline-danger"
+    }, "Remover del Carrito")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
+  }
 });
 
 /***/ }),
@@ -38330,7 +38357,8 @@ var CartContainer = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Cart__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        user: this.props.user
+        user: this.props.user,
+        cart: this.props.cart
       }));
     }
   }]);
@@ -38340,7 +38368,8 @@ var CartContainer = /*#__PURE__*/function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    user: state.userReducers.logged
+    user: state.userReducers.logged,
+    cart: state.cartReducers.cart
   };
 };
 
