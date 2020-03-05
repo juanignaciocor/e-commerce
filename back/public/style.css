@@ -23,4 +23,25 @@
 	top:1px;
 }
 
+.imgCarrito{
+	position: relative;
+	max-width: 40px;
+	max-height: 40px;
+	float: right;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	
+}
+.precioCarrito{
+	display: inline-block;
+}
+.precio{
+	text-align: center;
+}
+
+.vino{
+	text-align: center;
+	font-size: medium;
+}
+
     

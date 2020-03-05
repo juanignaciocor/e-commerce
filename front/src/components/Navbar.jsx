@@ -28,6 +28,9 @@ export default ({ onSearch, vinos, clearInput, onChange }) => {
                         <li className="nav-item">
                             <Link to="/cart"><button type="button" className="btn btn-secondary">Cart </button></Link>
                         </li>
+                        <li className="nav-item botones">
+                            <Link className="nav-link" to="/allWines">Productos </Link>
+                        </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias</a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">

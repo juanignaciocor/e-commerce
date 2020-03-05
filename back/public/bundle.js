@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/cart.svg":
+/*!*************************!*\
+  !*** ./assets/cart.svg ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> <svg viewBox=\"0 -16 512.00018 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m396 440c5.519531 0 10-4.480469 10-10s-4.480469-10-10-10-10 4.480469-10 10 4.480469 10 10 10zm0 0\"/><path d=\"m230 440c5.519531 0 10-4.480469 10-10s-4.480469-10-10-10-10 4.480469-10 10 4.480469 10 10 10zm0 0\"/><path d=\"m509.882812 123.847656c-1.894531-2.429687-4.804687-3.847656-7.882812-3.847656h-360.003906l-22.792969-96.875c-3.210937-13.617188-15.222656-23.125-29.203125-23.125h-60c-16.542969 0-30 13.457031-30 30s13.457031 30 30 30h36.238281l74.558594 316.875c3.210937 13.617188 15.222656 23.125 29.203125 23.125h20.027344c-6.292969 8.363281-10.027344 18.753906-10.027344 30 0 27.570312 22.429688 50 50 50s50-22.429688 50-50c0-11.246094-3.734375-21.636719-10.027344-30h86.054688c-6.292969 8.363281-10.027344 18.753906-10.027344 30 0 27.570312 22.429688 50 50 50s50-22.429688 50-50c0-11.246094-3.734375-21.636719-10.027344-30h.027344c16.542969 0 30-13.457031 30-30s-13.457031-30-30-30h-242.238281l-9.414063-40h58.621094.019531.015625 145.992188.019531.019531 57.347656c13.785157 0 25.757813-9.34375 29.109376-22.726562l36.210937-144.847657c.746094-2.988281.074219-6.152343-1.820313-8.578125zm-35.691406 76.152344h-63.863281l7.5-60h71.363281zm-118.191406 20h31.671875l-7.5 60h-54.171875v-30c0-5.523438-4.476562-10-10-10s-10 4.476562-10 10v30h-54.171875l-7.5-60h31.671875c5.523438 0 10-4.476562 10-10s-4.476562-10-10-10h-34.171875l-7.5-60h71.671875v30c0 5.523438 4.476562 10 10 10s10-4.476562 10-10v-30h71.671875l-7.5 60h-34.171875c-5.523438 0-10 4.476562-10 10s4.476562 10 10 10zm-176.359375 60-14.117187-60h58.648437l7.5 60zm34.53125-140 7.5 60h-60.855469l-14.113281-60zm45.828125 290c0 16.542969-13.457031 30-30 30s-30-13.457031-30-30 13.457031-30 30-30 30 13.457031 30 30zm166 0c0 16.542969-13.457031 30-30 30s-30-13.457031-30-30 13.457031-30 30-30 30 13.457031 30 30zm10-70c5.515625 0 10 4.484375 10 10s-4.484375 10-10 10h-266c-4.660156 0-8.664062-3.171875-9.734375-7.710938l-78.1875-332.289062h-52.078125c-5.515625 0-10-4.484375-10-10s4.484375-10 10-10h60c4.660156 0 8.664062 3.171875 9.734375 7.710938l62.1875 264.292968c.003906.015625.007813.03125.011719.050782l15.988281 67.945312zm20.089844-87.582031c-1.117188 4.464843-5.109375 7.582031-9.710938 7.582031h-46.050781l7.5-60h61.367187zm0 0\"/><path d=\"m316 200c-5.519531 0-10 4.480469-10 10s4.480469 10 10 10 10-4.480469 10-10-4.480469-10-10-10zm0 0\"/></svg>");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
 /*!************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
@@ -37675,6 +37686,7 @@ __webpack_require__.r(__webpack_exports__);
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito de ".concat(user.username)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "container"
     }, searchCart.map(function (item) {
+      console.log("************", item);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
         key: item.producto.id
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -38004,6 +38016,11 @@ __webpack_require__.r(__webpack_exports__);
     type: "button",
     className: "btn btn-secondary"
   }, "Cart "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "nav-item botones"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: "nav-link",
+    to: "/allWines"
+  }, "Productos ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item dropdown"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link dropdown-toggle",
@@ -38256,10 +38273,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/cart.svg */ "./assets/cart.svg");
+/* harmony import */ var _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_cart_svg__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var vinos = _ref.vinos;
+  var vinos = _ref.vinos,
+      handlerClick = _ref.handlerClick;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "textoCentrado"
   }, " VINOS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -38271,7 +38292,20 @@ __webpack_require__.r(__webpack_exports__);
       to: "/wines/".concat(vino.id)
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: vino.imagen
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figcaption", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, vino.nombre), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Precio: $", vino.precio, ",00")))));
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figcaption", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "vino"
+    }, vino.nombre), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "precioCarrito"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "precio"
+    }, "$ ", vino.precio, ",00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: function onClick() {
+        return handlerClick(vino.id);
+      }
+    }, " A\xF1adir a Carrito  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "imgCarrito",
+      src: _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2___default.a
+    })))));
   })));
 });
 
@@ -38449,6 +38483,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/actions/wines */ "./src/redux/actions/wines.js");
 /* harmony import */ var _components_Vinos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Vinos */ "./src/components/Vinos.jsx");
+/* harmony import */ var _redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/actions/cart */ "./src/redux/actions/cart.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38459,9 +38494,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -38472,13 +38507,18 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var CategoryBlancoContainer = /*#__PURE__*/function (_React$Component) {
   _inherits(CategoryBlancoContainer, _React$Component);
 
   function CategoryBlancoContainer() {
+    var _this;
+
     _classCallCheck(this, CategoryBlancoContainer);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(CategoryBlancoContainer).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CategoryBlancoContainer).call(this));
+    _this.handlerClick = _this.handlerClick.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(CategoryBlancoContainer, [{
@@ -38487,11 +38527,22 @@ var CategoryBlancoContainer = /*#__PURE__*/function (_React$Component) {
       this.props.searchBlanco();
     }
   }, {
+    key: "handlerClick",
+    value: function handlerClick(vinoId) {
+      var obj = {
+        idProducto: vinoId,
+        idUsuario: this.props.user,
+        cantidad: 1
+      };
+      this.props.createCartItem(obj)(alert("Producto añadido a tu carrito"));
+    }
+  }, {
     key: "render",
     value: function render() {
       var blanco = this.props.blanco;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Vinos__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        vinos: blanco
+        vinos: blanco,
+        handlerClick: this.handlerClick
       }));
     }
   }]);
@@ -38501,7 +38552,8 @@ var CategoryBlancoContainer = /*#__PURE__*/function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    blanco: state.winesReducers.categoryBlancos
+    blanco: state.winesReducers.categoryBlancos,
+    user: state.userReducers.logged
   };
 };
 
@@ -38509,6 +38561,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
   return {
     searchBlanco: function searchBlanco() {
       return dispatch(Object(_redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__["searchBlanco"])());
+    },
+    createCartItem: function createCartItem(item) {
+      return dispatch(Object(_redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__["createCartItem"])(item));
     }
   };
 };
@@ -38531,6 +38586,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/actions/wines */ "./src/redux/actions/wines.js");
 /* harmony import */ var _components_Vinos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Vinos */ "./src/components/Vinos.jsx");
+/* harmony import */ var _redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/actions/cart */ "./src/redux/actions/cart.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38541,9 +38597,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -38554,13 +38610,18 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var CategoryRosadoContainer = /*#__PURE__*/function (_React$Component) {
   _inherits(CategoryRosadoContainer, _React$Component);
 
   function CategoryRosadoContainer() {
+    var _this;
+
     _classCallCheck(this, CategoryRosadoContainer);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(CategoryRosadoContainer).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CategoryRosadoContainer).call(this));
+    _this.handlerClick = _this.handlerClick.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(CategoryRosadoContainer, [{
@@ -38569,10 +38630,21 @@ var CategoryRosadoContainer = /*#__PURE__*/function (_React$Component) {
       this.props.searchRosado();
     }
   }, {
+    key: "handlerClick",
+    value: function handlerClick(vinoId) {
+      var obj = {
+        idProducto: vinoId,
+        idUsuario: this.props.user,
+        cantidad: 1
+      };
+      this.props.createCartItem(obj)(alert("Producto añadido a tu carrito"));
+    }
+  }, {
     key: "render",
     value: function render() {
       var rosado = this.props.rosado;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Vinos__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        handlerClick: this.handlerClick,
         vinos: rosado
       }));
     }
@@ -38583,7 +38655,8 @@ var CategoryRosadoContainer = /*#__PURE__*/function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    rosado: state.winesReducers.categoryRosados
+    rosado: state.winesReducers.categoryRosados,
+    user: state.userReducers.logged
   };
 };
 
@@ -38591,6 +38664,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
   return {
     searchRosado: function searchRosado() {
       return dispatch(Object(_redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__["searchRosado"])());
+    },
+    createCartItem: function createCartItem(item) {
+      return dispatch(Object(_redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__["createCartItem"])(item));
     }
   };
 };
@@ -38613,6 +38689,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/actions/wines */ "./src/redux/actions/wines.js");
 /* harmony import */ var _components_Vinos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Vinos */ "./src/components/Vinos.jsx");
+/* harmony import */ var _redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/actions/cart */ "./src/redux/actions/cart.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38623,9 +38700,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -38636,13 +38713,18 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var CategoryTintoContainer = /*#__PURE__*/function (_React$Component) {
   _inherits(CategoryTintoContainer, _React$Component);
 
   function CategoryTintoContainer() {
+    var _this;
+
     _classCallCheck(this, CategoryTintoContainer);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(CategoryTintoContainer).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CategoryTintoContainer).call(this));
+    _this.handlerClick = _this.handlerClick.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(CategoryTintoContainer, [{
@@ -38651,10 +38733,21 @@ var CategoryTintoContainer = /*#__PURE__*/function (_React$Component) {
       this.props.searchTinto();
     }
   }, {
+    key: "handlerClick",
+    value: function handlerClick(vinoId) {
+      var obj = {
+        idProducto: vinoId,
+        idUsuario: this.props.user,
+        cantidad: 1
+      };
+      this.props.createCartItem(obj)(alert("Producto añadido a tu carrito"));
+    }
+  }, {
     key: "render",
     value: function render() {
       var tinto = this.props.tinto;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Vinos__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        handlerClick: this.handlerClick,
         vinos: tinto
       }));
     }
@@ -38665,7 +38758,8 @@ var CategoryTintoContainer = /*#__PURE__*/function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    tinto: state.winesReducers.categoryTintos
+    tinto: state.winesReducers.categoryTintos,
+    user: state.userReducers.logged
   };
 };
 
@@ -38673,11 +38767,14 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
   return {
     searchTinto: function searchTinto() {
       return dispatch(Object(_redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__["searchTinto"])());
+    },
+    createCartItem: function createCartItem(item) {
+      return dispatch(Object(_redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__["createCartItem"])(item));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(CategoryTintoContainer)); //const { allWines } = this.props
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(CategoryTintoContainer));
 
 /***/ }),
 
@@ -39198,6 +39295,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _components_Vinos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Vinos */ "./src/components/Vinos.jsx");
+/* harmony import */ var _redux_actions_cart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../redux/actions/cart */ "./src/redux/actions/cart.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39208,9 +39306,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -39220,20 +39318,36 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var VinosContainer = /*#__PURE__*/function (_Component) {
   _inherits(VinosContainer, _Component);
 
   function VinosContainer(props) {
+    var _this;
+
     _classCallCheck(this, VinosContainer);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(VinosContainer).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(VinosContainer).call(this, props));
+    _this.handlerClick = _this.handlerClick.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(VinosContainer, [{
+    key: "handlerClick",
+    value: function handlerClick(vinoId) {
+      var obj = {
+        idProducto: vinoId,
+        idUsuario: this.props.user,
+        cantidad: 1
+      };
+      this.props.createCartItem(obj)(alert("Producto añadido a tu carrito"));
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Vinos__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        vinos: this.props.vinos
+        vinos: this.props.vinos,
+        handlerClick: this.handlerClick
       });
     }
   }]);
@@ -39243,11 +39357,20 @@ var VinosContainer = /*#__PURE__*/function (_Component) {
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    vinos: state.winesReducers.vinosBusqueda
+    vinos: state.winesReducers.vinosBusqueda,
+    user: state.userReducers.logged
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, null)(VinosContainer));
+var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    createCartItem: function createCartItem(item) {
+      return dispatch(Object(_redux_actions_cart__WEBPACK_IMPORTED_MODULE_3__["createCartItem"])(item));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(VinosContainer));
 
 /***/ }),
 
@@ -39265,6 +39388,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/actions/wines */ "./src/redux/actions/wines.js");
 /* harmony import */ var _components_Vinos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Vinos */ "./src/components/Vinos.jsx");
+/* harmony import */ var _redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/actions/cart */ "./src/redux/actions/cart.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39275,9 +39399,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -39288,13 +39412,18 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var allWines = /*#__PURE__*/function (_React$Component) {
   _inherits(allWines, _React$Component);
 
   function allWines() {
+    var _this;
+
     _classCallCheck(this, allWines);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(allWines).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(allWines).call(this));
+    _this.handlerClick = _this.handlerClick.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(allWines, [{
@@ -39303,10 +39432,21 @@ var allWines = /*#__PURE__*/function (_React$Component) {
       this.props.searchAllWines();
     }
   }, {
+    key: "handlerClick",
+    value: function handlerClick(vinoId) {
+      var obj = {
+        idProducto: vinoId,
+        idUsuario: this.props.user,
+        cantidad: 1
+      };
+      this.props.createCartItem(obj)(alert("Producto añadido a tu carrito"));
+    }
+  }, {
     key: "render",
     value: function render() {
       var allWines = this.props.allWines;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Vinos__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        handlerClick: this.handlerClick,
         vinos: allWines
       }));
     }
@@ -39318,7 +39458,8 @@ var allWines = /*#__PURE__*/function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    allWines: state.winesReducers.vinosTodos
+    allWines: state.winesReducers.vinosTodos,
+    user: state.userReducers.logged
   };
 };
 
@@ -39326,6 +39467,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
   return {
     searchAllWines: function searchAllWines() {
       return dispatch(Object(_redux_actions_wines__WEBPACK_IMPORTED_MODULE_2__["searchAllWines"])());
+    },
+    createCartItem: function createCartItem(item) {
+      return dispatch(Object(_redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__["createCartItem"])(item));
     }
   };
 };
@@ -39414,8 +39558,8 @@ var createCartItem = function createCartItem(item) {
   return function (dispatch) {
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/cart/add', item).then(function (res) {
       return res.data;
-    }).then(function (producto) {
-      return dispatch(addCart(producto));
+    }).then(function (carrito) {
+      return console.log("++++++++++++++", carrito), dispatch(addCart(carrito));
     }).then(function (err) {
       return err;
     });

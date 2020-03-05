@@ -10,6 +10,8 @@ export default ({ user, cart, searchCart, removeClick }) => {
                 <hr></hr>
                 <div className="container">
                     {searchCart.map(item => {
+                        console.log("************", item);
+
                         return (
                             <figure key={item.producto.id}>
 

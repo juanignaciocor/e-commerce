@@ -8,9 +8,11 @@ router.post("/add", (req, res) => {
     Carrito.create({
         cantidad: req.body.cantidad
     })
-        .then(carrito => carrito.setProducto(req.body.idProducto.id))
-        .then(carrito => carrito.setUsuario(req.body.idUsuario.id))
-        .then(carrito => res.send(carrito))
+        .then(carrito => (
+            carrito.setProducto(req.body.idProducto)))
+        .then(carrito => (
+            carrito.setUsuario(req.body.idUsuario.id)))
+        .then(carrito => (res.send(carrito)))
 })
 router.get("/userCart/:usuario", (req, res) => {
     Carrito.findAll({
@@ -23,7 +25,7 @@ router.get("/userCart/:usuario", (req, res) => {
         }]
     })
         .then((data) => {
-
+            console.log(data, 'SOY LA DATAAAAAAAAAAAAAAAA')
             res.json(data)
         })
 
