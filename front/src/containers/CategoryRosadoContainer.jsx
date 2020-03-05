@@ -28,11 +28,8 @@ class CategoryRosadoContainer extends React.Component {
 
 
 const mapStateToProps = function (state, ownProps) {
-    console.log(ownProps)
     return {
         rosado: state.winesReducers.categoryRosados
-
-
     }
 };
 
