@@ -37688,7 +37688,6 @@ __webpack_require__.r(__webpack_exports__);
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito de ".concat(user.username)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "container"
     }, searchCart.map(function (item) {
-      console.log("************", item);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
         key: item.producto.id
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -37958,13 +37957,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/cart.svg */ "./assets/cart.svg");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var onSearch = _ref.onSearch,
       vinos = _ref.vinos,
       clearInput = _ref.clearInput,
-      onChange = _ref.onChange;
+      onChange = _ref.onChange,
+      user = _ref.user,
+      onLogout = _ref.onLogout;
   var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: " navegador navbar  navbar-expand-lg navbar-light  "
@@ -37991,38 +37994,25 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item botones"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/"
-  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    to: "/register",
+    className: "nav-link"
+  }, "Register ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item botones"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/register"
-  }, "Registrarse ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item"
+    to: "/login",
+    className: "nav-link"
+  }, "Log In ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "nav-item botones",
+    onClick: onLogout
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/login"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    className: "btn btn-secondary"
-  }, "Log In "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item botones"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/register"
-  }, "Log Out ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/cart"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    className: "btn btn-secondary"
-  }, "Cart "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    to: "/login",
+    className: "nav-link"
+  }, "Log Out")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item botones"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "nav-link",
     to: "/allWines"
-  }, "Productos ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "All Products ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item dropdown"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link dropdown-toggle",
@@ -38032,19 +38022,28 @@ __webpack_require__.r(__webpack_exports__);
     "data-toggle": "dropdown",
     "aria-haspopup": "true",
     "aria-expanded": "false"
-  }, "Categorias"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown-menu",
     "aria-labelledby": "navbarDropdown"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/category/red",
     className: "dropdown-item"
-  }, "Tinto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "Red"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/category/white",
     className: "dropdown-item"
-  }, "Blanco"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "White"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/category/rose",
     className: "dropdown-item"
-  }, "Rosado")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  }, "Rose")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/cart"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "button",
+    className: "btn btn-secondary",
+    id: "btnCartNav"
+  }, "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "imgCarrito",
+    src: _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }), " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "form-inline my-2 my-lg-0",
     onSubmit: onSearch
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -38056,7 +38055,7 @@ __webpack_require__.r(__webpack_exports__);
     value: clearInput,
     onChange: onChange
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn btn-outline-success my-2 my-sm-0",
+    className: "btn btn-outline-secondary my-2 my-sm-0",
     type: "submit"
   }, "Search")))));
 });
@@ -38233,28 +38232,28 @@ __webpack_require__.r(__webpack_exports__);
     className: "media"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: vinoSeleccionado.imagen,
-    className: "align-self-center mr-3",
+    className: "align-self-center mr-3 imagenSingle",
     alt: "botella-de-vino"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "media-body"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    className: "mt-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "mt-0 single"
   }, vinoSeleccionado.nombre), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Bodega: ", vinoSeleccionado.bodega), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Precio: $", vinoSeleccionado.precio, ",00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Tipo: ", vinoSeleccionado.tipo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Cepa: ", vinoSeleccionado.cepa), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Lugar de Origen: ", vinoSeleccionado.provincia), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Graduaci\xF3n alcoh\xF3lica: ", vinoSeleccionado.alcohol, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Descripci\xF3n: ", vinoSeleccionado.descripcion), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0"
+    className: "mb-0 single"
   }, " Stock: ", vinoSeleccionado.stock), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: handlerClick,
     className: "btnComprar"
@@ -38966,6 +38965,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_wines__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/actions/wines */ "./src/redux/actions/wines.js");
+/* harmony import */ var _redux_actions_users__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../redux/actions/users */ "./src/redux/actions/users.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38990,6 +38990,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var NavbarContainer = /*#__PURE__*/function (_Component) {
   _inherits(NavbarContainer, _Component);
 
@@ -39004,6 +39005,7 @@ var NavbarContainer = /*#__PURE__*/function (_Component) {
     };
     _this.onSearch = _this.onSearch.bind(_assertThisInitialized(_this));
     _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
+    _this.onLogout = _this.onLogout.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -39029,10 +39031,16 @@ var NavbarContainer = /*#__PURE__*/function (_Component) {
       });
     }
   }, {
+    key: "onLogout",
+    value: function onLogout() {
+      this.props.logOut();
+    }
+  }, {
     key: "render",
     value: function render() {
       var vinos = this.props.vinos;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        onLogout: this.onLogout,
         onSearch: this.onSearch,
         vinos: vinos,
         onChange: this.onChange,
@@ -39042,12 +39050,20 @@ var NavbarContainer = /*#__PURE__*/function (_Component) {
   }]);
 
   return NavbarContainer;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]); // const mapStateToProps = (state, ownProps) => {
+//   return {
+//     user: state.userReducers.logged
+//   }
+// }
+
 
 var matchDispatchToProps = function matchDispatchToProps(dispatch, ownprops) {
   return {
     showsWines: function showsWines(vino) {
       return dispatch(Object(_redux_actions_wines__WEBPACK_IMPORTED_MODULE_4__["showsWines"])(vino));
+    },
+    logOut: function logOut() {
+      return dispatch(Object(_redux_actions_users__WEBPACK_IMPORTED_MODULE_5__["logOut"])());
     }
   };
 };
@@ -39246,7 +39262,7 @@ var SingleWineContainer = /*#__PURE__*/function (_Component) {
     key: "handlerClick",
     value: function handlerClick(e) {
       var obj = {
-        idProducto: this.state.vinoSeleccionado,
+        idProducto: this.state.vinoSeleccionado.id,
         idUsuario: this.props.user,
         cantidad: 1
       };
@@ -39560,9 +39576,9 @@ var createCartItem = function createCartItem(item) {
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/cart/add', item).then(function (res) {
       return res.data;
     }).then(function (carrito) {
-      return console.log("++++++++++++++", carrito), dispatch(addCart(carrito));
-    }).then(function (err) {
-      return err;
+      return dispatch(addCart(carrito));
+    })["catch"](function (err) {
+      return console.log(err);
     });
   };
 };
@@ -39587,7 +39603,7 @@ var userRemoveCart = function userRemoveCart(userId, productoId) {
 /*!************************************!*\
   !*** ./src/redux/actions/users.js ***!
   \************************************/
-/*! exports provided: setUsuario, logUser, logout, crearUsuario, loguearUsuario, deslogueandome */
+/*! exports provided: setUsuario, logUser, logout, crearUsuario, loguearUsuario, logOut */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39597,7 +39613,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "crearUsuario", function() { return crearUsuario; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loguearUsuario", function() { return loguearUsuario; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deslogueandome", function() { return deslogueandome; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logOut", function() { return logOut; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
@@ -39617,8 +39633,7 @@ var logUser = function logUser(user) {
 };
 var logout = function logout() {
   return {
-    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["DESLOGUEO_USER"],
-    user: user
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["DESLOGUEO_USER"]
   };
 };
 var crearUsuario = function crearUsuario(user) {
@@ -39642,7 +39657,7 @@ var loguearUsuario = function loguearUsuario(user) {
     });
   };
 };
-var deslogueandome = function deslogueandome() {
+var logOut = function logOut() {
   return function (dispatch, getState) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/user/logout").then(function (res) {
       dispatch(logout());

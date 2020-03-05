@@ -25,7 +25,6 @@ router.get("/userCart/:usuario", (req, res) => {
         }]
     })
         .then((data) => {
-            console.log(data, 'SOY LA DATAAAAAAAAAAAAAAAA')
             res.json(data)
         })
 

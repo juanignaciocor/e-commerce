@@ -13,7 +13,7 @@ export const logUser = (user) => ({
 
 export const logout = () => ({
     type: DESLOGUEO_USER,
-    user
+
 });
 
 export const crearUsuario = (user) => dispatch =>
@@ -27,7 +27,7 @@ export const loguearUsuario = (user) => dispatch =>
         .catch(err => { throw new Error(err) })
 
 
-export const deslogueandome = () => {
+export const logOut = () => {
     return function (dispatch, getState) {
         return axios.get("/user/logout")
             .then((res) => {
