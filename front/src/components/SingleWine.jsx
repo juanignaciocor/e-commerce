@@ -12,6 +12,7 @@ export default ({ vinoSeleccionado, handlerClick }) => {
                     <p className="mb-0"> Precio: ${vinoSeleccionado.precio},00</p>
                     <p className="mb-0"> Tipo: {vinoSeleccionado.tipo}</p>
                     <p className="mb-0"> Cepa: {vinoSeleccionado.cepa}</p>
+                    <p className="mb-0"> Lugar de Origen: {vinoSeleccionado.provincia}</p>
                     <p className="mb-0"> Graduación alcohólica: {vinoSeleccionado.alcohol}%</p>
                     <p className="mb-0"> Descripción: {vinoSeleccionado.descripcion}</p>
                     <p className="mb-0"> Stock: {vinoSeleccionado.stock}</p>
