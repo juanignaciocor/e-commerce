@@ -10,11 +10,15 @@ class NavbarContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      clearInput: ""
+      clearInput: "",
+      dropdownOpen: false
     }
     this.onSearch = this.onSearch.bind(this)
     this.onChange = this.onChange.bind(this)
     this.onLogout = this.onLogout.bind(this)
+    this.toggle = this.toggle.bind(this);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
   }
 
   onSearch(e) {
@@ -28,31 +32,50 @@ class NavbarContainer extends Component {
   onChange(e) {
     this.setState({ clearInput: e.target.value })
   }
+
   onLogout() {
-
     this.props.logOut()
-
   }
+
+  toggle() {
+    this.setState(prevState => ({
+      dropdownOpen: !prevState.dropdownOpen
+    }));
+  }
+
+  onMouseEnter() {
+    this.setState({ dropdownOpen: true });
+  }
+
+  onMouseLeave() {
+    this.setState({ dropdownOpen: false });
+  }
+
+
 
 
   render() {
     const { vinos } = this.props
     return (
-      <Navbar onLogout={this.onLogout} onSearch={this.onSearch} vinos={vinos} onChange={this.onChange} clearInput={this.state.clearInput} />
+      <Navbar user={this.props.user} onMouseLeave={this.onMouseLeave} toggle={this.toogle} dropdownOpen={this.state.dropdownOpen} onMouseEnter={this.onMouseEnter} onLogout={this.onLogout} onSearch={this.onSearch} vinos={vinos} onChange={this.onChange} clearInput={this.state.clearInput} onMouseOver={this.onMouseOver} />
     )
   }
 }
 
+const mapStateToProps = (state, ownProps) => {
+  return {
+    user: state.userReducers.logged
+  }
+}
 
 const matchDispatchToProps = function (dispatch, ownprops) {
   return {
     showsWines: (vino) => dispatch(showsWines(vino)),
     logOut: () => dispatch(logOut()),
-    LogueoCoockie: () => dispatch(LogueoCoockie()),
 
 
 
   }
 }
 
-export default withRouter(connect(null, matchDispatchToProps)(NavbarContainer));
+export default withRouter(connect(mapStateToProps, matchDispatchToProps)(NavbarContainer));

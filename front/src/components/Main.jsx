@@ -16,22 +16,13 @@ import { LogueoCoockie } from "../redux/actions/users"
 import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
 
-
-
-
-
-
 class Main extends React.Component {
     constructor() {
         super()
-
     }
 
     componentDidMount() {
-
-
         this.props.LogueoCoockie()
-
     }
 
     render() {

@@ -1,9 +1,6 @@
-
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy
-const {
-    Usuario
-} = require('./models/index.js');
+const { Usuario } = require('../models/index');
 
 passport.use(new LocalStrategy({
     usernameField: 'email'
@@ -34,18 +31,12 @@ passport.use(new LocalStrategy({
 // esto es para actualizar el status
 
 passport.serializeUser(function (user, done) {
-    console.log("ESTOY EN EL SERIALIZE", user)
     done(null, user.id);
 });
 
 passport.deserializeUser(function (id, done) {
-    console.log("ENTROOOOOOOOOOOOOO")
     Usuario.findByPk(id)
-        .then(user => {
-            console.log(user, "YA ESTOY EN USEEEEEEEEEEEEEER")
-            done(null, user)
-        })
-})
-
+        .then(user => done(null, user))
+});
 
 module.exports = passport

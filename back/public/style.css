@@ -20,6 +20,11 @@
 	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
 	background-color:#bab1ba;
 }
+
+.btnUserNav:hover {
+	background-color:#ebe0d200;
+}
+
 .btnComprar:active {
 	position:relative;
 	top:1px;
@@ -66,4 +71,31 @@
 	border:none;
 }
 
-    
+.btnCategNav{
+	background-color: #ededed;
+	background-color:#bab1ba;
+	border: none;
+}
+
+.btnUserNav{
+	width: 120px;
+	padding: 1px;
+	color: black;
+	margin-right: 15px;
+	background-color: #ebe0d200;
+	border:none;
+}
+
+#btnText{
+	line-height: 45px;
+	color: gray;
+	font-size: 1rem;
+}
+
+.not-Found{
+	margin-top: 50px;
+}
+
+#footerFantasma{
+	margin-top: 445px
+}
