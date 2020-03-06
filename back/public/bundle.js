@@ -99,6 +99,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./assets/facebook.svg":
+/*!*****************************!*\
+  !*** ./assets/facebook.svg ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "f8b9739423f45f1b3a26d1bf47928b97.svg");
+
+/***/ }),
+
 /***/ "./assets/hola.jpeg":
 /*!**************************!*\
   !*** ./assets/hola.jpeg ***!
@@ -109,6 +122,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "1fd99ba6ded29c58df09f48bbe798abd.jpeg");
+
+/***/ }),
+
+/***/ "./assets/search.svg":
+/*!***************************!*\
+  !*** ./assets/search.svg ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "09aea0f59807f6f4f66af7f5719cba9e.svg");
 
 /***/ }),
 
@@ -2534,7 +2560,7 @@ module.exports = exports['default'];
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "body {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  background-color: #d9d2c8; }\n\n#columns {\n  column-width: 320px;\n  column-gap: 15px;\n  width: 90%;\n  max-width: 1100px;\n  margin: 50px auto;\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr 1fr;\n  justify-items: center; }\n\n.navegador {\n  background-color: #F2F2F2; }\n\n.textoCentrado {\n  text-align: center; }\n\n.botones {\n  margin-right: 20px; }\n\ndiv#columns figure {\n  background: #fefefe;\n  border: 2px solid #fcfcfc;\n  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);\n  margin: 0 2px 15px;\n  padding: 15px;\n  padding-bottom: 10px;\n  transition: opacity .4s ease-in-out;\n  display: inline-block;\n  column-break-inside: avoid;\n  transition-duration: 0.3s;\n  max-width: 200px; }\n\ndiv#columns figure:hover {\n  transform: scale(1.1); }\n\ndiv#columns figure img {\n  width: 100%;\n  height: auto;\n  border-bottom: 1px solid #ccc;\n  padding-bottom: 15px;\n  margin-bottom: 5px; }\n\ndiv#columns figure figcaption {\n  font-size: .9rem;\n  color: #444;\n  line-height: 1.5; }\n\ndiv#columns small {\n  font-size: 1rem;\n  float: right;\n  text-transform: uppercase;\n  color: #aaa; }\n\ndiv#columns small a {\n  color: #666;\n  text-decoration: none;\n  transition: .4s color; }\n\ndiv#columns:hover figure:not(:hover) {\n  opacity: 0.4; }\n\n@media screen and (max-width: 750px) {\n  #columns {\n    column-gap: 0px; }\n  #columns figure {\n    width: 100%; } }\n\nnav {\n  background-color: grey;\n  height: 100px;\n  width: 100vw;\n  display: fixed;\n  top: 0; }\n\n.cartImagen {\n  justify-content: flex-end;\n  max-width: 200px; }\n", ""]);
+exports.push([module.i, "body {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  background-color: #d9d2c8; }\n\n#columns {\n  column-width: 320px;\n  column-gap: 15px;\n  width: 90%;\n  max-width: 1100px;\n  margin: 50px auto;\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr 1fr;\n  justify-items: center; }\n\n.navegador {\n  background-color: #F2F2F2; }\n\n.textoCentrado {\n  text-align: center; }\n\n.botones {\n  margin-right: 20px; }\n\ndiv#columns figure {\n  background: #fefefe;\n  border: 2px solid #fcfcfc;\n  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);\n  margin: 0 2px 15px;\n  padding: 15px;\n  padding-bottom: 10px;\n  transition: opacity .4s ease-in-out;\n  display: inline-block;\n  column-break-inside: avoid;\n  transition-duration: 0.3s;\n  max-width: 200px; }\n\ndiv#columns figure:hover {\n  transform: scale(1.1); }\n\ndiv#columns figure img {\n  width: 100%;\n  height: auto;\n  border-bottom: 1px solid #ccc;\n  padding-bottom: 15px;\n  margin-bottom: 5px; }\n\ndiv#columns figure figcaption {\n  font-size: .9rem;\n  color: #444;\n  line-height: 1.5; }\n\ndiv#columns small {\n  font-size: 1rem;\n  float: right;\n  text-transform: uppercase;\n  color: #aaa; }\n\ndiv#columns small a {\n  color: #666;\n  text-decoration: none;\n  transition: .4s color; }\n\ndiv#columns:hover figure:not(:hover) {\n  opacity: 0.4; }\n\n@media screen and (max-width: 750px) {\n  #columns {\n    column-gap: 0px; }\n  #columns figure {\n    width: 100%; } }\n\nnav {\n  background-color: grey;\n  height: 100px;\n  width: 100vw;\n  display: fixed;\n  top: 0; }\n\n.cartImagen {\n  justify-content: flex-end;\n  max-width: 200px; }\n\n.btn-facebook {\n  background-color: white;\n  display: inline-block;\n  border-radius: .25rem;\n  line-height: 30px;\n  margin-bottom: 20px;\n  color: black;\n  padding: .375rem .75rem; }\n\n.btn-google {\n  background-color: white;\n  display: inline-block;\n  border-radius: .25rem;\n  line-height: 30px;\n  margin-bottom: 20px;\n  color: black;\n  padding: .375rem .75rem; }\n\n.icono {\n  max-width: 30px;\n  line-height: 30px;\n  max-height: 30px; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -53715,6 +53741,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _assets_facebook_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/facebook.svg */ "./assets/facebook.svg");
+/* harmony import */ var _assets_search_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/search.svg */ "./assets/search.svg");
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var handleSubmit = _ref.handleSubmit,
@@ -53722,7 +53752,25 @@ __webpack_require__.r(__webpack_exports__);
       state = _ref.state;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Registro de Usuario")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Registro de Usuario")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-md-6"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn-facebook"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "icono",
+    src: _assets_facebook_svg__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }), "Registrarse con Facebook")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-md-6"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn-google"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "icono",
+    src: _assets_search_svg__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }), "Registrarse con Google")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "container",
     onSubmit: handleSubmit
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
