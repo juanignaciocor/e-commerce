@@ -2,6 +2,7 @@ const db = require("./db/db")
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const passport = require('passport');
 const Router = require("./routes/index")
 const {
     Usuario
@@ -9,9 +10,9 @@ const {
 
 var cookieParser = require('cookie-parser');
 var session = require("express-session");
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy
+
 const app = express();
+require("./passport/passport")
 
 
 
@@ -26,48 +27,15 @@ app.use(morgan('tiny'));
 app.use(cookieParser());
 app.use(passport.initialize());
 app.use(session({
-    secret: "cats"
-}));
-app.use(passport.session());
-
-
-passport.use(new LocalStrategy({
-    usernameField: 'email'
-},
-    function (inputEmail, password, done) {
-        Usuario.findOne({
-            where: {
-                email: inputEmail
-            }
-        })
-            .then(user => {
-                if (!user) {
-                    return done(null, false, {
-                        message: 'Incorrect username.'
-                    });
-                }
-                if (!user.validPassword(password)) {
-                    return done(null, false, {
-                        message: 'Incorrect password.'
-                    });
-                }
-                return done(null, user); //ESTA TODO OK!
-            })
-            .catch(done);
+    secret: "cats",
+    resave: true, // Guarda la sesion por mas que no haya sido modificada
+    saveUninitialized: true, // Cuando iniciamos sesion en una App, si modificamos algo y nno guardamos nada, se va a guardar la sesion
+    cookie: {
+        secure: true // Nos indica que la COOKIE es segura, y puede vincularse mediante las sesiones del protocolo HTTP.
     }
-));
+}));
 
-// esto es para actualizar el status
-
-passport.serializeUser(function (user, done) {
-    done(null, user.id);
-});
-
-passport.deserializeUser(function (id, done) {
-    User.findByPk(id)
-        .then(user => done(null, user))
-});
-
+app.use(passport.session());
 
 app.use(function (err, req, res, next) {
     console.error(err);

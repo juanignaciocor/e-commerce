@@ -1,10 +1,22 @@
 import React from 'react';
+import fbicon from "../../assets/facebook.svg"
+import googleicon from "../../assets/search.svg"
 
 export default ({handleSubmit, handleChange, state}) => (
     <div>
         <label></label>
     <div className = "container"><h2>Registro de Usuario</h2></div>
     <hr></hr>
+        <div className="container">
+            <div className="row">
+                <div className="col-md-6">
+                    <button className = "btn-facebook"><img className = "icono" src={fbicon}/>Registrarse con Facebook</button>
+                </div>
+                <div className="col-md-6">
+                    <button className = "btn-google" ><img className = "icono" src={googleicon}/>Registrarse con Google</button>
+                </div>
+            </div>
+        </div>
     <form className = "container" onSubmit = {handleSubmit}>
     <div className="form-row">
         <div className="col-md-4 mb-3">
