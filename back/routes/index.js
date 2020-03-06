@@ -15,6 +15,20 @@ router.post("/user/register", function (req, res) {
         .then(res.send("Se creo el usuario"))
 })
 
+router.get('/login/facebook', 
+		passport.authenticate('facebook', { scope : 'email' }
+));
+
+// handle the callback after facebook has authenticated the user
+router.get('/login/facebook/callback',
+    passport.authenticate('facebook', {failureRedirect : '/login'}),
+    function(req, res) {
+        // Successful authentication, redirect home.
+        console.log(req.user)
+        res.redirect('/');
+        }
+);
+
 router.post('/user/login', passport.authenticate('local'), (req, res) => {
     res.send(req.user)
 })
