@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
 import { showsWines } from "../redux/actions/wines"
-import { logOut } from "../redux/actions/users"
+import { logOut, LogueoCoockie } from "../redux/actions/users"
 
 
 class NavbarContainer extends Component {
@@ -34,6 +34,7 @@ class NavbarContainer extends Component {
 
   }
 
+
   render() {
     const { vinos } = this.props
     return (
@@ -42,16 +43,13 @@ class NavbarContainer extends Component {
   }
 }
 
-// const mapStateToProps = (state, ownProps) => {
-//   return {
-//     user: state.userReducers.logged
-//   }
-// }
 
 const matchDispatchToProps = function (dispatch, ownprops) {
   return {
     showsWines: (vino) => dispatch(showsWines(vino)),
     logOut: () => dispatch(logOut()),
+    LogueoCoockie: () => dispatch(LogueoCoockie()),
+
 
 
   }

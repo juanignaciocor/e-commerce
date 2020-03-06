@@ -2,13 +2,27 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const router = express.Router();
 const db = require("../db/db")
-const passport = require('passport');
+const passport = require('../passport');
 const { Usuario } = require("../models/index")
 const wines = require("./wines")
 const cart = require("./cart")
 
+
 router.use('/api/wines', wines)
 router.use('/api/cart', cart)
+
+const loggedUser = function (req, res, next) {
+    if (req.isAuthenticated()) {
+        res.json(req.user)
+
+
+    } else {
+        res.json("")
+    }
+
+
+}
+
 
 router.post("/user/register", function (req, res) {
     Usuario.create(req.body)
@@ -24,6 +38,8 @@ router.get("/user/logout", function (req, res) {
     res.send('deslogueado!')
 })
 
+router.get("/check", loggedUser)
+
 /*
 <<<<<<< Este es el midelware de passport que vamos a usar mas adelante >>>>>>>
 
@@ -34,6 +50,7 @@ function isLogedIn(req, res, next) {
         console.log("no se logueo")
     }
 }
+
 */
 
 module.exports = router

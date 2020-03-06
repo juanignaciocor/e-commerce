@@ -7,9 +7,10 @@ const {
     Usuario
 } = require('./models/index.js');
 
+
 var cookieParser = require('cookie-parser');
 var session = require("express-session");
-const passport = require('passport');
+const passport = require('./passport');
 const LocalStrategy = require('passport-local').Strategy
 const app = express();
 
@@ -24,49 +25,13 @@ app.use(bodyParser.json());
 app.use(morgan('tiny'));
 
 app.use(cookieParser());
-app.use(passport.initialize());
 app.use(session({
-    secret: "cats"
+    secret: "cats",
+    resave: false,
+    saveUninitialized: true
 }));
+app.use(passport.initialize());
 app.use(passport.session());
-
-
-passport.use(new LocalStrategy({
-    usernameField: 'email'
-},
-    function (inputEmail, password, done) {
-        Usuario.findOne({
-            where: {
-                email: inputEmail
-            }
-        })
-            .then(user => {
-                if (!user) {
-                    return done(null, false, {
-                        message: 'Incorrect username.'
-                    });
-                }
-                if (!user.validPassword(password)) {
-                    return done(null, false, {
-                        message: 'Incorrect password.'
-                    });
-                }
-                return done(null, user); //ESTA TODO OK!
-            })
-            .catch(done);
-    }
-));
-
-// esto es para actualizar el status
-
-passport.serializeUser(function (user, done) {
-    done(null, user.id);
-});
-
-passport.deserializeUser(function (id, done) {
-    User.findByPk(id)
-        .then(user => done(null, user))
-});
 
 
 app.use(function (err, req, res, next) {
@@ -90,3 +55,16 @@ db.sync({
         });
     })
     .catch(console.error)
+
+
+
+
+
+
+
+
+
+
+
+
+

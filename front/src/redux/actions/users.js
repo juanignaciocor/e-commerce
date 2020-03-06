@@ -35,3 +35,13 @@ export const logOut = () => {
             })
     }
 }
+
+
+export const LogueoCoockie = () => {
+    return function (dispatch, getState) {
+        return axios.get("/check")
+            .then((res) => {
+                dispatch(logUser(res.data))
+            })
+    }
+}
