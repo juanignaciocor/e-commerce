@@ -4,13 +4,8 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const Router = require("./routes/index")
-const {
-    Usuario
-} = require('./models/index.js');
-
-var cookieParser = require('cookie-parser');
-var session = require("express-session");
-
+const cookieParser = require('cookie-parser');
+const session = require("express-session");
 const app = express();
 require("./passport/passport")
 
@@ -25,16 +20,15 @@ app.use(bodyParser.json());
 app.use(morgan('tiny'));
 
 app.use(cookieParser());
-app.use(passport.initialize());
 app.use(session({
     secret: "cats",
-    resave: true, // Guarda la sesion por mas que no haya sido modificada
-    saveUninitialized: true, // Cuando iniciamos sesion en una App, si modificamos algo y nno guardamos nada, se va a guardar la sesion
-    cookie: {
-        secure: true // Nos indica que la COOKIE es segura, y puede vincularse mediante las sesiones del protocolo HTTP.
-    }
+    // resave: true, // Guarda la sesion por mas que no haya sido modificada
+    //saveUninitialized: true, // Cuando iniciamos sesion en una App, si modificamos algo y nno guardamos nada, se va a guardar la sesion
+    //cookie: {
+    //   secure: true // Nos indica que la COOKIE es segura, y puede vincularse mediante las sesiones del protocolo HTTP.
+    // }
 }));
-
+app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(function (err, req, res, next) {
@@ -58,3 +52,16 @@ db.sync({
         });
     })
     .catch(console.error)
+
+
+
+
+
+
+
+
+
+
+
+
+
