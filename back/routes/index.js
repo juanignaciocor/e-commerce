@@ -19,6 +19,11 @@ router.post('/user/login', passport.authenticate('local'), (req, res) => {
     res.send(req.user)
 })
 
+router.get("/user/logout", function (req, res) {
+    req.logout()
+    res.send('deslogueado!')
+})
+
 /*
 <<<<<<< Este es el midelware de passport que vamos a usar mas adelante >>>>>>>
 

@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import cart from "../../assets/cart.svg"
 
-export default ({ onSearch, vinos, clearInput, onChange }) => {
+export default ({ onSearch, vinos, clearInput, onChange, user, onLogout }) => {
     const ref = useRef(null)
     return (
 
@@ -14,36 +15,30 @@ export default ({ onSearch, vinos, clearInput, onChange }) => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item botones">
-                            <Link className="nav-link" to="/">Home</Link>
+                            <Link to="/register" className="nav-link" >Register </Link>
                         </li>
                         <li className="nav-item botones">
-                            <Link className="nav-link" to="/register">Registrarse </Link>
+                            <Link to="/login" className="nav-link" >Log In </Link>
                         </li>
-                        <li className="nav-item">
-                            <Link to="/login"><button type="button" className="btn btn-secondary">Log In </button></Link>
-                        </li>
-                        <li className="nav-item botones">
-                            <Link className="nav-link" to="/register">Log Out </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/cart"><button type="button" className="btn btn-secondary">Cart </button></Link>
+                        <li className="nav-item botones" onClick={onLogout} >
+                            <Link to="/login" className="nav-link"  >Log Out</Link>
                         </li>
                         <li className="nav-item botones">
-                            <Link className="nav-link" to="/allWines">Productos </Link>
+                            <Link className="nav-link" to="/allWines">All Products </Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link to="category/red" className="dropdown-item" >Tinto</Link>
-                                <Link to="category/white" className="dropdown-item">Blanco</Link>
-                                <Link to="category/rose" className="dropdown-item">Rosado</Link>
+                                <Link to="/category/red" className="dropdown-item" >Red</Link>
+                                <Link to="/category/white" className="dropdown-item">White</Link>
+                                <Link to="/category/rose" className="dropdown-item">Rose</Link>
                             </div>
                         </li>
-
                     </ul>
+                    <Link to="/cart"><button type="button" className="btn btn-secondary" id="btnCartNav">  <img className="imgCarrito" src={cart} /> </button></Link>
                     <form className="form-inline my-2 my-lg-0" onSubmit={onSearch}>
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ref={ref} value={clearInput} onChange={onChange}></input>
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+                        <button className="btn btn-outline-secondary my-2 my-sm-0" type="submit" >Search</button>
                     </form>
                 </div>
             </nav>
