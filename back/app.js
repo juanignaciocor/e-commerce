@@ -14,9 +14,6 @@ var session = require("express-session");
 const app = express();
 require("./passport/passport")
 
-
-
-////////
 app.use(express.static(__dirname + "/public"))
 app.use(bodyParser.urlencoded({
     extended: false
