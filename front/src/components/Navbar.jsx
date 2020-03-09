@@ -30,7 +30,7 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                             </Fragment>
                         ) }
                         <li className="nav-item botones">
-                            <Link className="nav-link" to="/allWines">All Products </Link>
+                            <Link className="nav-link" to="/allWines/1">All Products </Link>
                         </li>
                         <li className="nav-item dropdown">
 

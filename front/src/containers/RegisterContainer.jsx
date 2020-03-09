@@ -19,6 +19,7 @@ class RegisterContainer extends React.Component{
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleClickFb = this.handleClickFb.bind(this)
     }
    
     handleChange (e) {
@@ -32,10 +33,14 @@ class RegisterContainer extends React.Component{
             .then(() => this.props.history.push("/login"))
     }
 
+    handleClickFb (e){
+        console.log("holaaaaaaaaaaaaaaaaaaaaaaaa",e.target[0])
+    }
+
     render(){
         return(
             <div>
-                <Register handleChange={this.handleChange} handleSubmit={this.handleSubmit} state= {this.state}/>
+                <Register handleChange={this.handleChange} handleSubmit={this.handleSubmit} state= {this.state} handleClickFb={this.handleClickFb}/>
             </div>
         )
     }
