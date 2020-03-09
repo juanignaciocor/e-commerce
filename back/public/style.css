@@ -1,3 +1,27 @@
+
+
+.imgCarrito{
+	position: relative;
+	max-width: 40px;
+	max-height: 40px;
+	float: right;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	
+}
+.precioCarrito{
+	display: inline-block;
+}
+.precio{
+	text-align: center;
+}
+
+.vino{
+	text-align: center;
+	font-size: medium;
+}
+
+/* STYLO SINGLE WINE  70 70 270 270*/ 
 .btnComprar {
 	box-shadow: 13px 12px 10px  #899599;
 	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
@@ -30,38 +54,34 @@
 	top:1px;
 }
 
-.imgCarrito{
-	position: relative;
-	max-width: 40px;
-	max-height: 40px;
-	float: right;
-	margin-bottom: 0px;
-	padding-bottom: 0px;
-	
+#ContenedorSingle{
+	margin-top: 1.5%;
+	margin-bottom: 1.5%;
+	margin-left: 22%;
+	margin-right: 22%;
+	background-color: white;
+	width: fit-content;
+	padding: 7px;
+	border-radius: 30px;
+	height: 100%;	
 }
-.precioCarrito{
-	display: inline-block;
-}
-.precio{
-	text-align: center;
-}
+#ContenedorSingleWineText{
+	padding-left: 20px,
 
-.vino{
-	text-align: center;
-	font-size: medium;
 }
+	
 
 .imagenSingle{
-	max-width: 600px;
-	max-height: 1200px;
+	max-width: 650px;
+	max-height: 650px;
+	border-radius: 30px;
 }
-
-.single{
+.singleWineText{
 	padding: 10px;
 	border-bottom: solid 1px gray;
 }
 
-
+/* STYLE NAVBAR */
 #btnCartNav{
 	width: 80px;
 	padding: 1px;
@@ -91,11 +111,13 @@
 	color: gray;
 	font-size: 1rem;
 }
-
+/* COMPONENTE NOT FOUND */
 .not-Found{
 	margin-top: 50px;
-}
+	border-radius: 30px;
 
+}
+/* AUXILIAR */
 #footerFantasma{
 	margin-top: 445px
 }
