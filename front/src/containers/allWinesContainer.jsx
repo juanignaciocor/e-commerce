@@ -9,6 +9,7 @@ class allWines extends React.Component {
         super()
         this.handlerClick = this.handlerClick.bind(this)
     }
+    
     componentDidMount() {
         this.props.searchAllWines()
     }
@@ -20,9 +21,10 @@ class allWines extends React.Component {
 
     render() {
         const { allWines } = this.props
+        const numeroPagination = this.props.match.path[10]
         return (
             <div>
-                <Vinos handlerClick={this.handlerClick} vinos={allWines} />
+                <Vinos handlerClick={this.handlerClick} vinos={allWines} numeroPagination={numeroPagination}/>
             </div>
         )
     }

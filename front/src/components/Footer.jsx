@@ -5,7 +5,8 @@ import React from "react"
 
 export default ({ }) => {
     return (
-        <div style={{ position: "fixed", bottom: 0, height: "9.5vh", width: "100%", display: "block" }}>
+        <div style={{ position: "relative", bottom: 0, height: "9.5vh", width: "100%", display: "block" }}>
+
             <div className="card">
 
                 <section id="lab_social_icon_footer">

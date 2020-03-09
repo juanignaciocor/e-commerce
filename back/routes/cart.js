@@ -1,8 +1,22 @@
 const express = require('express');
 const router = express.Router();
-const { Carrito, Producto, Usuario } = require("../models/index")
+const { Carrito, Producto, Usuario, Compra } = require("../models/index")
+
+router.post("/buy", (req, res, next) => {
+    const tarjetaCredito = parseInt(req.body.creditCard)
+    const totalPrecio = parseInt(req.body.total)
+
+    Compra.create({ numeroTarjeta: tarjetaCredito, total: totalPrecio, usuarioId: req.body.userId })
+        .then((compra) => {
+            Carrito.update({ compraId: compra.id, estado: "fulfilled" }, { where: { usuarioId: req.body.userId, estado: "pending" } })
+                .then((data) => {
+                    res.json(data)
+                })
 
 
+        })
+
+})
 router.post("/add", (req, res) => {
 
     Carrito.create({
@@ -22,7 +36,8 @@ router.get("/userCart/:usuario", (req, res) => {
         },
         {
             model: Producto,
-        }]
+        },
+        ], where: { estado: "pending" }
     })
         .then((data) => {
             res.json(data)
