@@ -5,7 +5,7 @@ const { Producto } = require("./models/index")
 Producto.create({
     nombre: "Catena Zapata Malbec Argentino 2017. 750 ml",
     descripcion: "No importa cuál sea la cosecha, en realidad este vino posee más de 100 años de antigüedad. Representa el trayecto emprendido por una familia para producir un Malbec argentino que pudiese competir con los mejores vinos del mundo. Malbec Argentino es un corte de uvas provenientes de dos viñedos históricos de Malbec de la familia Catena: el Viñedo “Adrianna” y el Viñedo “Nicasia”.",
-    precio: 5.203,
+    precio: 5203,
     imagen: "https://tonelprivado.vteximg.com.br/arquivos/ids/183278-1000-1000/catena_zapata_nuevo.jpg?v=637158997628700000",
     tipo: "Tinto",
     cepa: "Malbec",
@@ -31,7 +31,7 @@ Producto.create({
 Producto.create({
     nombre: "Alta Vista Single Vineyard Alizarine. 750 ml",
     descripcion: "Elaborado 100% con Malbec del viñedo que lleva su nombre, desde 2001 es la auténtica expresión del terroir de Las Compuertas. Con una crianza de 12 meses en barricas nuevas, es un tinto profundo, con aromática floral, buena acidez y taninos redondos. Alizarine es una palabra francesa que define un rojo sostenido.",
-    precio: 1.581,
+    precio: 1581,
     imagen: "https://tonelprivado.vteximg.com.br/arquivos/ids/171421-1000-1000/Alta-Vista-.-Single-Vineyard-Alizarin-2012-.-750-Ml-111589.jpg?v=636148997386070000",
     tipo: "Tinto",
     cepa: "Malbec",
