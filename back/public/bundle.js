@@ -53605,15 +53605,19 @@ var Main = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.LogueoCoockie();
-    }
+    } // VINEDO(https://images.pexels.com/photos/2339181/pexels-photo-2339181.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+    // MADERA https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+    // CHIQUI https://i.imgur.com/nhwdpMQ.jpg
+
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
+          backgroundSize: "100%",
           height: "100%",
           width: "100%",
-          backgroundImage: "url(https://images.pexels.com/photos/2339181/pexels-photo-2339181.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
+          backgroundImage: "url(https://i.imgur.com/nhwdpMQ.jpg",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed"
         }
@@ -53997,7 +54001,7 @@ __webpack_require__.r(__webpack_exports__);
     type: "submit"
   }, "Registrarse")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
-      height: "235px"
+      height: "200px"
     }
   }));
 });
