@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from "react-router-dom";
 
 export default ({ user, cart, searchCart, removeClick }) => {
+    console.log(user.username, "usernameeeeeeeeeeeeee");
+
     if (user.username) {
         return (
             <div>
@@ -42,12 +44,12 @@ export default ({ user, cart, searchCart, removeClick }) => {
                 <h2>Carrito</h2>
                 <hr></hr>
                 <div className="container">
-                    <div class="card">
-                        <h5 class="card-header">Nombre del producto del carrito</h5>
-                        <div class="card-body">
-                            <h5 class="card-title">Bodega</h5>
-                            <p class="card-text">Precio del producto</p>
-                            <button type="button" class="btn btn-outline-danger">Remover del Carrito</button>
+                    <div className="card">
+                        <h5 className="card-header">Nombre del producto del carrito</h5>
+                        <div className="card-body">
+                            <h5 className="card-title">Bodega</h5>
+                            <p className="card-text">Precio del producto</p>
+                            <button type="button" className="btn btn-outline-danger">Remover del Carrito</button>
                         </div>
                     </div>
                 </div >

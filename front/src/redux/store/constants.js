@@ -16,3 +16,6 @@ export const ALL_BLANCOS = "ALL_BLANCOS"
 export const SEARCH_CART = "SEARCH_CART"
 export const REMOVE_CART = "REMOVE_CART"
 export const ALL_USER = "ALL_USER"
+
+// aca abajo agrego la constante de agregar categoria para tenerlo comenzado
+export const ADD_CATEGORY = "ADD_CATEGORY" 
