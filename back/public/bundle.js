@@ -53333,6 +53333,7 @@ __webpack_require__.r(__webpack_exports__);
       cart = _ref.cart,
       searchCart = _ref.searchCart,
       removeClick = _ref.removeClick;
+  console.log(user.username, "usernameeeeeeeeeeeeee");
 
   if (user.username) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito de ".concat(user.username)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -53367,18 +53368,18 @@ __webpack_require__.r(__webpack_exports__);
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      "class": "card"
+      className: "card"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-      "class": "card-header"
+      className: "card-header"
     }, "Nombre del producto del carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      "class": "card-body"
+      className: "card-body"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-      "class": "card-title"
+      className: "card-title"
     }, "Bodega"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      "class": "card-text"
+      className: "card-text"
     }, "Precio del producto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "button",
-      "class": "btn btn-outline-danger"
+      className: "btn btn-outline-danger"
     }, "Remover del Carrito")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
   }
 });
@@ -53496,7 +53497,7 @@ __webpack_require__.r(__webpack_exports__);
     value: state.password,
     required: true
   })), state.error ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "alert alert-danger",
+    className: "alert alert-danger",
     role: "alert"
   }, "Error: The email entered is not registered or the password is incorrect") : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
@@ -54901,7 +54902,7 @@ var NavbarContainer = /*#__PURE__*/function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
         user: this.props.user,
         onMouseLeave: this.onMouseLeave,
-        toggle: this.toogle,
+        toggle: this.toggle,
         dropdownOpen: this.state.dropdownOpen,
         onMouseEnter: this.onMouseEnter,
         onLogout: this.onLogout,
@@ -56019,7 +56020,7 @@ var initialUserState = {
 /*!**************************************!*\
   !*** ./src/redux/store/constants.js ***!
   \**************************************/
-/*! exports provided: CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, SEARCH_WINES, ALL_WINES, ADD_CART, ALL_TINTOS, ALL_ROSADOS, ALL_BLANCOS, SEARCH_CART, REMOVE_CART, ALL_USER */
+/*! exports provided: CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, SEARCH_WINES, ALL_WINES, ADD_CART, ALL_TINTOS, ALL_ROSADOS, ALL_BLANCOS, SEARCH_CART, REMOVE_CART, ALL_USER, ADD_CATEGORY */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56036,6 +56037,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_CART", function() { return SEARCH_CART; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_CART", function() { return REMOVE_CART; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_USER", function() { return ALL_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CATEGORY", function() { return ADD_CATEGORY; });
 var CREATE_USER = "CREATE_USER";
 var LOGGUE_USER = "LOGGUE_USER";
 var DESLOGUEO_USER = "DESLOGUEO_USER";
@@ -56047,7 +56049,9 @@ var ALL_ROSADOS = "ALL_ROSADOS";
 var ALL_BLANCOS = "ALL_BLANCOS";
 var SEARCH_CART = "SEARCH_CART";
 var REMOVE_CART = "REMOVE_CART";
-var ALL_USER = "ALL_USER";
+var ALL_USER = "ALL_USER"; // aca abajo agrego la constante de agregar categoria para tenerlo comenzado
+
+var ADD_CATEGORY = "ADD_CATEGORY";
 
 /***/ }),
 
