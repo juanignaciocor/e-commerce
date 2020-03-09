@@ -138,3 +138,23 @@ nav {
     line-height: 30px;
     max-height: 30px;
 }
+
+
+//Apartir de esta linea empiezan los estilos de los Admin
+.ViewUsers{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+margin:2px;
+padding:1px;
+max-height: 33.3%;
+
+
+}
+
+.ViewUser{
+
+    border: 2px solid white;
+    padding: 2px;
+
+
+}
