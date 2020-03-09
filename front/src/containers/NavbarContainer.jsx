@@ -57,7 +57,7 @@ class NavbarContainer extends Component {
   render() {
     const { vinos } = this.props
     return (
-      <Navbar user={this.props.user} onMouseLeave={this.onMouseLeave} toggle={this.toogle} dropdownOpen={this.state.dropdownOpen} onMouseEnter={this.onMouseEnter} onLogout={this.onLogout} onSearch={this.onSearch} vinos={vinos} onChange={this.onChange} clearInput={this.state.clearInput} onMouseOver={this.onMouseOver} />
+      <Navbar user={this.props.user} onMouseLeave={this.onMouseLeave} toggle={this.toggle} dropdownOpen={this.state.dropdownOpen} onMouseEnter={this.onMouseEnter} onLogout={this.onLogout} onSearch={this.onSearch} vinos={vinos} onChange={this.onChange} clearInput={this.state.clearInput} onMouseOver={this.onMouseOver} />
     )
   }
 }
