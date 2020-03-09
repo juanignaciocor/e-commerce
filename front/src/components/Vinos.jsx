@@ -2,16 +2,35 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import cart from "../../assets/cart.svg"
 import wineNotFound from "../../assets/hola.jpeg"
+import {useEffect, useState} from 'react';
+
 
 export default ({ vinos, handlerClick }) => {
-    console.log(vinos.length)
+
+    const [currentPage, setCurrentePage] = useState(1);
+    const [vinosPerPage, setVinosPerPage] = useState(8);
+
+    const indexOfLastVino = currentPage * vinosPerPage;
+    const indexOfFirstVino = indexOfLastVino - vinosPerPage;
+    const currentVinos = vinos.slice(indexOfFirstVino, indexOfLastVino);
+
+    // PAGINATION - LO HAGO ACA PORQUE SINO TENGO QUE MODIFICAR 5 CONTAINERS - NO MODIFICAR SIN AVISAR A JOCHI !!!
+    const pageNumbers = [];
+
+    for(let i = 1; i <= Math.ceil(vinos.length / vinosPerPage); i++){
+        pageNumbers.push(i);
+    }
+
+    const paginate = (pageNumber) => setCurrentePage(pageNumber);
+
     return (
         <Fragment>
-            {vinos.length ? 
+            {currentVinos.length ? 
                 (<div>
-                    <h3 className="textoCentrado"> VINOS</h3>
+                    <h3 className="textoCentrado">Nuestros Vinos</h3>
+                    <hr></hr>
                     <div id="columns">
-                        {vinos.map(vino => {
+                        {currentVinos.map(vino => {
                             return (
                                 <figure key={vino.id}>
                                     <Link to={`/wines/${vino.id}`}>
@@ -30,6 +49,17 @@ export default ({ vinos, handlerClick }) => {
                                 </figure>
                             )
                         })}
+                    </div>
+                    <div className = "pagination-nav">
+                        <ul className = "pagination">
+                            {pageNumbers.map(number => (
+                                <li key={number} className="page-pagination">
+                                    <a onClick={() => paginate(number)} className="page-link">
+                                        {number}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>)
                 :
