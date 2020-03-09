@@ -2,16 +2,12 @@ const db = require("./db/db")
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const Router = require("./routes/index")
-const {
-    Usuario
-} = require('./models/index.js');
-
-var cookieParser = require('cookie-parser');
-var session = require("express-session");
 const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy
+const Router = require("./routes/index")
+const cookieParser = require('cookie-parser');
+const session = require("express-session");
 const app = express();
+require("./passport/passport")
 
 
 
@@ -24,50 +20,16 @@ app.use(bodyParser.json());
 app.use(morgan('tiny'));
 
 app.use(cookieParser());
-app.use(passport.initialize());
 app.use(session({
-    secret: "cats"
+    secret: "cats",
+    // resave: true, // Guarda la sesion por mas que no haya sido modificada
+    //saveUninitialized: true, // Cuando iniciamos sesion en una App, si modificamos algo y nno guardamos nada, se va a guardar la sesion
+    //cookie: {
+    //   secure: true // Nos indica que la COOKIE es segura, y puede vincularse mediante las sesiones del protocolo HTTP.
+    // }
 }));
+app.use(passport.initialize());
 app.use(passport.session());
-
-
-passport.use(new LocalStrategy({
-    usernameField: 'email'
-},
-    function (inputEmail, password, done) {
-        Usuario.findOne({
-            where: {
-                email: inputEmail
-            }
-        })
-            .then(user => {
-                if (!user) {
-                    return done(null, false, {
-                        message: 'Incorrect username.'
-                    });
-                }
-                if (!user.validPassword(password)) {
-                    return done(null, false, {
-                        message: 'Incorrect password.'
-                    });
-                }
-                return done(null, user); //ESTA TODO OK!
-            })
-            .catch(done);
-    }
-));
-
-// esto es para actualizar el status
-
-passport.serializeUser(function (user, done) {
-    done(null, user.id);
-});
-
-passport.deserializeUser(function (id, done) {
-    User.findByPk(id)
-        .then(user => done(null, user))
-});
-
 
 app.use(function (err, req, res, next) {
     console.error(err);
@@ -90,3 +52,16 @@ db.sync({
         });
     })
     .catch(console.error)
+
+
+
+
+
+
+
+
+
+
+
+
+
