@@ -1,6 +1,7 @@
-import { DESLOGUEO_USER } from "../store/constants"
+import { DESLOGUEO_USER, ALL_USER } from "../store/constants"
 const initialUserState = {
-    logged: {}
+    logged: {},
+    allUsers: []
 }
 
 export default function (state = initialUserState, action) {
@@ -9,6 +10,8 @@ export default function (state = initialUserState, action) {
             return { ...state, logged: action.user }
         case DESLOGUEO_USER:
             return { ...state, logged: {} }
+        case ALL_USER:
+            return { ...state, allUsers: action.allUser }
         default:
             return state;
     }
