@@ -53319,70 +53319,9 @@ var carrousel = function carrousel() {
   !*** ./src/components/Cart.jsx ***!
   \*********************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-
-
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var user = _ref.user,
-      cart = _ref.cart,
-      searchCart = _ref.searchCart,
-      removeClick = _ref.removeClick;
-  console.log(user.username, "usernameeeeeeeeeeeeee");
-
-  if (user.username) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito de ".concat(user.username)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "container"
-    }, searchCart.map(function (item) {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
-        key: item.producto.id
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-        className: "card-header"
-      }, item.producto.nombre), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-        className: "card-title"
-      }, "Bodega: ".concat(item.producto.bodega)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "card-text"
-      }, "Precio: ".concat(item.producto.precio, ",00")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        className: "btn btn-outline-danger",
-        onClick: function onClick() {
-          return removeClick(item.producto.id);
-        }
-      }, "Remover del Carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/wines/".concat(item.producto.id)
-      }, "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "cartImagen",
-        src: item.producto.imagen
-      })))));
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
-  } else {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "container"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "card"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-      className: "card-header"
-    }, "Nombre del producto del carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "card-body"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-      className: "card-title"
-    }, "Bodega"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      className: "card-text"
-    }, "Precio del producto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      type: "button",
-      className: "btn btn-outline-danger"
-    }, "Remover del Carrito")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/juan/E-commerce/front/src/components/Cart.jsx: Unexpected token (4:1)\n\n\u001b[0m \u001b[90m 2 | \u001b[39m\u001b[36mimport\u001b[39m { \u001b[33mLink\u001b[39m } from \u001b[32m\"react-router-dom\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m ({ user\u001b[33m,\u001b[39m cart\u001b[33m,\u001b[39m searchCart\u001b[33m,\u001b[39m removeClick\u001b[33m,\u001b[39m orderCreate\u001b[33m,\u001b[39m creditCardChange\u001b[33m,\u001b[39m creditCard }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 6 | \u001b[39m    let totalPrecio \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n    at Object.raise (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:7044:17)\n    at Object.unexpected (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:8422:16)\n    at Object.jsxParseIdentifier (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:3889:12)\n    at Object.jsxParseNamespacedName (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:3899:23)\n    at Object.jsxParseElementName (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:3910:21)\n    at Object.jsxParseOpeningElementAt (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:3996:22)\n    at Object.jsxParseElementAt (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:4029:33)\n    at Object.jsxParseElement (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:4103:17)\n    at Object.parseExprAtom (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:4110:19)\n    at Object.parseExprSubscripts (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9287:23)\n    at Object.parseMaybeUnary (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9267:21)\n    at Object.parseExprOps (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9137:23)\n    at Object.parseMaybeConditional (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9110:23)\n    at Object.parseMaybeAssign (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9065:21)\n    at Object.parseExpression (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9017:23)\n    at Object.parseStatementContent (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:10853:23)\n    at Object.parseStatement (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseBlockOrModuleBlockBody (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:11298:25)\n    at Object.parseBlockBody (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:11285:10)\n    at Object.parseTopLevel (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:10655:10)\n    at Object.parse (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:12264:10)\n    at parse (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:12315:38)\n    at parser (/home/juan/E-commerce/front/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/home/juan/E-commerce/front/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/home/juan/E-commerce/front/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/home/juan/E-commerce/front/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)");
 
 /***/ }),
 
@@ -54215,6 +54154,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _components_Cart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Cart */ "./src/components/Cart.jsx");
 /* harmony import */ var _redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/actions/cart */ "./src/redux/actions/cart.js");
+/* harmony import */ var _redux_actions_buy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../redux/actions/buy */ "./src/redux/actions/buy.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -54239,6 +54179,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var CartContainer = /*#__PURE__*/function (_React$Component) {
   _inherits(CartContainer, _React$Component);
 
@@ -54248,7 +54189,12 @@ var CartContainer = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, CartContainer);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(CartContainer).call(this));
+    _this.state = {
+      creditCard: ""
+    };
     _this.removeClick = _this.removeClick.bind(_assertThisInitialized(_this));
+    _this.orderCreate = _this.orderCreate.bind(_assertThisInitialized(_this));
+    _this.creditCardChange = _this.creditCardChange.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -54263,6 +54209,23 @@ var CartContainer = /*#__PURE__*/function (_React$Component) {
       this.props.userRemoveCart(this.props.userId, productoId);
     }
   }, {
+    key: "orderCreate",
+    value: function orderCreate(total) {
+      this.props.createOrder(this.props.userId, this.state.creditCard, total);
+    }
+  }, {
+    key: "creditCardChange",
+    value: function creditCardChange(e) {
+      e.preventDefault();
+      var value = e.target.value;
+
+      if (value.length < 17) {
+        this.setState({
+          creditCard: value
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       var searchCart = this.props.searchCart;
@@ -54270,7 +54233,10 @@ var CartContainer = /*#__PURE__*/function (_React$Component) {
         user: this.props.user,
         cart: this.props.cart,
         searchCart: searchCart,
-        removeClick: this.removeClick
+        removeClick: this.removeClick,
+        orderCreate: this.orderCreate,
+        creditCardChange: this.creditCardChange,
+        creditCard: this.state.creditCard
       }));
     }
   }]);
@@ -54294,6 +54260,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
     },
     userRemoveCart: function userRemoveCart(userId, productoId) {
       return dispatch(Object(_redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__["userRemoveCart"])(userId, productoId));
+    },
+    createOrder: function createOrder(userId, creditCard, total) {
+      return dispatch(Object(_redux_actions_buy__WEBPACK_IMPORTED_MODULE_5__["createOrder"])(userId, creditCard, total));
     }
   };
 };
@@ -55552,6 +55521,46 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 /***/ }),
 
+/***/ "./src/redux/actions/buy.js":
+/*!**********************************!*\
+  !*** ./src/redux/actions/buy.js ***!
+  \**********************************/
+/*! exports provided: buyCart, createOrder */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buyCart", function() { return buyCart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createOrder", function() { return createOrder; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
+
+
+var buyCart = function buyCart(order) {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["BUY_CART"],
+    order: order
+  };
+};
+var createOrder = function createOrder(userId, creditCard, total) {
+  return function (dispatch) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/cart/buy', {
+      userId: userId,
+      creditCard: creditCard,
+      total: total
+    }).then(function (res) {
+      return res.data;
+    }).then(function (carrito) {
+      dispatch(buyCart(carrito));
+    })["catch"](function (err) {
+      return console.log(err);
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./src/redux/actions/cart.js":
 /*!***********************************!*\
   !*** ./src/redux/actions/cart.js ***!
@@ -55825,6 +55834,44 @@ var searchRosado = function searchRosado() {
 
 /***/ }),
 
+/***/ "./src/redux/reducers/BuyReducer.js":
+/*!******************************************!*\
+  !*** ./src/redux/reducers/BuyReducer.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var initialCartState = {
+  order: [],
+  singleOrder: ""
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialCartState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _store_constants__WEBPACK_IMPORTED_MODULE_0__["BUY_CART"]:
+      return _objectSpread({}, state, {
+        singleOrder: action.order
+      });
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
 /***/ "./src/redux/reducers/cartReducer.js":
 /*!*******************************************!*\
   !*** ./src/redux/reducers/cartReducer.js ***!
@@ -55895,6 +55942,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _winesReducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./winesReducers */ "./src/redux/reducers/winesReducers.js");
 /* harmony import */ var _usersReducers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./usersReducers */ "./src/redux/reducers/usersReducers.js");
 /* harmony import */ var _cartReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./cartReducer */ "./src/redux/reducers/cartReducer.js");
+/* harmony import */ var _BuyReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./BuyReducer */ "./src/redux/reducers/BuyReducer.js");
+
 
 
 
@@ -55902,7 +55951,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   userReducers: _usersReducers__WEBPACK_IMPORTED_MODULE_2__["default"],
   winesReducers: _winesReducers__WEBPACK_IMPORTED_MODULE_1__["default"],
-  cartReducers: _cartReducer__WEBPACK_IMPORTED_MODULE_3__["default"]
+  cartReducers: _cartReducer__WEBPACK_IMPORTED_MODULE_3__["default"],
+  buyReducers: _BuyReducer__WEBPACK_IMPORTED_MODULE_4__["default"]
 }));
 
 /***/ }),
@@ -56020,38 +56070,10 @@ var initialUserState = {
 /*!**************************************!*\
   !*** ./src/redux/store/constants.js ***!
   \**************************************/
-/*! exports provided: CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, SEARCH_WINES, ALL_WINES, ADD_CART, ALL_TINTOS, ALL_ROSADOS, ALL_BLANCOS, SEARCH_CART, REMOVE_CART, ALL_USER, ADD_CATEGORY */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! exports provided: CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, SEARCH_WINES, ALL_WINES, ADD_CART, ALL_TINTOS, ALL_ROSADOS, ALL_BLANCOS, SEARCH_CART, REMOVE_CART, ALL_USER, BUY_CART */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_USER", function() { return CREATE_USER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGGUE_USER", function() { return LOGGUE_USER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESLOGUEO_USER", function() { return DESLOGUEO_USER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_WINES", function() { return SEARCH_WINES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_WINES", function() { return ALL_WINES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CART", function() { return ADD_CART; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_TINTOS", function() { return ALL_TINTOS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_ROSADOS", function() { return ALL_ROSADOS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_BLANCOS", function() { return ALL_BLANCOS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_CART", function() { return SEARCH_CART; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_CART", function() { return REMOVE_CART; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_USER", function() { return ALL_USER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CATEGORY", function() { return ADD_CATEGORY; });
-var CREATE_USER = "CREATE_USER";
-var LOGGUE_USER = "LOGGUE_USER";
-var DESLOGUEO_USER = "DESLOGUEO_USER";
-var SEARCH_WINES = "SEARCH_WINES";
-var ALL_WINES = "ALL_WINES";
-var ADD_CART = "ADD_CART";
-var ALL_TINTOS = "ALL_TINTOS";
-var ALL_ROSADOS = "ALL_ROSADOS";
-var ALL_BLANCOS = "ALL_BLANCOS";
-var SEARCH_CART = "SEARCH_CART";
-var REMOVE_CART = "REMOVE_CART";
-var ALL_USER = "ALL_USER"; // aca abajo agrego la constante de agregar categoria para tenerlo comenzado
-
-var ADD_CATEGORY = "ADD_CATEGORY";
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/juan/E-commerce/front/src/redux/store/constants.js: Unexpected token (19:3)\n\n\u001b[0m \u001b[90m 17 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mREMOVE_CART\u001b[39m \u001b[33m=\u001b[39m \u001b[32m\"REMOVE_CART\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mALL_USER\u001b[39m \u001b[33m=\u001b[39m \u001b[32m\"ALL_USER\"\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mBUY_CART\u001b[39m \u001b[33m=\u001b[39m \u001b[32m\"BUY_CART\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 21 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 | \u001b[39m\u001b[0m\n    at Object.raise (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:7044:17)\n    at Object.unexpected (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:8422:16)\n    at Object.jsxParseIdentifier (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:3889:12)\n    at Object.jsxParseNamespacedName (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:3899:23)\n    at Object.jsxParseElementName (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:3910:21)\n    at Object.jsxParseOpeningElementAt (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:3996:22)\n    at Object.jsxParseElementAt (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:4029:33)\n    at Object.jsxParseElement (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:4103:17)\n    at Object.parseExprAtom (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:4110:19)\n    at Object.parseExprSubscripts (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9287:23)\n    at Object.parseMaybeUnary (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9267:21)\n    at Object.parseExprOpBaseRightExpr (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9230:34)\n    at Object.parseExprOpRightExpr (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9223:21)\n    at Object.parseExprOp (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9189:27)\n    at Object.parseExprOps (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9147:17)\n    at Object.parseMaybeConditional (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9110:23)\n    at Object.parseMaybeAssign (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:9065:21)\n    at Object.parseVar (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:11373:26)\n    at Object.parseVarStatement (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:11192:10)\n    at Object.parseStatementContent (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:10791:21)\n    at Object.parseStatement (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseExportDeclaration (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:11913:17)\n    at Object.maybeParseExportDeclaration (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:11869:31)\n    at Object.parseExport (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:11799:29)\n    at Object.parseStatementContent (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:10828:27)\n    at Object.parseStatement (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseBlockOrModuleBlockBody (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:11298:25)\n    at Object.parseBlockBody (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:11285:10)\n    at Object.parseTopLevel (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:10655:10)\n    at Object.parse (/home/juan/E-commerce/front/node_modules/@babel/parser/lib/index.js:12264:10)");
 
 /***/ }),
 

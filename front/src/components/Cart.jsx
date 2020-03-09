@@ -1,12 +1,30 @@
 import React from "react"
 import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
+export default ({ user, cart, searchCart, removeClick, orderCreate, creditCardChange, creditCard }) => {
+    let totalPrecio = 0
+=======
 export default ({ user, cart, searchCart, removeClick }) => {
     console.log(user.username, "usernameeeeeeeeeeeeee");
 
+>>>>>>> fa9f6f0ec3f9d218e21237d8450e4d681640da6c
     if (user.username) {
         return (
             <div>
+                <div >
+                    <h3>Efectue su compra</h3>
+                    <label>Ingrese numero de tarjeta :</label>
+                    <input type="text"
+                        placeholder="4732426575629090"
+                        onChange={creditCardChange}
+                        value={creditCard}
+                    />
+                    {searchCart.map((carrito) => { totalPrecio += carrito.producto.precio })}
+                    <input type="text"
+                        value={totalPrecio} />
+                    <button onClick={() => (orderCreate(totalPrecio))}>Comprar</button>
+                </div>
                 <label></label>
                 <h2>{`Carrito de ${user.username}`}</h2>
                 <hr></hr>
@@ -33,8 +51,11 @@ export default ({ user, cart, searchCart, removeClick }) => {
                             </figure>
                         )
                     })}
+
                 </div >
+
                 <label></label>
+
             </div>
         )
     } else {

@@ -4,8 +4,7 @@ class Compra extends S.Model { }
 
 Compra.init({
     numeroTarjeta: {
-        type: S.INTEGER,
-        unique: true,
+        type: S.BIGINT,
         allowNull: false
 
 
