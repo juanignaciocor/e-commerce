@@ -6,8 +6,9 @@ const passport = require('../passport/passport');
 const { Usuario } = require("../models/index")
 const wines = require("./wines")
 const cart = require("./cart")
+const user = require("./user")
 
-
+router.use('/api/user', user)
 router.use('/api/wines', wines)
 router.use('/api/cart', cart)
 
