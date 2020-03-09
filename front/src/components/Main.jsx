@@ -28,8 +28,9 @@ class Main extends React.Component {
 
     render() {
         return (
-            <div style={{ height: "100%", width: "100%" }}>
+            <div style={{ height: "100%", width: "100%", backgroundImage: `url(https://images.pexels.com/photos/2339181/pexels-photo-2339181.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`, backgroundRepeat: "no-repeat", backgroundAttachment: "fixed" }} >
                 <NavbarContainer />
+
                 <Switch>
                     <Route exact path="/" component={CarrouselContainer}></Route>
                     <Route exact path="/register" component={RegisterContainer}></Route>
@@ -49,8 +50,8 @@ class Main extends React.Component {
                     <Route exact path="/category/white" component={CategoryBlancoContainer}></Route>
                     <Route exact path="/category/rose" component={CategoryRosadoContainer}></Route>
                     <Route exact path="/user/admin" component={UserAdminContainer}></Route>
-
                 </Switch>
+
                 <FooterContainer />
             </div >
         )

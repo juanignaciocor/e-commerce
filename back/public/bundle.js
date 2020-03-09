@@ -53483,7 +53483,7 @@ __webpack_require__.r(__webpack_exports__);
   var handleSubmit = _ref.handleSubmit,
       handleChange = _ref.handleChange,
       state = _ref.state;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Iniciar Sesi\xF3n")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "container",
@@ -53491,7 +53491,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "exampleInputEmail1"
+    for: "exampleInputEmail1"
   }, "Correo Electronico"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     onChange: handleChange,
     type: "email",
@@ -53504,7 +53504,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "exampleInputPassword1"
+    for: "exampleInputPassword1"
   }, "Contrase\xF1a"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     onChange: handleChange,
     type: "password",
@@ -53514,12 +53514,16 @@ __webpack_require__.r(__webpack_exports__);
     value: state.password,
     required: true
   })), state.error ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "alert alert-danger",
+    class: "alert alert-danger",
     role: "alert"
   }, "Error: The email entered is not registered or the password is incorrect") : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "btn btn-secondary btn-lg btn-block"
-  }, "Log In")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
+  }, "Log In")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      height: "500px"
+    }
+  }));
 });
 
 /***/ }),
@@ -53608,7 +53612,10 @@ var Main = /*#__PURE__*/function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
           height: "100%",
-          width: "100%"
+          width: "100%",
+          backgroundImage: "url(https://images.pexels.com/photos/2339181/pexels-photo-2339181.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed"
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
@@ -53857,7 +53864,7 @@ __webpack_require__.r(__webpack_exports__);
       handleChange = _ref.handleChange,
       state = _ref.state,
       handleClickFb = _ref.handleClickFb;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Registro de Usuario")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
@@ -53886,7 +53893,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Nombre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53897,7 +53904,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Apellido"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53909,7 +53916,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationServerUsername"
+    for: "validationServerUsername"
   }, "Fecha de Nacimiento"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -53926,7 +53933,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Correo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53938,7 +53945,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Domicilio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53952,7 +53959,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Nombre de Usuario"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53964,7 +53971,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Contrase\xF1a"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53988,7 +53995,11 @@ __webpack_require__.r(__webpack_exports__);
   }, "Acepto los terminos y condiciones del sitio"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-primary",
     type: "submit"
-  }, "Registrarse")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
+  }, "Registrarse")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      height: "235px"
+    }
+  }));
 });
 
 /***/ }),
@@ -54009,36 +54020,92 @@ __webpack_require__.r(__webpack_exports__);
   var vinoSeleccionado = _ref.vinoSeleccionado,
       handlerClick = _ref.handlerClick;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "media"
+    id: "ContenedorSingle",
+    className: " media "
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "carouselExampleIndicators",
+    className: "carousel slide",
+    "data-ride": "carousel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    className: "carousel-indicators"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    "data-target": "#carouselExampleIndicators",
+    "data-slide-to": "0",
+    className: "active"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    "data-target": "#carouselExampleIndicators",
+    "data-slide-to": "1"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: " carousel-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item active"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: vinoSeleccionado.imagen,
-    className: "align-self-center mr-3 imagenSingle",
-    alt: "botella-de-vino"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "media-body"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "mt-0 single"
-  }, vinoSeleccionado.nombre), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0 single"
-  }, " Bodega: ", vinoSeleccionado.bodega), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0 single"
-  }, " Precio: $", vinoSeleccionado.precio, ",00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0 single"
-  }, " Tipo: ", vinoSeleccionado.tipo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0 single"
-  }, " Cepa: ", vinoSeleccionado.cepa), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0 single"
-  }, " Lugar de Origen: ", vinoSeleccionado.provincia), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0 single"
-  }, " Graduaci\xF3n alcoh\xF3lica: ", vinoSeleccionado.alcohol, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0 single"
-  }, " Descripci\xF3n: ", vinoSeleccionado.descripcion), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mb-0 single"
-  }, " Stock: ", vinoSeleccionado.stock), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "imagenSingle",
+    src: vinoSeleccionado.imagen
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "imagenSingle carousel-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "imagenSingle",
+    src: "https://www.winestyletravel.com/wp-content/uploads/2018/11/portada-entrevino_winestyle.jpg"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "carousel-control-prev",
+    href: "#carouselExampleIndicators",
+    role: "button",
+    "data-slide": "prev"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "carousel-control-prev-icon",
+    "aria-hidden": "true"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "sr-only "
+  }, "Previous")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "carousel-control-next",
+    href: "#carouselExampleIndicators",
+    role: "button",
+    "data-slide": "next"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "carousel-control-next-icon",
+    "aria-hidden": "true"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "sr-only "
+  }, "Next"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "ContenedorSingleWineText"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "mt-0 singleWineText"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, vinoSeleccionado.nombre)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-0 singleWineText"
+  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Bodega: "), " ", vinoSeleccionado.bodega), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-0 singleWineText"
+  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Precio: "), "$", vinoSeleccionado.precio, ",00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-0 singleWineText"
+  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Tipo: "), vinoSeleccionado.tipo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-0 singleWineText"
+  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Cepa: "), " ", vinoSeleccionado.cepa), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-0 singleWineText"
+  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Lugar de Origen:"), " ", vinoSeleccionado.provincia), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-0 singleWineText"
+  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Graduaci\xF3n alcoh\xF3lica:"), " ", vinoSeleccionado.alcohol, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-0 singleWineText"
+  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Descripci\xF3n: "), " ", vinoSeleccionado.descripcion), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-0 singleWineText"
+  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Stock: "), vinoSeleccionado.stock), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: handlerClick,
     className: "btnComprar"
-  }, "A\xF1adir al Carrito "))));
+  }, "A\xF1adir al Carrito "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    style: {
+      marginTop: "20px",
+      width: "400px",
+      height: "60px"
+    },
+    src: "https://cepadevinos.com/wp-content/uploads/2016/08/logos-tarjetas.jpg"
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      height: "10px"
+    }
+  }));
 });
+{
+  /* <img src={vinoSeleccionado.imagen} className="align-self-center mr-3 imagenSingle" alt="botella-de-vino" /> */
+}
 
 /***/ }),
 
@@ -54197,6 +54264,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       className: "page-link"
     }, number));
   })))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      height: "70px"
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "not-Found container card mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row no-gutters"
@@ -54214,7 +54285,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
   }, "No hay productos que coincidan con tu b\xFAsqueda. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "  Revis\xE1 la ortograf\xEDa de la palabra. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " Utiliz\xE1 palabras m\xE1s gen\xE9ricas o menos palabras. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "  Visit\xE1 nuestra ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/allWines"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " p\xE1gina de productos"), "."))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "footerFantasma"
+    style: {
+      height: "450px"
+    }
   })));
 });
 
@@ -54853,7 +54926,7 @@ var LoginContainer = /*#__PURE__*/function (_React$Component) {
         });
       }).then(function () {
         return _this2.props.history.push("/");
-      })["catch"](function () {
+      }).catch(function () {
         _this2.setState({
           error: true
         });
@@ -55699,7 +55772,7 @@ var createOrder = function createOrder(userId, creditCard, total) {
       return res.data;
     }).then(function (carrito) {
       dispatch(buyCart(carrito));
-    })["catch"](function (err) {
+    }).catch(function (err) {
       return console.log(err);
     });
   };
@@ -55751,7 +55824,7 @@ var createCartItem = function createCartItem(item) {
       return res.data;
     }).then(function (carrito) {
       return dispatch(addCart(carrito));
-    })["catch"](function (err) {
+    }).catch(function (err) {
       return console.log(err);
     });
   };
@@ -55765,7 +55838,7 @@ var searchUserCart = function searchUserCart(userId) {
 };
 var userRemoveCart = function userRemoveCart(userId, productoId) {
   return function (dispatch, getState) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]("/api/cart/removeCart/".concat(userId, "/").concat(productoId)).then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete("/api/cart/removeCart/".concat(userId, "/").concat(productoId)).then(function (res) {
       dispatch(removeCart(res.data));
     });
   };
@@ -55838,7 +55911,7 @@ var loguearUsuario = function loguearUsuario(user) {
       return res.data;
     }).then(function (user) {
       return dispatch(logUser(user));
-    })["catch"](function (err) {
+    }).catch(function (err) {
       throw new Error(err);
     });
   };
@@ -55952,7 +56025,7 @@ var showsWines = function showsWines(vino) {
       return res.data;
     }).then(function (vino) {
       return dispatch(showWine(vino));
-    })["catch"](function (err) {
+    }).catch(function (err) {
       throw new Error(err);
     });
   };
