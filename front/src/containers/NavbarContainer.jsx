@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
 import { showsWines } from "../redux/actions/wines"
-import { logOut } from "../redux/actions/users"
+import { logOut, LogueoCoockie } from "../redux/actions/users"
 
 
 class NavbarContainer extends Component {
@@ -40,30 +40,31 @@ class NavbarContainer extends Component {
   toggle() {
     this.setState(prevState => ({
       dropdownOpen: !prevState.dropdownOpen
-  }));
+    }));
   }
-  
+
   onMouseEnter() {
-    this.setState({dropdownOpen: true});
+    this.setState({ dropdownOpen: true });
   }
-  
+
   onMouseLeave() {
-    this.setState({dropdownOpen: false});
+    this.setState({ dropdownOpen: false });
   }
+
 
 
 
   render() {
     const { vinos } = this.props
     return (
-      <Navbar user={this.props.user} onMouseLeave={this.onMouseLeave} toggle={this.toogle}  dropdownOpen ={this.state.dropdownOpen} onMouseEnter={this.onMouseEnter}  onLogout={this.onLogout} onSearch={this.onSearch} vinos={vinos} onChange={this.onChange} clearInput={this.state.clearInput}  onMouseOver={this.onMouseOver}/>
+      <Navbar user={this.props.user} onMouseLeave={this.onMouseLeave} toggle={this.toogle} dropdownOpen={this.state.dropdownOpen} onMouseEnter={this.onMouseEnter} onLogout={this.onLogout} onSearch={this.onSearch} vinos={vinos} onChange={this.onChange} clearInput={this.state.clearInput} onMouseOver={this.onMouseOver} />
     )
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    user : state.userReducers.logged
+    user: state.userReducers.logged
   }
 }
 
@@ -71,6 +72,9 @@ const matchDispatchToProps = function (dispatch, ownprops) {
   return {
     showsWines: (vino) => dispatch(showsWines(vino)),
     logOut: () => dispatch(logOut()),
+
+
+
   }
 }
 
