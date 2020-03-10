@@ -66,7 +66,7 @@ export default ({ handleSubmit, handleChange, state, handleClickFb }) => (
             </form>
             <label></label>
         </div>
-        <div style={{ height: "235px" }}></div>
+        <div style={{ height: "200px" }}></div>
     </Fragment>
 
 );
