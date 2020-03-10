@@ -122,3 +122,30 @@
 	margin-top: 445px
 }
 
+/* COMPONENTE REGISTER */
+.usuario{
+	margin-top: 50px;
+	border-radius: 30px;
+	width: 70%;
+	padding: 1%;
+}
+
+/* COMPONENTE LOGGIN */
+.loggin{
+	margin-top: 50px;
+	border-radius: 30px;
+	width: 50%;
+	padding: 1%;
+}
+
+/* COMPONENTE REVIEWS */
+.reviews{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr ;
+	margin: 1.2% 3%;
+	border-radius: 30px;
+}
+.singleReview{
+	padding: 1%;
+}
+
