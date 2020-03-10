@@ -8,8 +8,6 @@ export default function (state = initialCartState, action) {
     switch (action.type) {
         case BUY_CART:
             return { ...state, singleOrder: action.order }
-
-
         default:
             return state;
     }
