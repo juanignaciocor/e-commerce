@@ -20,8 +20,5 @@ export const BUY_CART = "BUY_CART"
 
 // aca abajo agrego la constante de agregar categoria para tenerlo comenzado
 export const ADD_CATEGORY = "ADD_CATEGORY" 
-<<<<<<< HEAD
 
 export const SHOW_USER_PROFILE = "SHOW_USER_PROFILE" 
-=======
->>>>>>> a21fef5248bef3c7e5b63d8c3747d2ab83754817
