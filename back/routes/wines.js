@@ -1,7 +1,64 @@
 const express = require('express');
 const router = express.Router();
-const { Producto } = require("../models/index")
+const { Producto, Review, Compra, Carrito } = require("../models/index")
 const { Op } = require("sequelize");
+
+
+
+
+router.get("/reviews/:idProducto/:idUsuario", function (req, res, next) {
+    const idProducto = req.params.idProducto
+    const idUsuario = req.params.idUsuario
+    Carrito.findAll(
+        {
+            where: {
+                usuarioId: idUsuario,
+                productoId: idProducto,
+                opinion: false
+            }
+        }
+    )
+        .then(carrito => {
+            res.json(carrito)
+        })
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+router.get("/reviews/:id", function (req, res, next) {
+    const id = req.params.id
+    Review.findAll(
+        {
+            where: {
+                productoId: id
+            }
+        }
+    )
+        .then(reviews => {
+            res.json(reviews)
+        })
+
+})
+
 
 router.get("/search/:vino", function (req, res, next) {
     const vino = req.params.vino.toLowerCase()

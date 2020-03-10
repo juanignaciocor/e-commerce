@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 
 export default ({ handleSubmit, handleChange, state }) => (
     <Fragment>
-        <div>
+        <div className=" loggin container card mb-3">
             <label></label>
-            <hr></hr>
+
             <div className="container"><h2>Iniciar Sesión</h2></div>
             <hr></hr>
             <form className="container" onSubmit={handleSubmit}>
@@ -21,7 +21,7 @@ export default ({ handleSubmit, handleChange, state }) => (
             </form>
             <label></label>
         </div>
-        <div style={{ height: "500px" }}></div>
+        <div style={{ height: "350px" }}></div>
     </Fragment>
 
 );
