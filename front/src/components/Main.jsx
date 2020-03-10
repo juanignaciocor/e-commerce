@@ -13,6 +13,7 @@ import CategoryTintoContainer from "../containers/CategoryTintoContainer"
 import CategoryBlancoContainer from "../containers/CategoryBlancoContainer"
 import CategoryRosadoContainer from "../containers/CategoryRosadoContainer"
 import UserAdminContainer from "../containers/UserAdminContainer"
+import UserProfileContainer from "../containers/UserProfileContainer"
 import { LogueoCoockie } from "../redux/actions/users"
 import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
@@ -25,11 +26,7 @@ class Main extends React.Component {
     componentDidMount() {
         this.props.LogueoCoockie()
     }
-
-
-
-
-
+    
     render() {
         return (
             <div style={{ backgroundSize: "100%", height: "100%", width: "100%", backgroundImage: "url(https://i.imgur.com/nhwdpMQ.jpg)", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed" }} >
@@ -47,6 +44,7 @@ class Main extends React.Component {
                     <Route exact path="/category/white" component={CategoryBlancoContainer}></Route>
                     <Route exact path="/category/rose" component={CategoryRosadoContainer}></Route>
                     <Route exact path="/user/admin" component={UserAdminContainer}></Route>
+                    <Route exact path="/user/profile" component={UserProfileContainer}></Route>
                 </Switch>
 
                 <FooterContainer />
