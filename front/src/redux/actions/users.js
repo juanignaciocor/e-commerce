@@ -34,14 +34,14 @@ export const showUser = (orderProfile) => ({
 
 export const crearUsuario = (user) => dispatch =>
     axios.post('/user/register', user)
-    .then(user => dispatch(logUser(user.data)))
+        .then(user => dispatch(logUser(user.data)))
 
-    
+
 export const showOrderProfile = (userId) => dispatch => {
     console.log(userId)
-  return  axios.get(`/api/user/profile/${userId}`)
-    .then((res) => { console.log(userId),dispatch(showUser(res.data)) }).catch(err=> console.log(err)
-    )
+    return axios.get(`/api/user/profile/${userId}`)
+        .then((res) => { console.log(userId), dispatch(showUser(res.data)) }).catch(err => console.log(err)
+        )
 }
 
 export const loguearUsuario = (user) => dispatch =>
@@ -60,7 +60,7 @@ export const logOut = () => {
         return axios.get("/user/logout")
             .then((res) => {
                 dispatch(logout())
-        })
+            })
     }
 }
 
@@ -98,10 +98,8 @@ export const ChangeToUser = (idUser) => {
     }
 }
 
-<<<<<<< HEAD
 
 
-=======
 export const allOrderAdmin = (usuario) => {
     return function (dispatch, getState) {
         return axios.get(`/api/user/admin/allOrder/${usuario}`)
@@ -114,4 +112,3 @@ export const allOrderAdmin = (usuario) => {
 
     }
 }
->>>>>>> 3cd54a2022f36599e724a56883a0bb4fa76ac2af
