@@ -9,17 +9,18 @@ const { Op } = require("sequelize");
 router.get("/reviews/:idProducto/:idUsuario", function (req, res, next) {
     const idProducto = req.params.idProducto
     const idUsuario = req.params.idUsuario
+
     Carrito.findAll(
         {
             where: {
                 usuarioId: idUsuario,
                 productoId: idProducto,
-                opinion: false
             }
         }
     )
-        .then(carrito => {
-            res.json(carrito)
+        .then(carritos => {
+            res.json(carritos)
+
         })
 
 })
