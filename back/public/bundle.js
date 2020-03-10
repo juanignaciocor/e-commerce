@@ -56377,10 +56377,151 @@ var recoverStock = function recoverStock(idProducto, cantidad, precio) {
 /*!************************************!*\
   !*** ./src/redux/actions/users.js ***!
   \************************************/
-/*! exports provided: setUsuario, logUser, logout, AllUser, allOrder, crearUsuario, loguearUsuario, crearUsuarioFacebook, logOut, LogueoCoockie, FetchAllUsers, ChangeToAdmin, ChangeToUser, allOrderAdmin */
-/***/ (function(module, exports) {
+/*! exports provided: setUsuario, logUser, logout, AllUser, allOrder, showUser, crearUsuario, showOrderProfile, loguearUsuario, crearUsuarioFacebook, logOut, LogueoCoockie, FetchAllUsers, ChangeToAdmin, ChangeToUser, allOrderAdmin */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/lauralimon/bootcamp/e-commerce/front/src/redux/actions/users.js: Unexpected token (101:1)\n\n\u001b[0m \u001b[90m  99 | \u001b[39m}\u001b[0m\n\u001b[0m \u001b[90m 100 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 101 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 102 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 103 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 104 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n    at Object.raise (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:7044:17)\n    at Object.unexpected (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:8422:16)\n    at Object.jsxParseIdentifier (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:3889:12)\n    at Object.jsxParseNamespacedName (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:3899:23)\n    at Object.jsxParseElementName (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:3910:21)\n    at Object.jsxParseOpeningElementAt (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:3996:22)\n    at Object.jsxParseElementAt (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:4029:33)\n    at Object.jsxParseElement (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:4103:17)\n    at Object.parseExprAtom (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:4110:19)\n    at Object.parseExprSubscripts (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9287:23)\n    at Object.parseMaybeUnary (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9267:21)\n    at Object.parseExprOps (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9137:23)\n    at Object.parseMaybeConditional (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9110:23)\n    at Object.parseMaybeAssign (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9065:21)\n    at Object.parseExpression (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9017:23)\n    at Object.parseStatementContent (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:10853:23)\n    at Object.parseStatement (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseBlockOrModuleBlockBody (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:11298:25)\n    at Object.parseBlockBody (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:11285:10)\n    at Object.parseTopLevel (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:10655:10)\n    at Object.parse (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:12264:10)\n    at parse (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:12315:38)\n    at parser (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setUsuario", function() { return setUsuario; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logUser", function() { return logUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllUser", function() { return AllUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allOrder", function() { return allOrder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showUser", function() { return showUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "crearUsuario", function() { return crearUsuario; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showOrderProfile", function() { return showOrderProfile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loguearUsuario", function() { return loguearUsuario; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "crearUsuarioFacebook", function() { return crearUsuarioFacebook; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logOut", function() { return logOut; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LogueoCoockie", function() { return LogueoCoockie; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FetchAllUsers", function() { return FetchAllUsers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChangeToAdmin", function() { return ChangeToAdmin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChangeToUser", function() { return ChangeToUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allOrderAdmin", function() { return allOrderAdmin; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _store_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/constants */ "./src/redux/store/constants.js");
+
+
+var setUsuario = function setUsuario(user) {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["CREATE_USER"],
+    user: user
+  };
+};
+var logUser = function logUser(user) {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["LOGGUE_USER"],
+    user: user
+  };
+};
+var logout = function logout() {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["DESLOGUEO_USER"]
+  };
+};
+var AllUser = function AllUser(allUser) {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["ALL_USER"],
+    allUser: allUser
+  };
+};
+var allOrder = function allOrder(_allOrder) {
+  return {
+    type: "ALL_ORDER",
+    allOrder: _allOrder
+  };
+};
+var showUser = function showUser(orderProfile) {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["SHOW_USER_PROFILE"],
+    orderProfile: orderProfile
+  };
+};
+var crearUsuario = function crearUsuario(user) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/user/register', user).then(function (user) {
+      return dispatch(logUser(user.data));
+    });
+  };
+};
+var showOrderProfile = function showOrderProfile(userId) {
+  return function (dispatch) {
+    console.log(userId);
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/user/profile/".concat(userId)).then(function (res) {
+      console.log(userId), dispatch(showUser(res.data));
+    }).catch(function (err) {
+      return console.log(err);
+    });
+  };
+};
+var loguearUsuario = function loguearUsuario(user) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/user/login', {
+      email: user.email,
+      password: user.password
+    }).then(function (res) {
+      return res.data;
+    }).then(function (user) {
+      return dispatch(logUser(user));
+    }).catch(function (err) {
+      throw new Error(err);
+    });
+  };
+};
+var crearUsuarioFacebook = function crearUsuarioFacebook() {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/user/register').then(function (user) {
+      return dispatch(logUser(user.data));
+    });
+  };
+};
+var logOut = function logOut() {
+  return function (dispatch, getState) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/user/logout").then(function (res) {
+      dispatch(logout());
+    });
+  };
+};
+var LogueoCoockie = function LogueoCoockie() {
+  return function (dispatch, getState) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/check").then(function (res) {
+      dispatch(logUser(res.data));
+    });
+  };
+};
+var FetchAllUsers = function FetchAllUsers() {
+  return function (dispatch, getState) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/user/admin/fetchAllUser").then(function (res) {
+      dispatch(AllUser(res.data));
+    });
+  };
+};
+var ChangeToAdmin = function ChangeToAdmin(idUser) {
+  return function (dispatch, getState) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/user/admin/changeToAdmin", {
+      idUser: idUser
+    }).then(function (res) {
+      return console.log(res.data);
+    });
+  };
+};
+var ChangeToUser = function ChangeToUser(idUser) {
+  return function (dispatch, getState) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/user/admin/changeToUser/", {
+      idUser: idUser
+    }).then(function (res) {
+      return console.log(res.data);
+    });
+  };
+};
+var allOrderAdmin = function allOrderAdmin(usuario) {
+  return function (dispatch, getState) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/user/admin/allOrder/".concat(usuario)).then(function (res) {
+      dispatch(allOrder(res.data));
+    });
+  };
+};
 
 /***/ }),
 
