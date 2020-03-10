@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
 import UserAdmin from "../components/UserAdmin"
-import { FetchAllUsers, ChangeToAdmin, ChangeToUser } from "../redux/actions/users"
+import { FetchAllUsers, ChangeToAdmin, ChangeToUser, allOrderAdmin } from "../redux/actions/users"
 import UsersChange from "../components/UsersChange"
+import AllOrder from "../components/allOrder"
 
 
 class UserAdminContainer extends React.Component {
@@ -22,7 +23,11 @@ class UserAdminContainer extends React.Component {
         this.changeAdmin = this.changeAdmin.bind(this)
         this.changeUser = this.changeUser.bind(this)
     }
-    componentDidMount() { this.props.FetchAllUsers() }
+    componentDidMount() {
+        this.props.FetchAllUsers()
+            .then((data) => this.props.allOrderAdmin()
+            )
+    }
 
     ToogleUsers() { this.setState({ vistaModificar: !this.state.vistaModificar }) };
     ToogleOrdenes() { this.setState({ vistaOrdenes: !this.state.vistaOrdenes }) }
@@ -30,10 +35,8 @@ class UserAdminContainer extends React.Component {
     ToogleProductos() { this.setState({ vistaProductos: !this.state.vistaProductos }) }
     changeAdmin(idUser) { this.props.ChangeToAdmin(idUser) }
     changeUser(idUser) { this.props.ChangeToUser(idUser) }
-
     render() {
-        const { allUsers } = this.props
-        console.log(allUsers, "estoy parado aca")
+        const { allUsers, allOrder } = this.props
         return (
             <div>
                 <UserAdmin
@@ -47,13 +50,17 @@ class UserAdminContainer extends React.Component {
                     changeUser={this.changeUser} />)
                     : (<React.Fragment></React.Fragment>)}
 
+                {this.state.vistaOrdenes ? (<AllOrder allOrder={allOrder} />)
+                    : (<React.Fragment></React.Fragment>)}
+
             </div>)
     }
 }
 const mapStateToProps = function (state, ownProps) {
     return {
         allUsers: state.userReducers.allUsers,
-        user: state.userReducers.logged
+        user: state.userReducers.logged,
+        allOrder: state.userReducers.allOrder,
     }
 };
 
@@ -61,7 +68,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         FetchAllUsers: () => dispatch(FetchAllUsers()),
         ChangeToAdmin: (idUser) => dispatch(ChangeToAdmin(idUser)),
-        ChangeToUser: (idUser) => dispatch(ChangeToUser(idUser))
+        ChangeToUser: (idUser) => dispatch(ChangeToUser(idUser)),
+        allOrderAdmin: () => dispatch(allOrderAdmin())
+
     }
 }
 

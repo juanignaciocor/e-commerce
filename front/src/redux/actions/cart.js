@@ -16,6 +16,16 @@ export const removeCart = (remove) => ({
     remove: remove
 
 });
+export const stockCart = (stock) => ({
+    type: "STOCK",
+    stock
+
+});
+
+export const recoverCart = (stock) => ({
+    type: "RECOVER",
+    stock
+})
 export const createCartItem = (item) => dispatch => {
     axios.post('/api/cart/add', item)
         .then(res => res.data)
@@ -39,5 +49,24 @@ export const userRemoveCart = (userId, productoId) => {
     }
 }
 
+export const changeStock = (idProducto, cantidad, precio) => {
+    return function (dispatch, getState) {
+        return axios.put('/api/cart/stock', { cantidad, idProducto })
+            .then((res) => {
+                let total = cantidad * precio
+                dispatch(stockCart(total))
+            })
+    }
+}
 
+
+export const recoverStock = (idProducto, cantidad, precio) => {
+    return function (dispatch, getState) {
+        return axios.put('/api/cart/recoverStock', { cantidad, idProducto })
+            .then((res) => {
+                let total = cantidad * precio
+                dispatch(recoverCart(total))
+            })
+    }
+}
 

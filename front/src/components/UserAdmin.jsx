@@ -9,7 +9,7 @@ export default ({ ToogleUsers, ToogleOrdenes, ToogleCategorias, ToogleProductos 
                     <h3>Funcionalidades de Admin</h3>
                     <ul>
                         <li onClick={ToogleUsers}>Ver y modificar usuarios</li>
-                        <li>Ver lista de ordenes</li>
+                        <li onClick={ToogleOrdenes}>Ver lista de ordenes</li>
                         <li>Crear , editar o eliminar categorias</li>
                         <li>Crear , editar o eliminar productos</li>
 
