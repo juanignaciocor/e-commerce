@@ -1,5 +1,5 @@
 import axios from "axios"
-import { CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, ALL_USER } from "../store/constants"
+import { CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, ALL_USER, SHOW_USER_PROFILE } from "../store/constants"
 
 export const setUsuario = (user) => ({
     type: CREATE_USER,
@@ -16,16 +16,25 @@ export const logout = () => ({
 
 });
 export const AllUser = (allUser) => ({
-
     type: ALL_USER,
     allUser: allUser
-
-
 })
+
+export const showUser = () => ({
+    type: SHOW_USER_PROFILE,
+    userProfile
+});
 
 export const crearUsuario = (user) => dispatch =>
     axios.post('/user/register', user)
-        .then(user => dispatch(logUser(user.data)))
+    .then(user => dispatch(logUser(user.data)))
+
+export const showUserProfile = (userId) => {
+    return function (dispatch, getState) {
+        axios.get(`/api/user/profile/${userId}`)
+            .then((res) => { dispatch(showUser(res.data)) })
+    }
+}
 
 export const loguearUsuario = (user) => dispatch =>
     axios.post('/user/login', { email: user.email, password: user.password })
@@ -39,7 +48,7 @@ export const logOut = () => {
         return axios.get("/user/logout")
             .then((res) => {
                 dispatch(logout())
-            })
+        })
     }
 }
 
@@ -77,3 +86,6 @@ export const ChangeToUser = (idUser) => {
 
     }
 }
+
+
+

@@ -1,14 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom";
 
-<<<<<<< HEAD
 export default ({ user, cart, searchCart, removeClick, orderCreate, creditCardChange, creditCard }) => {
     let totalPrecio = 0
-=======
-export default ({ user, cart, searchCart, removeClick }) => {
-    console.log(user.username, "usernameeeeeeeeeeeeee");
-
->>>>>>> fa9f6f0ec3f9d218e21237d8450e4d681640da6c
     if (user.username) {
         return (
             <div>

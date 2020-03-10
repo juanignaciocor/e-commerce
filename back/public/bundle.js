@@ -53319,9 +53319,87 @@ var carrousel = function carrousel() {
   !*** ./src/components/Cart.jsx ***!
   \*********************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/src/components/Cart.jsx: Unexpected token (4:1)\n\n\u001b[0m \u001b[90m 2 | \u001b[39m\u001b[36mimport\u001b[39m { \u001b[33mLink\u001b[39m } from \u001b[32m\"react-router-dom\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m ({ user\u001b[33m,\u001b[39m cart\u001b[33m,\u001b[39m searchCart\u001b[33m,\u001b[39m removeClick\u001b[33m,\u001b[39m orderCreate\u001b[33m,\u001b[39m creditCardChange\u001b[33m,\u001b[39m creditCard }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 6 | \u001b[39m    let totalPrecio \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n    at Object.raise (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:7044:17)\n    at Object.unexpected (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:8422:16)\n    at Object.jsxParseIdentifier (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3889:12)\n    at Object.jsxParseNamespacedName (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3899:23)\n    at Object.jsxParseElementName (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3910:21)\n    at Object.jsxParseOpeningElementAt (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3996:22)\n    at Object.jsxParseElementAt (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:4029:33)\n    at Object.jsxParseElement (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:4103:17)\n    at Object.parseExprAtom (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:4110:19)\n    at Object.parseExprSubscripts (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9287:23)\n    at Object.parseMaybeUnary (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9267:21)\n    at Object.parseExprOps (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9137:23)\n    at Object.parseMaybeConditional (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9110:23)\n    at Object.parseMaybeAssign (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9065:21)\n    at Object.parseExpression (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9017:23)\n    at Object.parseStatementContent (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:10853:23)\n    at Object.parseStatement (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseBlockOrModuleBlockBody (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:11298:25)\n    at Object.parseBlockBody (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:11285:10)\n    at Object.parseTopLevel (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:10655:10)\n    at Object.parse (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:12264:10)\n    at parse (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:12315:38)\n    at parser (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var user = _ref.user,
+      cart = _ref.cart,
+      searchCart = _ref.searchCart,
+      removeClick = _ref.removeClick,
+      orderCreate = _ref.orderCreate,
+      creditCardChange = _ref.creditCardChange,
+      creditCard = _ref.creditCard;
+  var totalPrecio = 0;
+
+  if (user.username) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Efectue su compra"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Ingrese numero de tarjeta :"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      placeholder: "4732426575629090",
+      onChange: creditCardChange,
+      value: creditCard
+    }), searchCart.map(function (carrito) {
+      totalPrecio += carrito.producto.precio;
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      value: totalPrecio
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: function onClick() {
+        return orderCreate(totalPrecio);
+      }
+    }, "Comprar")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito de ".concat(user.username)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container"
+    }, searchCart.map(function (item) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
+        key: item.producto.id
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "card-header"
+      }, item.producto.nombre), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "card-title"
+      }, "Bodega: ".concat(item.producto.bodega)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "card-text"
+      }, "Precio: ".concat(item.producto.precio, ",00")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-outline-danger",
+        onClick: function onClick() {
+          return removeClick(item.producto.id);
+        }
+      }, "Remover del Carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/wines/".concat(item.producto.id)
+      }, "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "cartImagen",
+        src: item.producto.imagen
+      })))));
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
+  } else {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "card"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+      className: "card-header"
+    }, "Nombre del producto del carrito"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "card-body"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+      className: "card-title"
+    }, "Bodega"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "card-text"
+    }, "Precio del producto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      className: "btn btn-outline-danger"
+    }, "Remover del Carrito")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null));
+  }
+});
 
 /***/ }),
 
@@ -53471,8 +53549,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _containers_CategoryBlancoContainer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../containers/CategoryBlancoContainer */ "./src/containers/CategoryBlancoContainer.jsx");
 /* harmony import */ var _containers_CategoryRosadoContainer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../containers/CategoryRosadoContainer */ "./src/containers/CategoryRosadoContainer.jsx");
 /* harmony import */ var _containers_UserAdminContainer__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../containers/UserAdminContainer */ "./src/containers/UserAdminContainer.jsx");
-/* harmony import */ var _redux_actions_users__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../redux/actions/users */ "./src/redux/actions/users.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _containers_UserProfileContainer__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../containers/UserProfileContainer */ "./src/containers/UserProfileContainer.jsx");
+/* harmony import */ var _redux_actions_users__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../redux/actions/users */ "./src/redux/actions/users.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -53490,6 +53569,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -53576,6 +53656,10 @@ var Main = /*#__PURE__*/function (_React$Component) {
         exact: true,
         path: "/user/admin",
         component: _containers_UserAdminContainer__WEBPACK_IMPORTED_MODULE_14__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/user/profile",
+        component: _containers_UserProfileContainer__WEBPACK_IMPORTED_MODULE_15__["default"]
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_FooterContainer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
     }
   }]);
@@ -53586,12 +53670,12 @@ var Main = /*#__PURE__*/function (_React$Component) {
 var matchDispatchToProps = function matchDispatchToProps(dispatch, ownprops) {
   return {
     LogueoCoockie: function LogueoCoockie() {
-      return dispatch(Object(_redux_actions_users__WEBPACK_IMPORTED_MODULE_15__["LogueoCoockie"])());
+      return dispatch(Object(_redux_actions_users__WEBPACK_IMPORTED_MODULE_16__["LogueoCoockie"])());
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_16__["connect"])(null, matchDispatchToProps)(Main)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_17__["connect"])(null, matchDispatchToProps)(Main)));
 
 /***/ }),
 
@@ -53694,7 +53778,9 @@ __webpack_require__.r(__webpack_exports__);
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/category/rose",
     className: "dropdown-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], null, "Rose")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], null, "Rose")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/user/profile"
+  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
     className: "btnUserNav btn btn-secondary"
   }, "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -53702,7 +53788,7 @@ __webpack_require__.r(__webpack_exports__);
     src: _assets_user_svg__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     id: "btnText"
-  }, user.email ? user.username : null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+  }, user.email ? user.username : null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/cart"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
@@ -53972,6 +54058,55 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Bienvenido a la seccion de Admins"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Funcionalidades de Admin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     onClick: ToogleUsers
   }, "Ver y modificar usuarios"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Ver lista de ordenes"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Crear , editar o eliminar categorias"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Crear , editar o eliminar productos")))));
+});
+
+/***/ }),
+
+/***/ "./src/components/UserProfile.jsx":
+/*!****************************************!*\
+  !*** ./src/components/UserProfile.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/cart.svg */ "./assets/cart.svg");
+/* harmony import */ var _assets_hola_jpeg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/hola.jpeg */ "./assets/hola.jpeg");
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "textoCentrado"
+  }, " VINOS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "columns"
+  }, vinos.map(function (vino) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
+      key: vino.id
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/wines/".concat(vino.id)
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: vino.imagen
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figcaption", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "vino"
+    }, vino.nombre), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "precioCarrito"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "precio"
+    }, "$ ", vino.precio, ",00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: function onClick() {
+        return handlerClick(vino.id);
+      }
+    }, " A\xF1adir a Carrito  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "imgCarrito",
+      src: _assets_cart_svg__WEBPACK_IMPORTED_MODULE_2__["default"]
+    })))));
+  })));
 });
 
 /***/ }),
@@ -55287,6 +55422,77 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
 
 /***/ }),
 
+/***/ "./src/containers/UserProfileContainer.jsx":
+/*!*************************************************!*\
+  !*** ./src/containers/UserProfileContainer.jsx ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _components_UserProfile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/UserProfile */ "./src/components/UserProfile.jsx");
+/* harmony import */ var _redux_actions_cart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/actions/cart */ "./src/redux/actions/cart.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var UserProfileContainer = /*#__PURE__*/function (_React$Component) {
+  _inherits(UserProfileContainer, _React$Component);
+
+  function UserProfileContainer() {
+    _classCallCheck(this, UserProfileContainer);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(UserProfileContainer).call(this));
+  }
+
+  _createClass(UserProfileContainer, [{
+    key: "render",
+    value: function render() {
+      var userProfile = this.props.userProfile;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UserProfile__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        user: userProfile
+      }));
+    }
+  }]);
+
+  return UserProfileContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    userProfile: state.userReducers.logged
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, null)(UserProfileContainer)));
+
+/***/ }),
+
 /***/ "./src/containers/VinosContainer.jsx":
 /*!*******************************************!*\
   !*** ./src/containers/VinosContainer.jsx ***!
@@ -55631,7 +55837,7 @@ var userRemoveCart = function userRemoveCart(userId, productoId) {
 /*!************************************!*\
   !*** ./src/redux/actions/users.js ***!
   \************************************/
-/*! exports provided: setUsuario, logUser, logout, AllUser, crearUsuario, loguearUsuario, logOut, LogueoCoockie, FetchAllUsers, ChangeToAdmin, ChangeToUser */
+/*! exports provided: setUsuario, logUser, logout, AllUser, showUser, crearUsuario, showUserProfile, loguearUsuario, logOut, LogueoCoockie, FetchAllUsers, ChangeToAdmin, ChangeToUser */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55640,7 +55846,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logUser", function() { return logUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllUser", function() { return AllUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showUser", function() { return showUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "crearUsuario", function() { return crearUsuario; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showUserProfile", function() { return showUserProfile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loguearUsuario", function() { return loguearUsuario; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logOut", function() { return logOut; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LogueoCoockie", function() { return LogueoCoockie; });
@@ -55675,10 +55883,23 @@ var AllUser = function AllUser(allUser) {
     allUser: allUser
   };
 };
+var showUser = function showUser() {
+  return {
+    type: _store_constants__WEBPACK_IMPORTED_MODULE_1__["SHOW_USER_PROFILE"],
+    userProfile: userProfile
+  };
+};
 var crearUsuario = function crearUsuario(user) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/user/register', user).then(function (user) {
       return dispatch(logUser(user.data));
+    });
+  };
+};
+var showUserProfile = function showUserProfile(userId) {
+  return function (dispatch, getState) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/user/profile/".concat(userId)).then(function (res) {
+      dispatch(showUser(res.data));
     });
   };
 };
@@ -55976,7 +56197,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialUserState = {
   logged: {},
-  allUsers: []
+  allUsers: [],
+  userProfile: {}
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialUserState;
@@ -55996,6 +56218,11 @@ var initialUserState = {
     case _store_constants__WEBPACK_IMPORTED_MODULE_0__["ALL_USER"]:
       return _objectSpread({}, state, {
         allUsers: action.allUser
+      });
+
+    case _store_constants__WEBPACK_IMPORTED_MODULE_0__["SHOW_USER_PROFILE"]:
+      return _objectSpread({}, state, {
+        userProfile: action.userProfile
       });
 
     default:
@@ -56070,10 +56297,42 @@ var initialUserState = {
 /*!**************************************!*\
   !*** ./src/redux/store/constants.js ***!
   \**************************************/
-/*! exports provided: CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, SEARCH_WINES, ALL_WINES, ADD_CART, ALL_TINTOS, ALL_ROSADOS, ALL_BLANCOS, SEARCH_CART, REMOVE_CART */
-/***/ (function(module, exports) {
+/*! exports provided: CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, SEARCH_WINES, ALL_WINES, ADD_CART, ALL_TINTOS, ALL_ROSADOS, ALL_BLANCOS, SEARCH_CART, REMOVE_CART, ALL_USER, BUY_CART, ADD_CATEGORY, SHOW_USER_PROFILE */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/src/redux/store/constants.js: Unexpected token (19:3)\n\n\u001b[0m \u001b[90m 17 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mREMOVE_CART\u001b[39m \u001b[33m=\u001b[39m \u001b[32m\"REMOVE_CART\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mALL_USER\u001b[39m \u001b[33m=\u001b[39m \u001b[32m\"ALL_USER\"\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mBUY_CART\u001b[39m \u001b[33m=\u001b[39m \u001b[32m\"BUY_CART\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 21 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 | \u001b[39m\u001b[0m\n    at Object.raise (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:7044:17)\n    at Object.unexpected (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:8422:16)\n    at Object.jsxParseIdentifier (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3889:12)\n    at Object.jsxParseNamespacedName (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3899:23)\n    at Object.jsxParseElementName (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3910:21)\n    at Object.jsxParseOpeningElementAt (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3996:22)\n    at Object.jsxParseElementAt (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:4029:33)\n    at Object.jsxParseElement (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:4103:17)\n    at Object.parseExprAtom (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:4110:19)\n    at Object.parseExprSubscripts (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9287:23)\n    at Object.parseMaybeUnary (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9267:21)\n    at Object.parseExprOpBaseRightExpr (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9230:34)\n    at Object.parseExprOpRightExpr (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9223:21)\n    at Object.parseExprOp (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9189:27)\n    at Object.parseExprOps (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9147:17)\n    at Object.parseMaybeConditional (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9110:23)\n    at Object.parseMaybeAssign (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9065:21)\n    at Object.parseVar (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:11373:26)\n    at Object.parseVarStatement (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:11192:10)\n    at Object.parseStatementContent (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:10791:21)\n    at Object.parseStatement (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseExportDeclaration (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:11913:17)\n    at Object.maybeParseExportDeclaration (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:11869:31)\n    at Object.parseExport (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:11799:29)\n    at Object.parseStatementContent (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:10828:27)\n    at Object.parseStatement (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseBlockOrModuleBlockBody (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:11298:25)\n    at Object.parseBlockBody (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:11285:10)\n    at Object.parseTopLevel (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:10655:10)\n    at Object.parse (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:12264:10)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_USER", function() { return CREATE_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGGUE_USER", function() { return LOGGUE_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESLOGUEO_USER", function() { return DESLOGUEO_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_WINES", function() { return SEARCH_WINES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_WINES", function() { return ALL_WINES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CART", function() { return ADD_CART; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_TINTOS", function() { return ALL_TINTOS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_ROSADOS", function() { return ALL_ROSADOS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_BLANCOS", function() { return ALL_BLANCOS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_CART", function() { return SEARCH_CART; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_CART", function() { return REMOVE_CART; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_USER", function() { return ALL_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BUY_CART", function() { return BUY_CART; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CATEGORY", function() { return ADD_CATEGORY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SHOW_USER_PROFILE", function() { return SHOW_USER_PROFILE; });
+var CREATE_USER = "CREATE_USER";
+var LOGGUE_USER = "LOGGUE_USER";
+var DESLOGUEO_USER = "DESLOGUEO_USER";
+var SEARCH_WINES = "SEARCH_WINES";
+var ALL_WINES = "ALL_WINES";
+var ADD_CART = "ADD_CART";
+var ALL_TINTOS = "ALL_TINTOS";
+var ALL_ROSADOS = "ALL_ROSADOS";
+var ALL_BLANCOS = "ALL_BLANCOS";
+var SEARCH_CART = "SEARCH_CART";
+var REMOVE_CART = "REMOVE_CART";
+var ALL_USER = "ALL_USER";
+var BUY_CART = "BUY_CART"; // aca abajo agrego la constante de agregar categoria para tenerlo comenzado
+
+var ADD_CATEGORY = "ADD_CATEGORY";
+var SHOW_USER_PROFILE = "SHOW_USER_PROFILE";
 
 /***/ }),
 
