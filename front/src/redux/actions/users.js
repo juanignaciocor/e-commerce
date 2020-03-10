@@ -22,6 +22,13 @@ export const AllUser = (allUser) => ({
 
 
 })
+export const allOrder = (allOrder) => ({
+
+    type: "ALL_ORDER",
+    allOrder
+
+
+})
 
 export const crearUsuario = (user) => dispatch =>
     axios.post('/user/register', user)
@@ -77,6 +84,19 @@ export const ChangeToUser = (idUser) => {
     return function (dispatch, getState) {
         return axios.put(`/api/user/admin/changeToUser/`, { idUser: idUser })
             .then((res) => (console.log(res.data)))
+
+    }
+}
+
+export const allOrderAdmin = (usuario) => {
+    return function (dispatch, getState) {
+        return axios.get(`/api/user/admin/allOrder/${usuario}`)
+            .then((res) => {
+                dispatch(allOrder(res.data))
+
+            })
+
+
 
     }
 }
