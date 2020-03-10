@@ -28,13 +28,11 @@ class Main extends React.Component {
 
 
 
-    // VINEDO(https://images.pexels.com/photos/2339181/pexels-photo-2339181.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
-    // MADERA https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-    // CHIQUI https://i.imgur.com/nhwdpMQ.jpg
+
 
     render() {
         return (
-            <div style={{ backgroundSize: "100%", height: "100%", width: "100%", backgroundImage: "url(https://i.imgur.com/nhwdpMQ.jpg", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed" }} >
+            <div style={{ backgroundSize: "100%", height: "100%", width: "100%", backgroundImage: "url(https://i.imgur.com/nhwdpMQ.jpg)", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed" }} >
                 <NavbarContainer />
 
                 <Switch>
