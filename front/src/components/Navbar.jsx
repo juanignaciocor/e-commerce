@@ -7,7 +7,7 @@ import userIcon from "../../assets/user.svg"
 export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouseLeave, toggle, dropdownOpen, onMouseEnter }) => {
     const ref = useRef(null)
     return (
-        <div>
+        <div >
             <nav className=" navegador navbar  navbar-expand-lg navbar-light  ">
                 <Link to="/" className="navbar-brand" ><button className="btn btn-dark my-2 my-sm-2">WINERY</button></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,23 +20,23 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                                 <Link to="/login" className="nav-link"  >Log Out</Link>
                             </li>
                         ) : (
-                            <Fragment>
-                                <li className="nav-item botones">
-                                    <Link to="/register" className="nav-link" >Register </Link>
-                                </li>
-                                <li className="nav-item botones">
-                                    <Link to="/login" className="nav-link" >Log In </Link>
-                                </li>
-                            </Fragment>
-                        ) }
+                                <Fragment>
+                                    <li className="nav-item botones">
+                                        <Link to="/register" className="nav-link" >Register </Link>
+                                    </li>
+                                    <li className="nav-item botones">
+                                        <Link to="/login" className="nav-link" >Log In </Link>
+                                    </li>
+                                </Fragment>
+                            )}
                         <li className="nav-item botones">
-                            <Link className="nav-link" to="/allWines">All Products </Link>
+                            <Link className="nav-link" to="/allWines/1">All Products </Link>
                         </li>
                         <li className="nav-item dropdown">
 
                             <Dropdown className="d-inline-block" onMouseOver={onMouseEnter} onMouseLeave={onMouseLeave} isOpen={dropdownOpen} toggle={toggle} >
                                 <DropdownToggle caret className="btnCategNav">
-                                Categories
+                                    Categories
                                 </DropdownToggle>
                                 <DropdownMenu>
                                     <Link to="/category/red" className="dropdown-item" ><DropdownItem >Red</DropdownItem></Link>
@@ -57,11 +57,11 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                     </ul>
                     <Link to="/user/profile"> <button type="button" className="btnUserNav btn btn-secondary">  <img className="imgCarrito" src={userIcon} /> 
                         <span id="btnText">
-                        {user.email ? (
-                            user.username
-                        ) : (
-                            null
-                        ) }
+                            {user.email ? (
+                                user.username
+                            ) : (
+                                    null
+                                )}
                         </span>
                     </button>
                     </Link>

@@ -42,6 +42,10 @@ export const loguearUsuario = (user) => dispatch =>
         .then(user => dispatch(logUser(user)))
         .catch(err => { throw new Error(err) })
 
+export const crearUsuarioFacebook = () => dispatch =>
+    axios.post('/user/register')
+        .then(user => dispatch(logUser(user.data)))
+
 
 export const logOut = () => {
     return function (dispatch, getState) {
@@ -51,7 +55,6 @@ export const logOut = () => {
         })
     }
 }
-
 
 export const LogueoCoockie = () => {
     return function (dispatch, getState) {
