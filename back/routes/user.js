@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Producto, Usuario } = require("../models/index")
-const { Op } = require("sequelize");
-
-
+const { Producto, Usuario, Carrito } = require("../models/index")
 
 router.get("/admin/fetchAllUser", (req, res, next) => {
     Usuario.findAll()
@@ -28,4 +25,19 @@ router.put("/admin/changeToUser", (req, res, next) => {
         })
         .then((data) => res.json(data))
 })
+
+router.get("/profile/:userId", (req, res, next) => {
+    Carrito.findAll({
+        include: [{
+            model: Usuario,
+            where: { id: req.params.userId }
+        },
+        {
+            model: Producto,
+        },
+        ], where: { estado: "fulfilled" }
+    })
+        .then((order) => {console.log(order), res.json(order)})
+})
+
 module.exports = router

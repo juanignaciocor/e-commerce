@@ -1,41 +1,39 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { connect } from "react-redux"
 import { withRouter } from "react-router";
 import UserProfile from "../components/UserProfile"
-import { showUserProfile } from "../redux/actions/cart"
-
+import { showOrderProfile } from "../redux/actions/users"
 
 class UserProfileContainer extends React.Component {
     constructor() {
         super()
     }
-   
-    // handlerClickUser(total) {
-    //     this.props.showUserProfile()
-    // }
-
+    
+    componentDidMount(){
+        this.props.showOrderProfile(this.props.userId)
+    }
+    
     render() {
-        const { userProfile } = this.props
-
+        const { orderProfile } = this.props
+        console.log(this.props)
         return (
             <div>
-                <UserProfile user={userProfile} handlerClickUser={handlerClickUser}/>
+                <UserProfile orderProfile={orderProfile} props={this.props}/>
             </div>
         )
     }
 }
 
-
 const mapStateToProps = (state, ownProps) => {
     return {
-        userProfile: {userLogged: state.userReducers.logged, userCart : state.cartReducers.searchCart}
+        orderProfile: state.userReducers.orderProfile,
+        userId : state.userReducers.logged.id
     }
 }
 
-// const mapDispatchToProps = (dispatch, ownProps) => {
-//     return {
-//         showUserProfile: (userId) => (dispatch(showUserProfile(userId))),
-//     }
-
-// }
-export default withRouter(connect(mapStateToProps, null)(UserProfileContainer));
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        showOrderProfile: (userId) => (dispatch(showOrderProfile(userId))),
+    }
+}
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(UserProfileContainer));

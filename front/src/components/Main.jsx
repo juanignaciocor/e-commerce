@@ -26,11 +26,7 @@ class Main extends React.Component {
     componentDidMount() {
         this.props.LogueoCoockie()
     }
-
-
-
-
-
+    
     render() {
         return (
             <div style={{ backgroundSize: "100%", height: "100%", width: "100%", backgroundImage: "url(https://i.imgur.com/nhwdpMQ.jpg)", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed" }} >

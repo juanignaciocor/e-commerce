@@ -2,7 +2,7 @@ import { DESLOGUEO_USER, ALL_USER, SHOW_USER_PROFILE } from "../store/constants"
 const initialUserState = {
     logged: {},
     allUsers: [],
-    userProfile: {}
+    orderProfile: []
 }
 
 export default function (state = initialUserState, action) {
@@ -14,7 +14,7 @@ export default function (state = initialUserState, action) {
         case ALL_USER:
             return { ...state, allUsers: action.allUser }
         case SHOW_USER_PROFILE:
-            return { ...state, userProfile: action.userProfile }
+            return { ...state, orderProfile: action.orderProfile }
         default:
             return state;
     }

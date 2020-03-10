@@ -20,20 +20,21 @@ export const AllUser = (allUser) => ({
     allUser: allUser
 })
 
-export const showUser = () => ({
+export const showUser = (orderProfile) => ({
     type: SHOW_USER_PROFILE,
-    userProfile
+    orderProfile
 });
 
 export const crearUsuario = (user) => dispatch =>
     axios.post('/user/register', user)
     .then(user => dispatch(logUser(user.data)))
 
-export const showUserProfile = (userId) => {
-    return function (dispatch, getState) {
-        axios.get("/api/user/profile")
-            .then((res) => { dispatch(showUser(res.data)) })
-    }
+    
+export const showOrderProfile = (userId) => dispatch => {
+    console.log(userId)
+  return  axios.get(`/api/user/profile/${userId}`)
+    .then((res) => { console.log(userId),dispatch(showUser(res.data)) }).catch(err=> console.log(err)
+    )
 }
 
 export const loguearUsuario = (user) => dispatch =>
