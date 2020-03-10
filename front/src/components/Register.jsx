@@ -3,7 +3,8 @@ import fbicon from "../../assets/facebook.svg"
 import googleicon from "../../assets/search.svg"
 export default ({ handleSubmit, handleChange, state, handleClickFb }) => (
     <Fragment>
-        <div>
+
+        <div className=" usuario container card mb-3">
             <label></label>
             <div className="container"><h2>Registro de Usuario</h2></div>
             <hr></hr>
@@ -51,7 +52,7 @@ export default ({ handleSubmit, handleChange, state, handleClickFb }) => (
                     </div>
                     <div className="col-md-6 mb-3">
                         <label for="validationCustom01">Contraseña</label>
-                        <input type="text" onChange={handleChange} name="password" className="form-control" placeholder="Contraseña" id="validationServer05" required />
+                        <input type="password" onChange={handleChange} name="password" className="form-control" placeholder="Contraseña" id="validationServer05" required />
                     </div>
                 </div>
                 <div className="form-group">
@@ -66,7 +67,7 @@ export default ({ handleSubmit, handleChange, state, handleClickFb }) => (
             </form>
             <label></label>
         </div>
-        <div style={{ height: "200px" }}></div>
+        <div style={{ height: "140px" }}></div>
     </Fragment>
 
 );

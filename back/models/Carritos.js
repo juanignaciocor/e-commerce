@@ -10,6 +10,10 @@ Carrito.init({
         type: S.STRING,
         defaultValue: "pending"
     },
+    opinion: {
+        type: S.BOOLEAN,
+
+    }
 
 }, { sequelize: db, modelName: 'carrito' })
 

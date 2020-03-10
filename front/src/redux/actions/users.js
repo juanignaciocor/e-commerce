@@ -19,6 +19,13 @@ export const AllUser = (allUser) => ({
     type: ALL_USER,
     allUser: allUser
 })
+export const allOrder = (allOrder) => ({
+
+    type: "ALL_ORDER",
+    allOrder
+
+
+})
 
 export const showUser = (orderProfile) => ({
     type: SHOW_USER_PROFILE,
@@ -91,5 +98,20 @@ export const ChangeToUser = (idUser) => {
     }
 }
 
+<<<<<<< HEAD
 
 
+=======
+export const allOrderAdmin = (usuario) => {
+    return function (dispatch, getState) {
+        return axios.get(`/api/user/admin/allOrder/${usuario}`)
+            .then((res) => {
+                dispatch(allOrder(res.data))
+
+            })
+
+
+
+    }
+}
+>>>>>>> 3cd54a2022f36599e724a56883a0bb4fa76ac2af

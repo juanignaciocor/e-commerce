@@ -18,6 +18,12 @@ class SingleWineContainer extends Component {
                 .then(res => res.data)
                 .then(vino => {
                     this.setState({ vinoSeleccionado: vino[0] })
+                }),
+            axios.get(`/api/wines/reviews/${this.props.match.params.id}/${this.props.user.id}`)
+                .then(res => res.data)
+                .then(res => {
+                    console.log("esto va a funcionaaaaaaaaaaaaar ", res);
+
                 })
         )
     }
@@ -29,7 +35,7 @@ class SingleWineContainer extends Component {
     render() {
         return (
             <Fragment>
-                <SingleWine vinoSeleccionado={this.state.vinoSeleccionado} handlerClick={this.handlerClick} />
+                <SingleWine user={this.props.user} vinoSeleccionado={this.state.vinoSeleccionado} handlerClick={this.handlerClick} />
             </Fragment>
         )
     }

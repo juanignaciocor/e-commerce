@@ -1,7 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const { Producto, Usuario, Carrito } = require("../models/index")
+const { Op } = require("sequelize");
 
+
+router.get("/admin/allOrder/:user", (req, res, next) => {
+    Compra.findAll()
+        .then((data) => {
+            res.json(data)
+        })
+})
 router.get("/admin/fetchAllUser", (req, res, next) => {
     Usuario.findAll()
         .then(data => res.json(data))

@@ -36,14 +36,7 @@ class Main extends React.Component {
                     <Route exact path="/" component={CarrouselContainer}></Route>
                     <Route exact path="/register" component={RegisterContainer}></Route>
                     <Route exact path="/login" component={LoginContainer}></Route>
-                    <Route exact path="/allWines/1" component={AllWines}></Route>
-                    <Route exact path="/allWines/2" component={AllWines}></Route>
-                    <Route exact path="/allWines/3" component={AllWines}></Route>
-                    <Route exact path="/allWines/4" component={AllWines}></Route>
-                    <Route exact path="/allWines/5" component={AllWines}></Route>
-                    <Route exact path="/allWines/6" component={AllWines}></Route>
-                    <Route exact path="/allWines/7" component={AllWines}></Route>
-                    <Route exact path="/allWines/8" component={AllWines}></Route>
+                    <Route exact path="/allWines" component={AllWines}></Route>
                     <Route exact path="/wines/search" component={VinosContainer}></Route>
                     <Route exact path="/wines/:id" component={SingleWineContainer}></Route>
                     <Route exact path="/cart" component={CartContainer}></Route>
