@@ -1,5 +1,5 @@
 var FacebookStrategy = require('passport-facebook').Strategy;
-var User = require('../models/user');
+var User = require('../models/users.js');
 var fbConfig = require('./config/fb');
 
 module.exports = function(passport) {
@@ -19,7 +19,7 @@ module.exports = function(passport) {
 		process.nextTick(function() {
 
 			// find the user in the database based on their facebook id
-	        User.findOne({ 'id' : profile.id }, function(err, user) {
+	        User.findOrCreate({ 'id' : profile.id }, function(err, user) {
 
 	        	// if there is an error, stop everything and return that
 	        	// ie an error connecting to the database
