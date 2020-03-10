@@ -31,7 +31,7 @@ export const crearUsuario = (user) => dispatch =>
 
 export const showUserProfile = (userId) => {
     return function (dispatch, getState) {
-        axios.get(`/api/user/profile/${userId}`)
+        axios.get("/api/user/profile")
             .then((res) => { dispatch(showUser(res.data)) })
     }
 }

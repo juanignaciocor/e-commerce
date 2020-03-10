@@ -10,12 +10,16 @@ class UserProfileContainer extends React.Component {
         super()
     }
    
+    // handlerClickUser(total) {
+    //     this.props.showUserProfile()
+    // }
+
     render() {
         const { userProfile } = this.props
 
         return (
             <div>
-                <UserProfile user={userProfile} />
+                <UserProfile user={userProfile} handlerClickUser={handlerClickUser}/>
             </div>
         )
     }
@@ -24,8 +28,14 @@ class UserProfileContainer extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        userProfile: state.userReducers.logged
+        userProfile: {userLogged: state.userReducers.logged, userCart : state.cartReducers.searchCart}
     }
 }
 
+// const mapDispatchToProps = (dispatch, ownProps) => {
+//     return {
+//         showUserProfile: (userId) => (dispatch(showUserProfile(userId))),
+//     }
+
+// }
 export default withRouter(connect(mapStateToProps, null)(UserProfileContainer));

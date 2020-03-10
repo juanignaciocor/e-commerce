@@ -55607,14 +55607,18 @@ var UserProfileContainer = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, UserProfileContainer);
 
     return _possibleConstructorReturn(this, _getPrototypeOf(UserProfileContainer).call(this));
-  }
+  } // handlerClickUser(total) {
+  //     this.props.showUserProfile()
+  // }
+
 
   _createClass(UserProfileContainer, [{
     key: "render",
     value: function render() {
       var userProfile = this.props.userProfile;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UserProfile__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        user: userProfile
+        user: userProfile,
+        handlerClickUser: handlerClickUser
       }));
     }
   }]);
@@ -55624,9 +55628,17 @@ var UserProfileContainer = /*#__PURE__*/function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    userProfile: state.userReducers.logged
+    userProfile: {
+      userLogged: state.userReducers.logged,
+      userCart: state.cartReducers.searchCart
+    }
   };
-};
+}; // const mapDispatchToProps = (dispatch, ownProps) => {
+//     return {
+//         showUserProfile: (userId) => (dispatch(showUserProfile(userId))),
+//     }
+// }
+
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, null)(UserProfileContainer)));
 
@@ -56040,7 +56052,7 @@ var crearUsuario = function crearUsuario(user) {
 };
 var showUserProfile = function showUserProfile(userId) {
   return function (dispatch, getState) {
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/user/profile/".concat(userId)).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/user/profile").then(function (res) {
       dispatch(showUser(res.data));
     });
   };
