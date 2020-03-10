@@ -53505,7 +53505,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "exampleInputEmail1"
+    for: "exampleInputEmail1"
   }, "Correo Electronico"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     onChange: handleChange,
     type: "email",
@@ -53518,7 +53518,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "exampleInputPassword1"
+    for: "exampleInputPassword1"
   }, "Contrase\xF1a"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     onChange: handleChange,
     type: "password",
@@ -53528,7 +53528,7 @@ __webpack_require__.r(__webpack_exports__);
     value: state.password,
     required: true
   })), state.error ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "alert alert-danger",
+    class: "alert alert-danger",
     role: "alert"
   }, "Error: The email entered is not registered or the password is incorrect") : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
@@ -53890,7 +53890,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Nombre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53901,7 +53901,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Apellido"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53913,7 +53913,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationServerUsername"
+    for: "validationServerUsername"
   }, "Fecha de Nacimiento"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -53930,7 +53930,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Correo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53942,7 +53942,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Domicilio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53956,7 +53956,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Nombre de Usuario"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53968,7 +53968,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "validationCustom01"
+    for: "validationCustom01"
   }, "Contrase\xF1a"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "password",
     onChange: handleChange,
@@ -54052,12 +54052,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _containers_ReviewContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../containers/ReviewContainer */ "./src/containers/ReviewContainer.jsx");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var user = _ref.user,
+      carritos = _ref.carritos,
       vinoSeleccionado = _ref.vinoSeleccionado,
       handlerClick = _ref.handlerClick;
+  var falsos = [];
+
+  var nuevoCarrito = _toConsumableArray(carritos);
+
+  console.log(Array.isArray(nuevoCarrito));
+  console.log(nuevoCarrito);
+  console.log(nuevoCarrito.map);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, vinoSeleccionado.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "ContenedorSingle",
     className: " media "
@@ -54136,7 +54152,28 @@ __webpack_require__.r(__webpack_exports__);
       height: "60px"
     },
     src: "https://cepadevinos.com/wp-content/uploads/2016/08/logos-tarjetas.jpg"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_ReviewContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, nuevoCarrito ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, nuevoCarrito.map(function (carrito) {
+    if (carrito.opinion === false) falsos.push(carrito);
+  }), falsos.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "not-Found container card mb-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Calificaci\xF3n del vino"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    class: "form-control"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Dejanos un comentario del vino"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "form-group"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    class: "form-control",
+    id: "exampleFormControlTextarea1",
+    rows: "3"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "btn-group-toggle",
+    "data-toggle": "buttons"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    class: "btn btn-secondary active"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "checkbox",
+    checked: true
+  }), " Checked")))))) : null) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_ReviewContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     vinoSeleccionado: vinoSeleccionado
   }), " ") : null);
 });
@@ -55183,7 +55220,7 @@ var LoginContainer = /*#__PURE__*/function (_React$Component) {
         });
       }).then(function () {
         return _this2.props.history.push("/");
-      })["catch"](function () {
+      }).catch(function () {
         _this2.setState({
           error: true
         });
@@ -55631,7 +55668,8 @@ var SingleWineContainer = /*#__PURE__*/function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(SingleWineContainer).call(this, props));
     _this.state = {
-      vinoSeleccionado: {}
+      vinoSeleccionado: {},
+      carritos: []
     };
     _this.handlerClick = _this.handlerClick.bind(_assertThisInitialized(_this));
     return _this;
@@ -55650,8 +55688,10 @@ var SingleWineContainer = /*#__PURE__*/function (_Component) {
         });
       }), axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/wines/reviews/".concat(this.props.match.params.id, "/").concat(this.props.user.id)).then(function (res) {
         return res.data;
-      }).then(function (res) {
-        console.log("esto va a funcionaaaaaaaaaaaaar ", res);
+      }).then(function (carritos) {
+        _this2.setState({
+          carritos: carritos
+        });
       });
     }
   }, {
@@ -55669,6 +55709,7 @@ var SingleWineContainer = /*#__PURE__*/function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SingleWine__WEBPACK_IMPORTED_MODULE_1__["default"], {
         user: this.props.user,
+        carritos: this.state.carritos,
         vinoSeleccionado: this.state.vinoSeleccionado,
         handlerClick: this.handlerClick
       }));
@@ -56220,7 +56261,7 @@ var createOrder = function createOrder(userId, creditCard, total, direccion, due
       return res.data;
     }).then(function (carrito) {
       dispatch(Object(_actions_cart__WEBPACK_IMPORTED_MODULE_2__["searchUserCart"])(userId));
-    })["catch"](function (err) {
+    }).catch(function (err) {
       return console.log(err);
     });
   };
@@ -56288,7 +56329,7 @@ var createCartItem = function createCartItem(item) {
       return res.data;
     }).then(function (carrito) {
       return dispatch(addCart(carrito));
-    })["catch"](function (err) {
+    }).catch(function (err) {
       return console.log(err);
     });
   };
@@ -56302,7 +56343,7 @@ var searchUserCart = function searchUserCart(userId) {
 };
 var userRemoveCart = function userRemoveCart(userId, productoId) {
   return function (dispatch, getState) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]("/api/cart/removeCart/".concat(userId, "/").concat(productoId)).then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete("/api/cart/removeCart/".concat(userId, "/").concat(productoId)).then(function (res) {
       dispatch(removeCart(res.data));
     });
   };
@@ -56336,10 +56377,10 @@ var recoverStock = function recoverStock(idProducto, cantidad, precio) {
 /*!************************************!*\
   !*** ./src/redux/actions/users.js ***!
   \************************************/
-/*! exports provided: setUsuario, logUser, logout, AllUser, showUser, crearUsuario, showOrderProfile, loguearUsuario, crearUsuarioFacebook, logOut, LogueoCoockie, FetchAllUsers, ChangeToAdmin, ChangeToUser */
+/*! exports provided: setUsuario, logUser, logout, AllUser, allOrder, crearUsuario, loguearUsuario, crearUsuarioFacebook, logOut, LogueoCoockie, FetchAllUsers, ChangeToAdmin, ChangeToUser, allOrderAdmin */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/src/redux/actions/users.js: Unexpected token (101:1)\n\n\u001b[0m \u001b[90m  99 | \u001b[39m}\u001b[0m\n\u001b[0m \u001b[90m 100 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 101 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 102 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 103 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 104 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n    at Object.raise (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:7044:17)\n    at Object.unexpected (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:8422:16)\n    at Object.jsxParseIdentifier (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3889:12)\n    at Object.jsxParseNamespacedName (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3899:23)\n    at Object.jsxParseElementName (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3910:21)\n    at Object.jsxParseOpeningElementAt (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:3996:22)\n    at Object.jsxParseElementAt (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:4029:33)\n    at Object.jsxParseElement (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:4103:17)\n    at Object.parseExprAtom (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:4110:19)\n    at Object.parseExprSubscripts (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9287:23)\n    at Object.parseMaybeUnary (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9267:21)\n    at Object.parseExprOps (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9137:23)\n    at Object.parseMaybeConditional (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9110:23)\n    at Object.parseMaybeAssign (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9065:21)\n    at Object.parseExpression (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:9017:23)\n    at Object.parseStatementContent (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:10853:23)\n    at Object.parseStatement (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseBlockOrModuleBlockBody (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:11298:25)\n    at Object.parseBlockBody (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:11285:10)\n    at Object.parseTopLevel (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:10655:10)\n    at Object.parse (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:12264:10)\n    at parse (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/parser/lib/index.js:12315:38)\n    at parser (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/home/ivan/local/PersonalRepository/bootcamp/01-Estructura-de-datos/e-commerce/front/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/lauralimon/bootcamp/e-commerce/front/src/redux/actions/users.js: Unexpected token (101:1)\n\n\u001b[0m \u001b[90m  99 | \u001b[39m}\u001b[0m\n\u001b[0m \u001b[90m 100 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 101 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 102 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 103 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 104 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n    at Object.raise (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:7044:17)\n    at Object.unexpected (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:8422:16)\n    at Object.jsxParseIdentifier (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:3889:12)\n    at Object.jsxParseNamespacedName (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:3899:23)\n    at Object.jsxParseElementName (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:3910:21)\n    at Object.jsxParseOpeningElementAt (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:3996:22)\n    at Object.jsxParseElementAt (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:4029:33)\n    at Object.jsxParseElement (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:4103:17)\n    at Object.parseExprAtom (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:4110:19)\n    at Object.parseExprSubscripts (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9287:23)\n    at Object.parseMaybeUnary (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9267:21)\n    at Object.parseExprOps (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9137:23)\n    at Object.parseMaybeConditional (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9110:23)\n    at Object.parseMaybeAssign (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9065:21)\n    at Object.parseExpression (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:9017:23)\n    at Object.parseStatementContent (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:10853:23)\n    at Object.parseStatement (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseBlockOrModuleBlockBody (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:11298:25)\n    at Object.parseBlockBody (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:11285:10)\n    at Object.parseTopLevel (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:10655:10)\n    at Object.parse (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:12264:10)\n    at parse (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/parser/lib/index.js:12315:38)\n    at parser (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/home/lauralimon/bootcamp/e-commerce/front/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)");
 
 /***/ }),
 
@@ -56403,7 +56444,7 @@ var showsWines = function showsWines(vino) {
       return res.data;
     }).then(function (vino) {
       return dispatch(showWine(vino));
-    })["catch"](function (err) {
+    }).catch(function (err) {
       throw new Error(err);
     });
   };

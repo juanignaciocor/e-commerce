@@ -1,11 +1,17 @@
 import React, { Fragment } from "react";
 import ReviewContainer from "../containers/ReviewContainer"
 
-export default ({ user, vinoSeleccionado, handlerClick }) => {
+export default ({ user, carritos, vinoSeleccionado, handlerClick }) => {
+    let falsos = []
+    let nuevoCarrito = [...carritos]
+
+    console.log(Array.isArray(nuevoCarrito))
+    console.log(nuevoCarrito)
+    console.log(nuevoCarrito.map)
     return (
         <>
             {
-                vinoSeleccionado.id ? (<Fragment> <div id="ContenedorSingle" className=" media " >
+                (vinoSeleccionado.id) ? (<Fragment> <div id="ContenedorSingle" className=" media " >
                     {/*Inicio carrusel */}
                     <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                         <ol className="carousel-indicators">
@@ -44,7 +50,49 @@ export default ({ user, vinoSeleccionado, handlerClick }) => {
                         <center><img style={{ marginTop: "20px", width: "400px", height: "60px" }} src="https://cepadevinos.com/wp-content/uploads/2016/08/logos-tarjetas.jpg" /></center>
                     </div>
                 </div>
+                    <div>
+                        {
+                            nuevoCarrito ? (
+                                <>
+                                    {nuevoCarrito.map((carrito) => {
+                                        if (carrito.opinion === false) falsos.push(carrito)
+                                    })}
+                                    {falsos.length ? (
+                                        <Fragment>
+                                            <div className="not-Found container card mb-3">
+                                                <h3>Calificación del vino</h3>
+                                                <select class="form-control">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                                <h3>Dejanos un comentario del vino</h3>
+                                                <form>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" />
+                                                        <div class="btn-group-toggle" data-toggle="buttons">
+                                                            <label class="btn btn-secondary active">
+                                                                <input type="checkbox" checked /> Checked
+  </label>
+                                                        </div>
 
+
+
+
+
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </Fragment>
+                                    ) : null}
+                                </>
+                            ) : null
+
+
+                        }
+                    </div>
 
                     <ReviewContainer vinoSeleccionado={vinoSeleccionado} /> </Fragment>) : null
             }
