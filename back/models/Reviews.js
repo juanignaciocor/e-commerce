@@ -12,9 +12,8 @@ Review.init({
     valoracion: {
 
         type: S.FLOAT
+    }
 
-
-    },
 
 
 

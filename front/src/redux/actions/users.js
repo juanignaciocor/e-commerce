@@ -1,5 +1,5 @@
 import axios from "axios"
-import { CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, ALL_USER } from "../store/constants"
+import { CREATE_USER, LOGGUE_USER, DESLOGUEO_USER, ALL_USER, SHOW_USER_PROFILE } from "../store/constants"
 
 export const setUsuario = (user) => ({
     type: CREATE_USER,
@@ -16,11 +16,8 @@ export const logout = () => ({
 
 });
 export const AllUser = (allUser) => ({
-
     type: ALL_USER,
     allUser: allUser
-
-
 })
 export const allOrder = (allOrder) => ({
 
@@ -37,9 +34,22 @@ export const Products = (allProducts) => ({
 
 })
 
+export const showUser = (orderProfile) => ({
+    type: SHOW_USER_PROFILE,
+    orderProfile
+});
+
 export const crearUsuario = (user) => dispatch =>
     axios.post('/user/register', user)
         .then(user => dispatch(logUser(user.data)))
+
+
+export const showOrderProfile = (userId) => dispatch => {
+    console.log(userId)
+    return axios.get(`/api/user/profile/${userId}`)
+        .then((res) => { console.log(userId), dispatch(showUser(res.data)) }).catch(err => console.log(err)
+        )
+}
 
 export const loguearUsuario = (user) => dispatch =>
     axios.post('/user/login', { email: user.email, password: user.password })

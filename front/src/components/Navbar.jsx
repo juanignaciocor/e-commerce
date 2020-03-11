@@ -30,7 +30,7 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                                 </Fragment>
                             )}
                         <li className="nav-item botones">
-                            <Link className="nav-link" to="/allWines/1">All Products </Link>
+                            <Link className="nav-link" to="/allWines">All Products </Link>
                         </li>
                         <li className="nav-item dropdown">
 
@@ -55,7 +55,7 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                             </div> */}
                         </li>
                     </ul>
-                    <button type="button" className="btnUserNav btn btn-secondary">  <img className="imgCarrito" src={userIcon} />
+                    <Link to="/user/profile"> <button type="button" className="btnUserNav btn btn-secondary">  <img className="imgCarrito" src={userIcon} /> 
                         <span id="btnText">
                             {user.email ? (
                                 user.username
@@ -64,6 +64,7 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                                 )}
                         </span>
                     </button>
+                    </Link>
                     <Link to="/cart"><button type="button" className="btn btn-secondary" id="btnCartNav">  <img className="imgCarrito" src={cart} /></button></Link>
                     <form className="form-inline my-2 my-lg-0" onSubmit={onSearch}>
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ref={ref} value={clearInput} onChange={onChange}></input>

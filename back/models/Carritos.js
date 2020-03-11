@@ -14,6 +14,10 @@ Carrito.init({
     cambiarBoton: {
         type: S.BOOLEAN,
         defaultValue: false
+    },
+    opinion: {
+        type: S.BOOLEAN,
+
     }
 
 }, { sequelize: db, modelName: 'carrito' })

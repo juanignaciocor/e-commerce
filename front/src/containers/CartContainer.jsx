@@ -35,7 +35,6 @@ class CartContainer extends React.Component {
 
     }
     componentDidMount() {
-
         this.props.searchUserCart(this.props.userId)
 
     }

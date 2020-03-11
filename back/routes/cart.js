@@ -61,7 +61,7 @@ router.post("/buy", (req, res, next) => {
         correoElectronico: req.body.correo
     })
         .then((compra) => {
-            Carrito.update({ compraId: compra.id, estado: "fulfilled" }, { where: { usuarioId: req.body.userId, estado: "pending" } })
+            Carrito.update({ compraId: compra.id, estado: "fulfilled", opinion: false }, { where: { usuarioId: req.body.userId, estado: "pending" } })
                 .then((data) => {
                     res.json(data)
                 })

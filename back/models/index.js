@@ -11,6 +11,7 @@ Carrito.belongsTo(Compra)
 Usuario.hasMany(Compra, { as: 'compra' })
 Review.belongsTo(Usuario)
 Review.belongsTo(Producto)
+Review.belongsTo(Compra)
 Categoria.hasMany(Producto, { as: 'producto' })
 
 
