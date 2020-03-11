@@ -1,10 +1,27 @@
 const express = require('express');
 const router = express.Router();
-const { Producto, Usuario, Carrito } = require("../models/index")
+const { Producto, Usuario, Compra, Carrito } = require("../models/index")
 const { Op } = require("sequelize");
+router.get("/admin/allOrderProducts/:idProducto", (req, res, next) => {
+    Carrito.findAll({
+        include: [{
+            model: Compra,
+        },
+        {
+            model: Producto,
+        }], where: { estado: "fulfilled" }
+    })
+        .then((data) => res.json(data))
+})
+router.put("/admin/changeToEnviado", (req, res, next) => {
+    Compra.findByPk(req.body.idOrder)
+        .then((compra) => {
+            compra.update({ estado: req.body.valor })
 
-
-router.get("/admin/allOrder/:user", (req, res, next) => {
+        })
+        .then((data) => res.json(data))
+})
+router.get("/admin/allOrder", (req, res, next) => {
     Compra.findAll()
         .then((data) => {
             res.json(data)
@@ -45,7 +62,7 @@ router.get("/profile/:userId", (req, res, next) => {
         },
         ], where: { estado: "fulfilled" }
     })
-        .then((order) => {console.log(order), res.json(order)})
+        .then((order) => { console.log(order), res.json(order) })
 })
 
 module.exports = router
