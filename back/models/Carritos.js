@@ -4,12 +4,17 @@ class Carrito extends S.Model { }
 
 Carrito.init({
     cantidad: {
-        type: S.INTEGER
+        type: S.INTEGER,
+        defaultValue: 0
     },
     estado: {
         type: S.STRING,
         defaultValue: "pending"
     },
+    cambiarBoton: {
+        type: S.BOOLEAN,
+        defaultValue: false
+    }
 
 }, { sequelize: db, modelName: 'carrito' })
 

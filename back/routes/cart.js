@@ -2,20 +2,52 @@ const express = require('express');
 const router = express.Router();
 const { Carrito, Producto, Usuario, Compra } = require("../models/index")
 
-router.put("/recoverStock", (req, res, next) => {
-    const cantidad = parseInt(req.body.cantidad)
-    Producto.findByPk(req.body.idProducto)
-        .then((producto) => { Producto.update({ stock: producto.stock + cantidad }, { where: { id: req.body.idProducto } }) })
-        .then((data) => { res.json(data) })
+router.put("/input", (req, res, next) => {
+    const cant = parseInt(req.body.valor)
+    Producto.update({ input: cant }, { where: { id: req.body.idProducto } })
+        .then((data) => {
+            res.json(data)
+        })
 
 })
+router.put("/sumar", (req, res, next) => {
+    const cant = parseInt(req.body.cantidad)
 
-router.put("/stock", (req, res, next) => {
     Producto.findByPk(req.body.idProducto)
-        .then((producto) => { Producto.update({ stock: producto.stock - req.body.cantidad }, { where: { id: req.body.idProducto } }) })
-        .then((data) => { res.json(data) })
+        .then((producto) => {
+            Producto.update({ quantity: producto.quantity + cant, stock: producto.stock - cant }, { where: { id: req.body.idProducto } })
+                .then((data) => {
+                    Carrito.findOne({ where: { productoId: req.body.idProducto } })
+                        .then((data) => {
+                            Carrito.update({ cantidad: data.cantidad + cant, cambiarBoton: true }, { where: { productoId: req.body.idProducto } })
+
+                                .then((data) => { res.json(data) })
+                        })
+
+                })
+
+        })
 
 })
+router.put("/resta", (req, res, next) => {
+    const cant = parseInt(req.body.cantidad)
+
+    Producto.findByPk(req.body.idProducto)
+        .then((producto) => {
+            Producto.update({ quantity: cant - producto.quantity, stock: producto.stock + cant }, { where: { id: req.body.idProducto } })
+                .then((data) => {
+                    Carrito.findOne({ where: { productoId: req.body.idProducto } })
+                        .then((data) => {
+                            Carrito.update({ cantidad: cant - data.cantidad, cambiarBoton: false }, { where: { productoId: req.body.idProducto } })
+
+                                .then((data) => { res.json(data) })
+                        })
+
+                })
+
+        })
+})
+
 router.post("/buy", (req, res, next) => {
     const tarjetaCredito = parseInt(req.body.creditCard)
     const totalPrecio = parseInt(req.body.total)
@@ -25,7 +57,8 @@ router.post("/buy", (req, res, next) => {
         total: totalPrecio,
         usuarioId: req.body.userId,
         dueñoTarjeta: req.body.dueñoTarjeta,
-        direccionEntrega: req.body.direccion
+        direccionEntrega: req.body.direccion,
+        correoElectronico: req.body.correo
     })
         .then((compra) => {
             Carrito.update({ compraId: compra.id, estado: "fulfilled" }, { where: { usuarioId: req.body.userId, estado: "pending" } })
@@ -40,7 +73,7 @@ router.post("/buy", (req, res, next) => {
 router.post("/add", (req, res) => {
 
     Carrito.create({
-        cantidad: req.body.cantidad
+        cantidad: 0
     })
         .then(carrito => (
             carrito.setProducto(req.body.idProducto)))
@@ -57,8 +90,12 @@ router.get("/userCart/:usuario", (req, res) => {
         },
         {
             model: Producto,
+
         },
-        ], where: { estado: "pending" }
+        ], where: { estado: "pending" },
+        order: [
+            ['id', 'DESC'],
+        ],
     })
         .then((data) => {
             res.json(data)

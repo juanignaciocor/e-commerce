@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default ({ total, creditCardChange, creditCard, orderCreate, cambiarUsuario, cambiarDireccion, direccion, usuarioCredito }) => {
+export default ({ total, creditCardChange, correo, cambiarCorreo, creditCard, orderCreate, cambiarUsuario, cambiarDireccion, direccion, usuarioCredito }) => {
 
     return (
         <div>
@@ -24,9 +24,17 @@ export default ({ total, creditCardChange, creditCard, orderCreate, cambiarUsuar
             <div>
                 <label>Ingrese numero de tarjeta :</label>
                 <input type="text"
-                    placeholder="4732426575629090"
+                    placeholder="Numero de tarjeta"
                     onChange={creditCardChange}
                     value={creditCard}
+                />
+            </div>
+            <div>
+                <label>Ingrese su correo electronico:</label>
+                <input type="text"
+                    placeholder="Correo electronico"
+                    onChange={cambiarCorreo}
+                    value={correo}
                 />
             </div>
             <div>

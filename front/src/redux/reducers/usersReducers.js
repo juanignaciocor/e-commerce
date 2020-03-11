@@ -2,7 +2,8 @@ import { DESLOGUEO_USER, ALL_USER } from "../store/constants"
 const initialUserState = {
     logged: {},
     allUsers: [],
-    allOrder: []
+    allOrder: [],
+    allProducts: []
 }
 
 export default function (state = initialUserState, action) {
@@ -15,6 +16,8 @@ export default function (state = initialUserState, action) {
             return { ...state, allUsers: action.allUser }
         case "ALL_ORDER":
             return { ...state, allOrder: action.allOrder }
+        case "ALL_PRODUCTS":
+            return { ...state, allProducts: action.allProducts }
         default:
             return state;
     }

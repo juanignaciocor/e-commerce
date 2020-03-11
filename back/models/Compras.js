@@ -24,6 +24,15 @@ Compra.init({
 
 
     },
+    estado: {
+        type: S.STRING,
+        defaultValue: "No enviado"
+    },
+    correoElectronico: {
+
+        type: S.STRING,
+        allowNull: false
+    }
 
 
 
