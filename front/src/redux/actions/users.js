@@ -98,10 +98,6 @@ export const ChangeToUser = (idUser) => {
     }
 }
 
-<<<<<<< HEAD
-
-
-=======
 export const allOrderAdmin = (usuario) => {
     return function (dispatch, getState) {
         return axios.get(`/api/user/admin/allOrder/${usuario}`)
@@ -114,4 +110,3 @@ export const allOrderAdmin = (usuario) => {
 
     }
 }
->>>>>>> 3cd54a2022f36599e724a56883a0bb4fa76ac2af
