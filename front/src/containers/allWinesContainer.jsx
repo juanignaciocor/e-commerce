@@ -9,7 +9,7 @@ class allWines extends React.Component {
         super()
         this.handlerClick = this.handlerClick.bind(this)
     }
-    
+
     componentDidMount() {
         this.props.searchAllWines()
     }
@@ -24,13 +24,12 @@ class allWines extends React.Component {
         const numeroPagination = this.props.match.path[10]
         return (
             <div>
-                <Vinos handlerClick={this.handlerClick} vinos={allWines} numeroPagination={numeroPagination}/>
+                <Vinos handlerClick={this.handlerClick} vinos={allWines} numeroPagination={numeroPagination} />
             </div>
         )
     }
 }
 
-//vinos
 
 const mapStateToProps = function (state, ownProps) {
     return {

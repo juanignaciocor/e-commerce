@@ -42,7 +42,16 @@ Producto.init({
     alcohol: {
         type: S.FLOAT,
         allowNull: false
+    },
+    quantity: {
+        type: S.INTEGER,
+        defaultValue: 0
+    },
+    input: {
+        type: S.INTEGER,
+        defaultValue: 0
     }
+
 
 
 

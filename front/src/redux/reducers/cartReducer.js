@@ -4,13 +4,17 @@ const initialCartState = {
     cart: [],
     searchCart: [],
     removeCart: {},
-    stock: 0
+    stock: 0,
+    data: 0
+
 }
 //
 export default function (state = initialCartState, action) {
     switch (action.type) {
         case "ADD_CART":
             return { ...state, cart: [...state.cart, action.cart] }
+        case "CAMBIO":
+            return { ...state, cart: [...state.data, action.data] }
         case "STOCK":
             return { ...state, stock: state.stock + action.stock }
         case "RECOVER":

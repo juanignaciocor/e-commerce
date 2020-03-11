@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom"
 export default ({ ToogleUsers, ToogleOrdenes, ToogleCategorias, ToogleProductos }) => {
     return (
         <React.Fragment>
@@ -10,8 +10,14 @@ export default ({ ToogleUsers, ToogleOrdenes, ToogleCategorias, ToogleProductos 
                     <ul>
                         <li onClick={ToogleUsers}>Ver y modificar usuarios</li>
                         <li onClick={ToogleOrdenes}>Ver lista de ordenes</li>
-                        <li>Crear , editar o eliminar categorias</li>
-                        <li>Crear , editar o eliminar productos</li>
+                        <li>Productos :
+                            <ul>
+                                <Link to="/user/admin/createProduct"><li>Crear</li></Link>
+                                <Link to="/user/admin/editProduct"><li>Editar</li></Link>
+                                <Link to="/user/admin/deleteProduct"> <li>Eliminar</li></Link>
+
+                            </ul>
+                        </li>
 
                     </ul>
                 </div>
