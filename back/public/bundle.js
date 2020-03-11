@@ -2560,7 +2560,7 @@ module.exports = exports['default'];
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "body {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  background-color: #d9d2c8; }\n\n#columns {\n  column-width: 320px;\n  column-gap: 15px;\n  width: 90%;\n  max-width: 1100px;\n  margin: 50px auto;\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr 1fr;\n  justify-items: center; }\n\n#colBuy {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  width: 50%;\n  justify-items: center;\n  margin-bottom: .7rem;\n  margin-top: .7rem; }\n\n#img {\n  max-width: 200px;\n  max-height: 400px; }\n\n.navegador {\n  background-color: #F2F2F2; }\n\n.textoCentrado {\n  text-align: center;\n  margin-top: 30px; }\n\n.botones {\n  margin-right: 20px; }\n\ndiv#columns figure {\n  background: #fefefe;\n  border: 2px solid #fcfcfc;\n  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);\n  margin: 0 2px 15px;\n  padding: 15px;\n  padding-bottom: 10px;\n  transition: opacity .4s ease-in-out;\n  display: inline-block;\n  column-break-inside: avoid;\n  transition-duration: 0.3s;\n  max-width: 200px; }\n\ndiv#columns figure:hover {\n  transform: scale(1.1); }\n\ndiv#columns figure img {\n  width: 100%;\n  height: auto;\n  border-bottom: 1px solid #ccc;\n  padding-bottom: 15px;\n  margin-bottom: 5px; }\n\ndiv#columns figure figcaption {\n  font-size: .9rem;\n  color: #444;\n  line-height: 1.5; }\n\ndiv#columns small {\n  font-size: 1rem;\n  float: right;\n  text-transform: uppercase;\n  color: #aaa; }\n\ndiv#columns small a {\n  color: #666;\n  text-decoration: none;\n  transition: .4s color; }\n\ndiv#columns:hover figure:not(:hover) {\n  opacity: 0.4; }\n\n@media screen and (max-width: 750px) {\n  #columns {\n    column-gap: 0px; }\n  #columns figure {\n    width: 100%; } }\n\nnav {\n  background-color: grey;\n  height: 100px;\n  width: 100vw;\n  display: fixed;\n  top: 0; }\n\n.cartImagen {\n  justify-content: flex-end;\n  max-width: 200px; }\n\n.btn-facebook {\n  background-color: white;\n  display: inline-block;\n  border-radius: .25rem;\n  line-height: 30px;\n  margin-bottom: 20px;\n  color: black;\n  padding: .375rem .75rem; }\n\n.btn-google {\n  background-color: white;\n  display: inline-block;\n  border-radius: .25rem;\n  line-height: 30px;\n  margin-bottom: 20px;\n  color: black;\n  padding: .375rem .75rem; }\n\n.icono {\n  max-width: 30px;\n  line-height: 30px;\n  max-height: 30px; }\n\n.pagination {\n  display: flex;\n  justify-content: center; }\n\n.ViewUsers {\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr 1fr;\n  margin: 2px;\n  padding: 1px;\n  max-height: 33.3%; }\n\n.ViewUser {\n  border: 2px solid white;\n  padding: 2px; }\n", ""]);
+exports.push([module.i, "body {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  background-color: #d9d2c8; }\n\n#columns {\n  column-width: 320px;\n  column-gap: 15px;\n  width: 90%;\n  max-width: 1100px;\n  margin: 50px auto;\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr 1fr;\n  justify-items: center; }\n\n#colBuy {\n  display: inline-grid;\n  grid-template-columns: 1fr 1fr 1fr;\n  width: 100%;\n  margin: 50px auto; }\n\n#img {\n  max-width: 200px;\n  max-height: 200px; }\n\n.navegador {\n  background-color: #F2F2F2; }\n\n.textoCentrado {\n  text-align: center;\n  margin-top: 30px; }\n\n.botones {\n  margin-right: 20px; }\n\ndiv#columns figure {\n  background: #fefefe;\n  border: 2px solid #fcfcfc;\n  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);\n  margin: 0 2px 15px;\n  padding: 15px;\n  padding-bottom: 10px;\n  transition: opacity .4s ease-in-out;\n  display: inline-block;\n  column-break-inside: avoid;\n  transition-duration: 0.3s;\n  max-width: 200px; }\n\ndiv#columns figure:hover {\n  transform: scale(1.1); }\n\ndiv#columns figure img {\n  width: 100%;\n  height: auto;\n  border-bottom: 1px solid #ccc;\n  padding-bottom: 15px;\n  margin-bottom: 5px; }\n\ndiv#columns figure figcaption {\n  font-size: .9rem;\n  color: #444;\n  line-height: 1.5; }\n\ndiv#columns small {\n  font-size: 1rem;\n  float: right;\n  text-transform: uppercase;\n  color: #aaa; }\n\ndiv#columns small a {\n  color: #666;\n  text-decoration: none;\n  transition: .4s color; }\n\ndiv#columns:hover figure:not(:hover) {\n  opacity: 0.4; }\n\n@media screen and (max-width: 750px) {\n  #columns {\n    column-gap: 0px; }\n  #columns figure {\n    width: 100%; } }\n\nnav {\n  background-color: grey;\n  height: 100px;\n  width: 100vw;\n  display: fixed;\n  top: 0; }\n\n.cartImagen {\n  justify-content: flex-end;\n  max-width: 200px; }\n\n.btn-facebook {\n  background-color: white;\n  display: inline-block;\n  border-radius: .25rem;\n  line-height: 30px;\n  margin-bottom: 20px;\n  color: black;\n  padding: .375rem .75rem; }\n\n.btn-google {\n  background-color: white;\n  display: inline-block;\n  border-radius: .25rem;\n  line-height: 30px;\n  margin-bottom: 20px;\n  color: black;\n  padding: .375rem .75rem; }\n\n.icono {\n  max-width: 30px;\n  line-height: 30px;\n  max-height: 30px; }\n\n.pagination {\n  display: flex;\n  justify-content: center; }\n\n.ViewUsers {\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr 1fr;\n  margin: 2px;\n  padding: 1px;\n  max-height: 33.3%; }\n\n.ViewUser {\n  border: 2px solid white;\n  padding: 2px; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -53505,7 +53505,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "exampleInputEmail1"
+    "for": "exampleInputEmail1"
   }, "Correo Electronico"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     onChange: handleChange,
     type: "email",
@@ -53518,7 +53518,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "exampleInputPassword1"
+    "for": "exampleInputPassword1"
   }, "Contrase\xF1a"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     onChange: handleChange,
     type: "password",
@@ -53528,7 +53528,7 @@ __webpack_require__.r(__webpack_exports__);
     value: state.password,
     required: true
   })), state.error ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "alert alert-danger",
+    "class": "alert alert-danger",
     role: "alert"
   }, "Error: The email entered is not registered or the password is incorrect") : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
@@ -53734,7 +53734,7 @@ __webpack_require__.r(__webpack_exports__);
       onMouseEnter = _ref.onMouseEnter;
   var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: " navegador navbar  navbar-expand-lg navbar-light  "
+    className: "navegador navbar navbar-expand-lg navbar-light"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/",
     className: "navbar-brand"
@@ -53890,7 +53890,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationCustom01"
+    "for": "validationCustom01"
   }, "Nombre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53901,7 +53901,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationCustom01"
+    "for": "validationCustom01"
   }, "Apellido"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53913,7 +53913,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationServerUsername"
+    "for": "validationServerUsername"
   }, "Fecha de Nacimiento"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -53930,7 +53930,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationCustom01"
+    "for": "validationCustom01"
   }, "Correo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53942,7 +53942,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationCustom01"
+    "for": "validationCustom01"
   }, "Domicilio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53956,7 +53956,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationCustom01"
+    "for": "validationCustom01"
   }, "Nombre de Usuario"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     onChange: handleChange,
@@ -53968,7 +53968,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    for: "validationCustom01"
+    "for": "validationCustom01"
   }, "Contrase\xF1a"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "password",
     onChange: handleChange,
@@ -54157,19 +54157,19 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
   }), falsos.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "not-Found container card mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Calificaci\xF3n del vino"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    class: "form-control"
+    "class": "form-control"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Dejanos un comentario del vino"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "form-group"
+    "class": "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
-    class: "form-control",
+    "class": "form-control",
     id: "exampleFormControlTextarea1",
     rows: "3"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "btn-group-toggle",
+    "class": "btn-group-toggle",
     "data-toggle": "buttons"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    class: "btn btn-secondary active"
+    "class": "btn btn-secondary active"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "checkbox",
     checked: true
@@ -54223,7 +54223,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var orderProfile = _ref.orderProfile,
       props = _ref.props;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, orderProfile.length && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, orderProfile.length && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column"
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      backgroundColor: "black",
+      opacity: "0.7",
+      color: "white",
+      margin: "42px 55px"
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "textoCentrado profile"
   }, " ", "Welcome to Profile ".concat(orderProfile[0].usuario.username))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
     className: "textoCentrado profile"
@@ -54239,19 +54251,24 @@ __webpack_require__.r(__webpack_exports__);
     className: "textoCentrado profile"
   }, " ", "Tipo de usuario: ".concat(orderProfile[0].usuario.typoUsuario)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
     className: "textoCentrado profile"
-  }, " ", "Fecha de creacion de usuario: ".concat(orderProfile[0].usuario.updatedAt)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, orderProfile.map(function (order) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
+  }, " ", "Fecha de creacion de usuario: ".concat(orderProfile[0].usuario.updatedAt))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      overflow: "scroll",
+      display: "flex",
+      flexDirection: "column",
+      height: "60vh",
+      margin: "0px"
+    }
+  }, orderProfile.map(function (order) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      classname: "row",
       key: order.producto.id
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "card",
-      id: "colBuy"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       style: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
+        display: "flex"
       }
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: order.producto.imagen,
       id: "img"
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -54259,15 +54276,17 @@ __webpack_require__.r(__webpack_exports__);
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-header",
       id: "textoCentrado"
-    }, order.producto.nombre), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    }, order.producto.nombre), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h9", {
       className: "card-text"
-    }, "Bodega: ".concat(order.producto.bodega)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Bodega: "), order.producto.bodega), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h7", {
       className: "card-text"
-    }, "Precio: $".concat(order.producto.precio, ",00")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Cantidad: "), order.cantidad), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h7", {
       className: "card-text"
-    }, "A\xF1adido al carrito: ".concat(order.createdAt)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Precio: "), "$", order.producto.precio, ",00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h7", {
       className: "card-text"
-    }, "Efectuada la compra: ".concat(order.updatedAt)))));
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "A\xF1adido al carrito: "), order.createdAt), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h7", {
+      className: "card-text"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Efectuada la compra: "), order.updatedAt))));
   }))));
 });
 
@@ -55220,7 +55239,7 @@ var LoginContainer = /*#__PURE__*/function (_React$Component) {
         });
       }).then(function () {
         return _this2.props.history.push("/");
-      }).catch(function () {
+      })["catch"](function () {
         _this2.setState({
           error: true
         });
@@ -56261,7 +56280,7 @@ var createOrder = function createOrder(userId, creditCard, total, direccion, due
       return res.data;
     }).then(function (carrito) {
       dispatch(Object(_actions_cart__WEBPACK_IMPORTED_MODULE_2__["searchUserCart"])(userId));
-    }).catch(function (err) {
+    })["catch"](function (err) {
       return console.log(err);
     });
   };
@@ -56329,7 +56348,7 @@ var createCartItem = function createCartItem(item) {
       return res.data;
     }).then(function (carrito) {
       return dispatch(addCart(carrito));
-    }).catch(function (err) {
+    })["catch"](function (err) {
       return console.log(err);
     });
   };
@@ -56343,7 +56362,7 @@ var searchUserCart = function searchUserCart(userId) {
 };
 var userRemoveCart = function userRemoveCart(userId, productoId) {
   return function (dispatch, getState) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete("/api/cart/removeCart/".concat(userId, "/").concat(productoId)).then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]("/api/cart/removeCart/".concat(userId, "/").concat(productoId)).then(function (res) {
       dispatch(removeCart(res.data));
     });
   };
@@ -56450,7 +56469,7 @@ var showOrderProfile = function showOrderProfile(userId) {
     console.log(userId);
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/user/profile/".concat(userId)).then(function (res) {
       console.log(userId), dispatch(showUser(res.data));
-    }).catch(function (err) {
+    })["catch"](function (err) {
       return console.log(err);
     });
   };
@@ -56464,7 +56483,7 @@ var loguearUsuario = function loguearUsuario(user) {
       return res.data;
     }).then(function (user) {
       return dispatch(logUser(user));
-    }).catch(function (err) {
+    })["catch"](function (err) {
       throw new Error(err);
     });
   };
@@ -56585,7 +56604,7 @@ var showsWines = function showsWines(vino) {
       return res.data;
     }).then(function (vino) {
       return dispatch(showWine(vino));
-    }).catch(function (err) {
+    })["catch"](function (err) {
       throw new Error(err);
     });
   };

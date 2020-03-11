@@ -122,6 +122,6 @@
 	margin-top: 445px
 }
 
-.profile{
-	font-style: inherit;
-}
+.newCard::-webkit-scrollbar {
+	overflow-y: auto;
+  }
