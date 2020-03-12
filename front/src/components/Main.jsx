@@ -17,6 +17,7 @@ import UserProfileContainer from "../containers/UserProfileContainer"
 import { LogueoCoockie } from "../redux/actions/users"
 import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
+import finReview from "../components/finReview"
 
 class Main extends React.Component {
     constructor() {
@@ -26,7 +27,7 @@ class Main extends React.Component {
     componentDidMount() {
         this.props.LogueoCoockie()
     }
-    
+
     render() {
         return (
             <div style={{ backgroundSize: "100%", height: "100%", width: "100%", backgroundImage: "url(https://i.imgur.com/nhwdpMQ.jpg)", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed" }} >
@@ -41,6 +42,7 @@ class Main extends React.Component {
                     <Route exact path="/wines/:id" component={SingleWineContainer}></Route>
                     <Route exact path="/cart" component={CartContainer}></Route>
                     <Route exact path="/category/red" component={CategoryTintoContainer}></Route>
+                    <Route exact path="/createReview" component={finReview}></Route>
                     <Route exact path="/category/white" component={CategoryBlancoContainer}></Route>
                     <Route exact path="/category/rose" component={CategoryRosadoContainer}></Route>
                     <Route exact path="/user/admin" component={UserAdminContainer}></Route>

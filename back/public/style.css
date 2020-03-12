@@ -23,22 +23,24 @@
 
 /* STYLO SINGLE WINE  70 70 270 270*/ 
 .btnComprar {
-	box-shadow: 13px 12px 10px  #899599;
+	height: 15%;
+	box-shadow: 3px 6px 4px 0px  #899599;
 	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
 	background-color:#ededed;
 	border-radius:15px;
 	border:1px solid #d6bcd6;
-	display:flex;
+	/* display:flex; */
 	justify-content: flex-end;
 	cursor:pointer;
 	color:#3a8a9e;
 	font-family:Arial;
 	font-size:17px;
 	font-weight:bold;
-	padding: 14px;
+	padding: 1%;
 	margin-top: 10px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #e1e2ed;
+	float: right;
 }
 .btnComprar:hover {
 	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
@@ -66,7 +68,7 @@
 	height: 100%;	
 }
 #ContenedorSingleWineText{
-	padding-left: 20px,
+	padding: 3%
 
 }
 	
@@ -75,11 +77,53 @@
 	max-width: 650px;
 	max-height: 650px;
 	border-radius: 30px;
+	padding: 0.9%;
+	margin-top:1% ;
 }
 .singleWineText{
 	padding: 10px;
 	border-bottom: solid 1px gray;
 }
+
+.reviewUsuario{
+	margin-top: 1.5%;
+	margin-bottom: 1.5%;
+	padding: 3%;
+	border-radius: 30px;
+}
+
+
+
+
+
+/*BOTON PUBLICAR REVIEW*/
+.publicarReview{
+	box-shadow: 3px 6px 4px 0px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	/* display:inline-block; */
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:8px 28px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+	margin-top: 2%;
+	float: right;
+}
+.publicarReview:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+.publicarReview:active {
+	position:relative;
+	top:1px;
+}
+
 
 /* STYLE NAVBAR */
 #btnCartNav{
@@ -122,11 +166,9 @@
 	margin-top: 445px
 }
 
-<<<<<<< HEAD
 .profile{
 	font-style: inherit;
 }
-=======
 /* COMPONENTE REGISTER */
 .usuario{
 	margin-top: 50px;
@@ -154,4 +196,3 @@
 	padding: 1%;
 }
 
->>>>>>> 3cd54a2022f36599e724a56883a0bb4fa76ac2af

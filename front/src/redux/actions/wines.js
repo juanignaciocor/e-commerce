@@ -1,5 +1,5 @@
 import axios from "axios"
-import { SEARCH_WINES, ALL_WINES, ALL_TINTOS, ALL_BLANCOS, ALL_ROSADOS } from "../store/constants"
+import { SINGLE_WINE, SEARCH_WINES, ALL_WINES, ALL_TINTOS, ALL_BLANCOS, ALL_ROSADOS } from "../store/constants"
 
 export const showWine = vinos => ({
     type: SEARCH_WINES,
@@ -22,6 +22,13 @@ export const allRosados = allRosados => ({
     type: ALL_ROSADOS,
     allRosados: allRosados
 });
+
+export const vinoSeleccionado = vinoSeleccionado => ({
+    type: SINGLE_WINE,
+    vinoSeleccionado: vinoSeleccionado
+})
+
+
 
 
 export const showsWines = vino => dispatch => {
@@ -61,4 +68,17 @@ export const searchRosado = () => {
             .then((res) => { dispatch(allRosados(res.data)) })
     }
 }
+
+export const searchVinito = (id) => {
+    return function (dispatch, getState) {
+        return axios.get(`/api/wines/${id}`)
+            .then(res => res.data)
+            .then(vino => {
+                dispatch(vinoSeleccionado(vino[0]))
+            })
+    }
+}
+
+
+
 

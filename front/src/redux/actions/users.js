@@ -11,6 +11,10 @@ export const logUser = (user) => ({
     user
 });
 
+export const startLoading = () => ({
+    type: 'START_LOADING'
+})
+
 export const logout = () => ({
     type: DESLOGUEO_USER,
 
@@ -66,6 +70,7 @@ export const logOut = () => {
 
 export const LogueoCoockie = () => {
     return function (dispatch, getState) {
+        dispatch(startLoading())
         return axios.get("/check")
             .then((res) => {
                 dispatch(logUser(res.data))

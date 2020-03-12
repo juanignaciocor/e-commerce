@@ -4,7 +4,8 @@ const initialCartState = {
     cart: [],
     searchCart: [],
     removeCart: {},
-    stock: 0
+    stock: 0,
+    carritos: []
 }
 //
 export default function (state = initialCartState, action) {
@@ -25,9 +26,8 @@ export default function (state = initialCartState, action) {
                 removeCart: action.remove,
 
             });
-
-
-
+        case "ALL_CART":
+            return { ...state, carritos: action.carritos }
 
         default:
             return state;

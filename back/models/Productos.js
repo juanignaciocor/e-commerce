@@ -42,11 +42,11 @@ Producto.init({
     alcohol: {
         type: S.FLOAT,
         allowNull: false
+    },
+    puntaje: {
+        type: S.FLOAT,
+        defaultValue: 0
     }
-
-
-
-
 
 
 }, { sequelize: db, modelName: 'producto' })
