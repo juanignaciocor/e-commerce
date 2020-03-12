@@ -6,6 +6,7 @@ import Main from './components/Main';
 import { Provider } from 'react-redux';
 import store from './redux/store/store';
 import cssVinos from './style/vinos.scss'
+import form from './style/formAdm.scss'
 
 
 //Todavia no podemos utilizar el provider porque no tenemos reducers en el store

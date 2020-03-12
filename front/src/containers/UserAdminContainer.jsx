@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
 import UserAdmin from "../components/UserAdmin"
 import { FetchAllUsers, ChangeToAdmin, ChangeToUser, allOrderAdmin, changeToEnviado, allProducts } from "../redux/actions/users"
+import { searchAllWines, createCategory } from "../redux/actions/wines"
 import UsersChange from "../components/UsersChange"
 import AllOrder from "../components/allOrder"
-
+import AdminCategory from "../components/adminCategory"
+import adminCategory from "../components/adminCategory"
 
 class UserAdminContainer extends React.Component {
     constructor(props) {
@@ -13,8 +15,8 @@ class UserAdminContainer extends React.Component {
             vistaModificar: false,
             vistaOrdenes: false,
             vistaCategorias: false,
-            vistaProductos: false
-
+            vistaProductos: false,
+            nombreCategoria: ""
         }
         this.ToogleUsers = this.ToogleUsers.bind(this)
         this.ToogleOrdenes = this.ToogleOrdenes.bind(this)
@@ -24,6 +26,10 @@ class UserAdminContainer extends React.Component {
         this.changeUser = this.changeUser.bind(this)
         this.changeInput = this.changeInput.bind(this)
         this.viewProducts = this.viewProducts.bind(this)
+        this.newCategory = this.newCategory.bind(this)
+        this.handleCategory = this.handleCategory.bind(this)
+
+
 
 
 
@@ -43,8 +49,11 @@ class UserAdminContainer extends React.Component {
     changeUser(idUser) { this.props.ChangeToUser(idUser) }
     changeInput(idOrder, valor) { this.props.changeToEnviado(idOrder, valor) }
     viewProducts(idOrder) { return (this.props.allProducts(idOrder)) }
+    newCategory() { this.props.createCategory(this.state.nombreCategoria) }
+    handleCategory(e) { this.setState({ nombreCategoria: e.target.value }) }
     render() {
         const { allUsers, allOrder, producto } = this.props
+        console.log(UsersChange)
         return (
             <div>
                 <UserAdmin
@@ -67,6 +76,13 @@ class UserAdminContainer extends React.Component {
                     vistaProductos={this.state.vistaProductos} />)
                     : (<React.Fragment></React.Fragment>)}
 
+                {this.state.vistaCategorias ? (<AdminCategory newCategory={this.newCategory}
+                    handleCategory={this.handleCategory}
+                    nombreCategoria={this.state.nombreCategoria} />)
+                    : (<React.Fragment></React.Fragment>)}
+
+
+
             </div>)
     }
 }
@@ -86,7 +102,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         ChangeToUser: (idUser) => dispatch(ChangeToUser(idUser)),
         allOrderAdmin: () => dispatch(allOrderAdmin()),
         changeToEnviado: (idOrder, valor) => dispatch(changeToEnviado(idOrder, valor)),
-        allProducts: (order) => dispatch(allProducts(order))
+        allProducts: (order) => dispatch(allProducts(order)),
+        searchAllWines: () => (dispatch(searchAllWines())),
+        createCategory: () => (dispatch(createCategory())),
+
+
 
     }
 }

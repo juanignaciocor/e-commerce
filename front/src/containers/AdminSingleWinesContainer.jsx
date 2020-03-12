@@ -1,9 +1,10 @@
 import React from "react"
 import { connect } from "react-redux"
-import AdminCreate from "../components/adminCreate"
-import { admCreate } from "../redux/actions/wines"
+import { searchAllWines, fetchOneWine, admUpdate } from "../redux/actions/wines"
+import AdminSingleUpdate from "../components/adminSIngleUpdate"
 
-class AdminFormsContainer extends React.Component {
+
+class AdminSingleWines extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,8 +16,7 @@ class AdminFormsContainer extends React.Component {
             stock: "",
             bodega: "",
             provincia: "",
-            alcohol: "",
-            imagen: ""
+            alcohol: ""
 
 
         }
@@ -24,12 +24,15 @@ class AdminFormsContainer extends React.Component {
         this.submit = this.submit.bind(this)
 
     }
+    componentDidMount() {
+        this.props.fetchOneWine(this.props.id)
+
+    }
     handlerChange(e) {
         this.setState({ [e.target.name]: e.target.value })
     }
-    submit(e) {
-        e.preventDefault()
-        this.props.admCreate(this.state.nombre,
+    submit() {
+        this.props.admUpdate(this.state.nombre,
             this.state.precio,
             this.state.descripcion,
             this.state.tipo,
@@ -38,29 +41,38 @@ class AdminFormsContainer extends React.Component {
             this.state.bodega,
             this.state.provincia,
             this.state.alcohol,
-            this.state.imagen)
+            this.props.id)
     }
 
     render() {
+        const { wine } = this.props
         return (
             <div>
-                <AdminCreate
+                <AdminSingleUpdate wine={wine}
                     handlerChange={this.handlerChange}
-                    submit={this.submit}></AdminCreate>
+                    submit={this.submit}></AdminSingleUpdate>
             </div>
         )
     }
 }
 
 const mapStateToProps = function (state, ownProps) {
+    console.log(ownProps)
     return {
+        id: ownProps.match.params.id,
+        wine: state.winesReducers.singleWine
+
+
     }
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        admCreate: (nombre, precio, descripcion, tipo, cepa, stock, bodega, provincia, alcohol, imagen) => dispatch(admCreate(nombre, precio, descripcion,
-            tipo, cepa, stock, bodega, provincia, alcohol, imagen))
+        fetchOneWine: (idProducto) => dispatch(fetchOneWine(idProducto)),
+        admUpdate: (nombre, precio, descripcion, tipo, cepa, stock, bodega, provincia, alcohol, idProducto) => dispatch(admUpdate(nombre, precio, descripcion,
+            tipo, cepa, stock, bodega, provincia, alcohol, idProducto))
+
+
     }
 }
 
@@ -68,5 +80,5 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(AdminFormsContainer);
+)(AdminSingleWines);
 

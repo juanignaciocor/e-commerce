@@ -8,7 +8,9 @@ const initialUserState = {
     vinosTodos: [],
     categoryTintos: [],
     categoryBlancos: [],
-    categoryRosados: []
+    categoryRosados: [],
+    singleWine: {},
+    singleCategory: {}
 }
 
 export default function (state = initialUserState, action) {
@@ -33,6 +35,16 @@ export default function (state = initialUserState, action) {
         case ALL_ROSADOS:
             return Object.assign({}, state, {
                 categoryRosados: action.allRosados,
+
+            });
+        case "SINGLE":
+            return Object.assign({}, state, {
+                singleWine: action.wine,
+
+            });
+        case "CREAR_CATEGORY":
+            return Object.assign({}, state, {
+                singleCategory: action.category,
 
             });
         default:
