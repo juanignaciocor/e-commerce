@@ -6,7 +6,6 @@ import { searchAllWines, createCategory } from "../redux/actions/wines"
 import UsersChange from "../components/UsersChange"
 import AllOrder from "../components/allOrder"
 import AdminCategory from "../components/adminCategory"
-import adminCategory from "../components/adminCategory"
 
 class UserAdminContainer extends React.Component {
     constructor(props) {
@@ -49,11 +48,13 @@ class UserAdminContainer extends React.Component {
     changeUser(idUser) { this.props.ChangeToUser(idUser) }
     changeInput(idOrder, valor) { this.props.changeToEnviado(idOrder, valor) }
     viewProducts(idOrder) { return (this.props.allProducts(idOrder)) }
-    newCategory() { this.props.createCategory(this.state.nombreCategoria) }
+    newCategory(e) {
+        e.preventDefault()
+        this.props.createCategory(this.state.nombreCategoria)
+    }
     handleCategory(e) { this.setState({ nombreCategoria: e.target.value }) }
     render() {
-        const { allUsers, allOrder, producto } = this.props
-        console.log(UsersChange)
+        const { allUsers, allOrder, producto, user } = this.props
         return (
             <div>
                 <UserAdmin
@@ -62,7 +63,9 @@ class UserAdminContainer extends React.Component {
                     ToogleCategorias={this.ToogleCategorias}
                     ToogleProductos={this.ToogleProductos}
                 />
-                {this.state.vistaModificar ? (<UsersChange allUsers={allUsers}
+                {this.state.vistaModificar ? (<UsersChange
+                    usuario={user}
+                    allUsers={allUsers}
                     changeAdmin={this.changeAdmin}
                     changeUser={this.changeUser} />)
                     : (<React.Fragment></React.Fragment>)}
@@ -104,7 +107,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         changeToEnviado: (idOrder, valor) => dispatch(changeToEnviado(idOrder, valor)),
         allProducts: (order) => dispatch(allProducts(order)),
         searchAllWines: () => (dispatch(searchAllWines())),
-        createCategory: () => (dispatch(createCategory())),
+        createCategory: (nombre) => (dispatch(createCategory(nombre))),
 
 
 

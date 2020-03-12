@@ -29,7 +29,6 @@ export default ({ user, total, cantidad, searchCart, togglearCompra, Restar, rem
                                             max={item.producto.stock}
                                             value={item.producto.input}
                                             onChange={(e) => {
-                                                console.log(item.producto.id, "jaklsjdaslkjdaslkjd")
                                                 cambiarCantidad(item.producto.id, e.target.value)
                                             }}
                                         />

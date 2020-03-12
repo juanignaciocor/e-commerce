@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import cart from "../../assets/cart.svg"
 import userIcon from "../../assets/user.svg"
 
-export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouseLeave, toggle, dropdownOpen, onMouseEnter }) => {
+export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouseLeave, toggle, dropdownOpen, onMouseEnter, allCategory }) => {
     const ref = useRef(null)
     return (
         <div >
@@ -32,6 +32,9 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                         <li className="nav-item botones">
                             <Link className="nav-link" to="/allWines">All Products </Link>
                         </li>
+                        {user.typoUsuario === "admin" || user.typoUsuario === "superAdmin" ? (
+                            <li className="nav-item botones">
+                                <Link to="/user/admin">Admins</Link></li>) : (null)}
                         <li className="nav-item dropdown">
 
                             <Dropdown className="d-inline-block" onMouseOver={onMouseEnter} onMouseLeave={onMouseLeave} isOpen={dropdownOpen} toggle={toggle} >
@@ -47,6 +50,8 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                                 </DropdownMenu>
                             </Dropdown>
 
+
+
                             {/* <a onMouseOver={onMouseOver} className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <Link to="/category/red" className="dropdown-item" >Red</Link>
@@ -54,8 +59,30 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                                 <Link to="/category/rose" className="dropdown-item">Rose</Link>
                             </div> */}
                         </li>
+
                     </ul>
-                    <Link to="/user/profile"> <button type="button" className="btnUserNav btn btn-secondary">  <img className="imgCarrito" src={userIcon} /> 
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SubCategories
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {allCategory.map((category) => {
+                                return (
+
+                                    <div><Link to={`/subcategory/${category.id}`}>{category.nombre}</Link></div>
+                                )
+
+                            })}
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <Link to="/user/profile"> <button type="button" className="btnUserNav btn btn-secondary">  <img className="imgCarrito" src={userIcon} />
                         <span id="btnText">
                             {user.email ? (
                                 user.username

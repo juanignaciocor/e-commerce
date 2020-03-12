@@ -51,7 +51,6 @@ router.delete("/single/adm/destroy/:id", (req, res, next) => {
 
 
 router.post('/single/adm/crear', (req, res, next) => {
-    console.log(req.body)
     Producto.create({
         nombre: req.body.nombre,
         precio: req.body.precio,
@@ -65,6 +64,13 @@ router.post('/single/adm/crear', (req, res, next) => {
         imagen: req.body.imagen
 
     })
+        .then((producto) => {
+            let arreglo = []
+            for (key in req.body.categoria) {
+                arreglo.push(req.body.categoria[key])
+            }
+            producto.addCategoria(arreglo)
+        })
         .then((data) => res.sendStatus(200))
 
 })

@@ -92,7 +92,7 @@ export const FetchAllUsers = () => {
 export const ChangeToAdmin = (idUser) => {
     return function (dispatch, getState) {
         return axios.put(`/api/user/admin/changeToAdmin`, { idUser: idUser })
-            .then((res) => (console.log(res.data)))
+            .then((res) => (dispatch(FetchAllUsers())))
 
     }
 }
@@ -100,7 +100,7 @@ export const ChangeToAdmin = (idUser) => {
 export const ChangeToUser = (idUser) => {
     return function (dispatch, getState) {
         return axios.put(`/api/user/admin/changeToUser/`, { idUser: idUser })
-            .then((res) => (console.log(res.data)))
+            .then((res) => (dispatch(FetchAllUsers())))
 
     }
 }

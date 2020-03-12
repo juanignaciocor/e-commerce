@@ -71,12 +71,7 @@ export const searchRosado = () => {
     }
 }
 
-export const createCategory = (nombre) => {
-    return function (dispatch, getState) {
-        axios.post(` /api/wines/category/new`, { nombre })
-            .then((res) => { dispatch(allRosados(res.data)) })
-    }
-}
+
 export const fetchOneWine = (idProducto) => {
     return function (dispatch, getState) {
         return axios.get(`/api/wines/single/${idProducto}`)
@@ -103,13 +98,21 @@ export const admDestroy = (idProducto) => {
     }
 }
 
-export const admCreate = (nombre, precio, descripcion, tipo, cepa, stock, bodega, provincia, alcohol, imagen) => {
+export const admCreate = (nombre, precio, descripcion, tipo, cepa, stock, bodega, provincia, alcohol, imagen, categoria) => {
     return function (dispatch, getState) {
         return axios.post('/api/wines/single/adm/crear', {
             nombre, precio, descripcion,
-            tipo, cepa, stock, bodega, provincia, alcohol, imagen
+            tipo, cepa, stock, bodega, provincia, alcohol, imagen, categoria
         })
             .then((data) => { console.log("se creo ") })
 
+    }
+}
+
+
+export const createCategory = (nombre) => {
+    return function (dispatch, getState) {
+        axios.post(` /api/category/new`, { nombre })
+            .then((res) => { console.log("CREADO") })
     }
 }
