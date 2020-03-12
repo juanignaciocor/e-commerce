@@ -5,12 +5,15 @@ const initialUserState = {
     allOrder: [],
     allProducts: [],
     orderProfile: [],
+    loading: false
 }
 
 export default function (state = initialUserState, action) {
     switch (action.type) {
+        case 'START_LOADING':
+            return { ...state, loading: true }
         case "LOGGUE_USER":
-            return { ...state, logged: action.user }
+            return { ...state, logged: action.user, loading: false }
         case DESLOGUEO_USER:
             return { ...state, logged: {} }
         case ALL_USER:

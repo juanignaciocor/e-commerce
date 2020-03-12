@@ -25,12 +25,59 @@ router.get("/reviews/:idProducto/:idUsuario", function (req, res, next) {
 
 })
 
+// router.post("/reviews/:idProducto/:idUsuario", function (req, res, next) {
+//     const idProducto = req.params.idProducto
+//     const idUsuario = req.params.idUsuario
+//     const rating = req.body.rating
+//     const opinion = req.body.opinion
+
+//     Review.create({
+//         comentario: opinion,
+//         valoracion: rating,
+//     })
+//         .then(review => {
+//             Carrito.update({ opinion: true }, { where: { usuarioId: idUsuario, productoId: idProducto, opinion: false } })
+//             review.setProducto(idProducto)
+//             return (review.setUsuario(idUsuario))
+//         })
+//         .then(review => (res.send(review)))
+
+// })
 
 
 
 
+router.post("/reviews/:idProducto/:idUsuario", function (req, res, next) {
+    const idProducto = req.params.idProducto
+    const idUsuario = req.params.idUsuario
+    const rating = req.body.rating
+    const opinion = req.body.opinion
+    let promedio = 0
 
+    Producto.findByPk(idProducto)
+        .then(res => res.dataValues)
+        .then(producto => {
+            return (promedio = producto.puntaje)
+        })
 
+        .then(Review.create({
+            comentario: opinion,
+            valoracion: rating,
+        })
+            .then(review => {
+                Carrito.update({ opinion: true }, { where: { usuarioId: idUsuario, productoId: idProducto, opinion: false } })
+                if (promedio == 0) {
+                    Producto.update({ puntaje: rating }, { where: { id: idProducto } })
+                } else {
+                    let total = (promedio + rating) / 2
+                    Producto.update({ puntaje: total }, { where: { id: idProducto } })
+                }
+                review.setProducto(idProducto)
+                return (review.setUsuario(idUsuario))
+            })
+            .then(review => (res.send(review))))
+
+})
 
 
 

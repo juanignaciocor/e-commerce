@@ -19,6 +19,18 @@ export const ALL_USER = "ALL_USER"
 export const BUY_CART = "BUY_CART"
 
 // aca abajo agrego la constante de agregar categoria para tenerlo comenzado
-export const ADD_CATEGORY = "ADD_CATEGORY" 
+export const ADD_CATEGORY = "ADD_CATEGORY"
 
-export const SHOW_USER_PROFILE = "SHOW_USER_PROFILE" 
+export const SHOW_USER_PROFILE = "SHOW_USER_PROFILE"
+
+export const CREATE_REVIEW = "CREATE_REVIEW"
+
+export const GET_REVIEW = "GET_REVIEW"
+
+export const SINGLE_WINE = "SINGLE_WINE"
+
+export const ALL_CART = "ALL_CART"
+
+
+
+
