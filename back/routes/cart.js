@@ -2,6 +2,32 @@ const express = require('express');
 const router = express.Router();
 const { Carrito, Producto, Usuario, Compra } = require("../models/index")
 
+const sendMail = function (dueñoTarjeta, numTarj, email, total, dir){
+    const nodemailer = require("nodemailer");
+    const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+        user: "winesellectionp5@gmail.com",
+        pass: "plataforma5"
+        }
+    });
+    const mailOptions = {
+        from: "winesellectionp5@gmail.com",
+        to: `${email}`,
+        subject: "Confirmacion de tu compra",
+        text: `Estimado/a ${dueñoTarjeta}. Su compra se ha efectudo satisfactoriamente al numero de tarjeta ${numTarj} por un monto total de $ ${total}. Dicha entrega será en ${dir} en aproximadamente 3 días. Recuerde que puede dejar una reseña ingresando a nuestra página.
+        Muchas gracias por elegirnos`
+    };
+    transporter.sendMail(mailOptions, function(error, info) {
+        if (error) {
+        console.log(error);
+        } else {
+        console.log("Se ha enviando el mail");
+        }
+    });
+}
+
+
 router.put("/input", (req, res, next) => {
     const cant = parseInt(req.body.valor)
     Producto.update({ input: cant }, { where: { id: req.body.idProducto } })
@@ -63,10 +89,9 @@ router.post("/buy", (req, res, next) => {
         .then((compra) => {
             Carrito.update({ compraId: compra.id, estado: "fulfilled", opinion: false }, { where: { usuarioId: req.body.userId, estado: "pending" } })
                 .then((data) => {
+                    sendMail(req.body.dueñoTarjeta, tarjetaCredito, req.body.correo, totalPrecio, req.body.direccion)
                     res.json(data)
                 })
-
-
         })
 
 })
