@@ -32,6 +32,10 @@ export const recoverCart = (stock) => ({
     type: "RECOVER",
     stock
 })
+export const input = (data) => ({
+    type: "CAMBIO",
+    data
+})
 export const createCartItem = (item) => dispatch => {
     axios.post('/api/cart/add', item)
         .then(res => res.data)
@@ -46,32 +50,46 @@ export const searchUserCart = (userId) => {
     }
 }
 
-export const userRemoveCart = (userId, productoId) => {
+export const userRemoveCart = (userId, productoId, precio, cantidad) => {
     return function (dispatch, getState) {
         return axios.delete((`/api/cart/removeCart/${userId}/${productoId}`))
-            .then((res) => {
-                dispatch(removeCart(res.data))
+            .then((data) => {
+                return dispatch(searchUserCart(userId))
+
             })
+
+
+
+
+
     }
 }
 
-export const changeStock = (idProducto, cantidad, precio) => {
+export const sumarCantidad = (idProducto, precio, userId, cantidad) => {
     return function (dispatch, getState) {
-        return axios.put('/api/cart/stock', { cantidad, idProducto })
+        return axios.put('/api/cart/sumar', { idProducto, cantidad })
             .then((res) => {
                 let total = cantidad * precio
                 dispatch(stockCart(total))
             })
+            .then((data) => {
+                dispatch(searchUserCart(userId))
+
+            })
     }
 }
 
 
-export const recoverStock = (idProducto, cantidad, precio) => {
+export const restarCantidad = (idProducto, precio, userId, cantidad) => {
     return function (dispatch, getState) {
-        return axios.put('/api/cart/recoverStock', { cantidad, idProducto })
+        return axios.put('/api/cart/resta', { idProducto, cantidad })
             .then((res) => {
                 let total = cantidad * precio
-                dispatch(recoverCart(total))
+                return dispatch(recoverCart(total))
+            })
+            .then((data) => {
+                return dispatch(searchUserCart(userId))
+
             })
     }
 }
@@ -84,4 +102,16 @@ export const searchCarritos = (objeto) => {
                 dispatch(allCart(carritos))
             })
     }
+}
+export const inputChange = (idProducto, valor, userId) => {
+
+    return function (dispatch, getState) {
+        return axios.put(`/api/cart/input`, { idProducto, valor })
+            .then((res) => {
+                return dispatch(searchUserCart(userId))
+            })
+
+
+    }
+
 }

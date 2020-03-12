@@ -196,3 +196,6 @@
 	padding: 1%;
 }
 
+.newCard::-webkit-scrollbar {
+	overflow-y: auto;
+  }

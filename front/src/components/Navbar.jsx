@@ -8,7 +8,7 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
     const ref = useRef(null)
     return (
         <div >
-            <nav className=" navegador navbar  navbar-expand-lg navbar-light  ">
+            <nav className="navegador navbar navbar-expand-lg navbar-light">
                 <Link to="/" className="navbar-brand" ><button className="btn btn-dark my-2 my-sm-2">WINERY</button></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

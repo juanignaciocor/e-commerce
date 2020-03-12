@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
 
-export default ({ user, cart, searchCart, togglearCompra, togglearStock, recoStock, removeClick, orderCreate, setStock, cambiarCantidad, toogleStock }) => {
+export default ({ user, total, cantidad, searchCart, togglearCompra, Restar, removeClick, orderCreate, Sumar, cambiarCantidad }) => {
     if (user.username) {
         return (
             <div>
@@ -24,25 +24,26 @@ export default ({ user, cart, searchCart, togglearCompra, togglearStock, recoSto
                                                     <p className="card-text">{`Precio: ${item.producto.precio},00`}</p>
                                                     <button type="button"
                                                         className="btn btn-outline-danger"
-                                                        onClick={() => removeClick(item.producto.id)}
+                                                        onClick={() => removeClick(item.producto.id, item.producto.precio)}
                                                     >Remover del Carrito</button>
                                                     <input type="number"
-                                                        min="1"
+                                                        min="0"
                                                         max={item.producto.stock}
-
-                                                        onChange={cambiarCantidad}
+                                                        value={item.producto.input}
+                                                        onChange={(e) => {
+                                                            cambiarCantidad(item.producto.id, e.target.value)
+                                                        }}
                                                     />
-                                                    {!toogleStock ? (<input value="Confirmar" type="submit" onClick={() => {
-                                                        setStock(item.producto.id, item.producto.precio)
-                                                            .then((data) => togglearStock()
-                                                            )
-                                                    }} />) : (<input value="Volver" type="submit" onClick={() => {
-                                                        recoStock(item.producto.id, item.producto.precio)
-                                                            .then((data) => togglearStock()
-                                                            )
-                                                    }} />)}
+                                                    <input type="submit" value="Confirmar" onClick={() => Sumar(item.producto.id, item.producto.precio, item.producto.input)} />
+                                                    {total < cantidad * item.producto.precio ?
+                                                        (<input type="submit" value="Retroceder" onClick={() => (alert("No puede tener valores negativos"))} />
+                                                        ) : (<input type="submit" value="Retroceder" onClick={() => Restar(item.producto.id, item.producto.precio, item.cantidad)} />
+                                                        )}
+
 
                                                     <Link to={`/wines/${item.producto.id}`}>  <img className="cartImagen" src={item.producto.imagen}></img></Link>
+
+
 
                                                 </div>
                                             </div>

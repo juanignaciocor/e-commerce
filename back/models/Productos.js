@@ -46,6 +46,14 @@ Producto.init({
     puntaje: {
         type: S.FLOAT,
         defaultValue: 0
+    },
+    quantity: {
+        type: S.INTEGER,
+        defaultValue: 0
+    },
+    input: {
+        type: S.INTEGER,
+        defaultValue: 0
     }
 
 

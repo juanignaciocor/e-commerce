@@ -30,6 +30,13 @@ export const allOrder = (allOrder) => ({
 
 
 })
+export const Products = (allProducts) => ({
+
+    type: "ALL_PRODUCTS",
+    allProducts
+
+
+})
 
 export const showUser = (orderProfile) => ({
     type: SHOW_USER_PROFILE,
@@ -103,17 +110,33 @@ export const ChangeToUser = (idUser) => {
     }
 }
 
-
-
-export const allOrderAdmin = (usuario) => {
+export const allOrderAdmin = () => {
     return function (dispatch, getState) {
-        return axios.get(`/api/user/admin/allOrder/${usuario}`)
+        return axios.get(`/api/user/admin/allOrder
+        `)
             .then((res) => {
                 dispatch(allOrder(res.data))
 
             })
+    }
+}
+
+export const allProducts = (idProducto) => {
+    return function (dispatch, getState) {
+        return axios.get(`/api/user/admin/allOrderProducts/${idProducto} `)
+            .then((res) => {
+                dispatch(Products(res.data))
+
+            })
 
 
+
+    }
+}
+export const changeToEnviado = (idOrder, valor) => {
+    return function (dispatch, getState) {
+        return axios.put(`/api/user/admin/changeToEnviado`, { idOrder, valor })
+            .then((res) => { dispatch(allOrderAdmin()) })
 
     }
 }

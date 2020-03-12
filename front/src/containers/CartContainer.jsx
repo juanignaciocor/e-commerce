@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from "react-redux"
 import { withRouter } from "react-router";
 import Cart from "../components/Cart"
-import { searchUserCart, userRemoveCart, changeStock, recoverStock } from "../redux/actions/cart"
+import { searchUserCart, userRemoveCart, restarCantidad, sumarCantidad, inputChange } from "../redux/actions/cart"
 import { createOrder } from "../redux/actions/buy"
 import CheckOut from "../components/checkOut"
 
@@ -12,11 +12,12 @@ class CartContainer extends React.Component {
         super()
         this.state = {
             creditCard: "",
-            cantidad: 1,
+            cantidad: 0,
             toogleCompra: false,
             toogleStock: false,
             direccion: "",
-            usuarioCredito: ""
+            usuarioCredito: "",
+            correo: ""
         }
         this.removeClick = this.removeClick.bind(this)
         this.orderCreate = this.orderCreate.bind(this)
@@ -26,8 +27,9 @@ class CartContainer extends React.Component {
         this.cambiarDireccion = this.cambiarDireccion.bind(this)
         this.cambiarUsuario = this.cambiarUsuario.bind(this)
         this.togglearStock = this.togglearStock.bind(this)
-        this.recoStock = this.recoStock.bind(this)
-        this.setStock = this.setStock.bind(this)
+        this.Sumar = this.Sumar.bind(this)
+        this.Restar = this.Restar.bind(this)
+        this.cambiarCorreo = this.cambiarCorreo.bind(this)
 
 
 
@@ -38,14 +40,14 @@ class CartContainer extends React.Component {
     }
 
 
-    removeClick(productoId) {
+    removeClick(productoId, precio) {
 
-        this.props.userRemoveCart(this.props.userId, productoId)
+        this.props.userRemoveCart(this.props.userId, productoId, precio, this.state.cantidad)
 
     }
 
     orderCreate(total) {
-        this.props.createOrder(this.props.userId, this.state.creditCard, total, this.state.direccion, this.state.usuarioCredito)
+        this.props.createOrder(this.props.userId, this.state.creditCard, total, this.state.direccion, this.state.usuarioCredito, this.state.correo)
 
     }
     creditCardChange(e) {
@@ -57,23 +59,26 @@ class CartContainer extends React.Component {
 
 
     }
+    cambiarCorreo(e) {
+        this.setState({ correo: e.target.value })
+    }
     cambiarDireccion(e) {
         this.setState({ direccion: e.target.value })
     }
     cambiarUsuario(e) {
         this.setState({ usuarioCredito: e.target.value })
     }
-    cambiarCantidad(e) {
-        this.setState({ cantidad: e.target.value })
+    cambiarCantidad(id, cambio) {
+        this.props.inputChange(id, cambio, this.props.userId)
     }
-    setStock(productoId, precio) {
+    Restar(productoId, precio, cantidad) {
         return (
-            this.props.changeStock(productoId, this.state.cantidad, precio)
+            this.props.restarCantidad(productoId, precio, this.props.userId, cantidad)
         )
     }
-    recoStock(productoId, precio) {
+    Sumar(productoId, precio, cantidad) {
         return (
-            this.props.recoverStock(productoId, this.state.cantidad, precio)
+            this.props.sumarCantidad(productoId, precio, this.props.userId, cantidad)
         )
     }
     togglearCompra() {
@@ -84,8 +89,8 @@ class CartContainer extends React.Component {
     }
 
     render() {
-        const { searchCart, changeStock, total } = this.props
-        const { usuarioCredito, direccion, toogleStock } = this.state
+        const { searchCart, restarCantidad, total } = this.props
+        const { usuarioCredito, direccion, toogleStock, cantidad, correo } = this.state
 
         return (
             <div>
@@ -96,11 +101,14 @@ class CartContainer extends React.Component {
                     cantidad={this.state.cantidad}
                     setStock={this.setStock}
                     cambiarCantidad={this.cambiarCantidad}
-                    setStock={this.setStock}
+                    Sumar={this.Sumar}
                     togglearCompra={this.togglearCompra}
                     togglearStock={this.togglearStock}
-                    recoStock={this.recoStock}
+                    Restar={this.Restar}
                     toogleStock={toogleStock}
+                    cantidad={cantidad}
+                    total={total}
+
 
                 />
                 {this.state.toogleCompra ? (<CheckOut
@@ -113,6 +121,8 @@ class CartContainer extends React.Component {
                     usuarioCredito={usuarioCredito}
                     direccion={direccion}
                     usuarioCredito={usuarioCredito}
+                    cambiarCorreo={this.cambiarCorreo}
+                    correo={correo}
                 />) : (<React.Fragment></React.Fragment>)}
 
             </div>
@@ -138,10 +148,11 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         searchUserCart: (userId) => (dispatch(searchUserCart(userId))),
-        userRemoveCart: (userId, productoId) => (dispatch(userRemoveCart(userId, productoId))),
-        createOrder: (userId, creditCard, total, direccion, dueñoTarjeta) => (dispatch(createOrder(userId, creditCard, total, direccion, dueñoTarjeta))),
-        changeStock: (productoId, cantidad, precio) => (dispatch(changeStock(productoId, cantidad, precio))),
-        recoverStock: (productoId, cantidad, precio) => (dispatch(recoverStock(productoId, cantidad, precio))),
+        inputChange: (id, cambio, userId) => (dispatch(inputChange(id, cambio, userId))),
+        userRemoveCart: (userId, productoId, precio, cantidad) => (dispatch(userRemoveCart(userId, productoId, precio, cantidad))),
+        createOrder: (userId, creditCard, total, direccion, dueñoTarjeta, correo) => (dispatch(createOrder(userId, creditCard, total, direccion, dueñoTarjeta, correo))),
+        restarCantidad: (productoId, precio, userId, c) => (dispatch(restarCantidad(productoId, precio, userId, c))),
+        sumarCantidad: (productoId, precio, userId, c) => (dispatch(sumarCantidad(productoId, precio, userId, c))),
 
 
 
