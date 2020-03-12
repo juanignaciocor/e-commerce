@@ -1,17 +1,25 @@
 import React, { Fragment } from "react";
 import ReviewContainer from "../containers/ReviewContainer"
+import Rating from '@material-ui/lab/Rating';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
-export default ({ user, carritos, vinoSeleccionado, handlerClick }) => {
-    let falsos = []
-    let nuevoCarrito = [...carritos]
+export default ({ wineId, reviews, handlerChange, handlerChange2, handlerSubmit, ranking, opinion, user, carritos, vinoSeleccionado, handlerClick }) => {
 
-    console.log(Array.isArray(nuevoCarrito))
-    console.log(nuevoCarrito)
-    console.log(nuevoCarrito.map)
+    const arrayValoraciones = []
+    for (let i = 0; i < reviews.length; i++) {
+        arrayValoraciones.push(reviews[i].valoracion)
+    }
+    let suma = 0
+    for (let i = 0; i < arrayValoraciones.length; i++) {
+        suma += arrayValoraciones[i]
+    }
+    const promedio = suma / (arrayValoraciones.length)
+
     return (
         <>
             {
-                (vinoSeleccionado.id) ? (<Fragment> <div id="ContenedorSingle" className=" media " >
+                (vinoSeleccionado.length) ? (<Fragment> <div id="ContenedorSingle" className=" media " >
                     {/*Inicio carrusel */}
                     <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                         <ol className="carousel-indicators">
@@ -20,7 +28,7 @@ export default ({ user, carritos, vinoSeleccionado, handlerClick }) => {
                         </ol>
                         <div className=" carousel-inner">
                             <div className="carousel-item active">
-                                <img className="imagenSingle" src={vinoSeleccionado.imagen} />
+                                <img className="imagenSingle" src={vinoSeleccionado[0].imagen} />
                             </div>
                             <div className="imagenSingle carousel-item">
                                 <img className="imagenSingle" src="https://www.winestyletravel.com/wp-content/uploads/2018/11/portada-entrevino_winestyle.jpg" />
@@ -37,64 +45,25 @@ export default ({ user, carritos, vinoSeleccionado, handlerClick }) => {
                     </div>
                     {/*Fin carrusel */}
                     <div id="ContenedorSingleWineText">
-                        <h3 className="mt-0 singleWineText"><strong>{vinoSeleccionado.nombre}</strong></h3>
-                        <p className="mb-0 singleWineText"> <strong>Bodega: </strong> {vinoSeleccionado.bodega}</p>
-                        <p className="mb-0 singleWineText"> <strong>Precio: </strong>${vinoSeleccionado.precio},00</p>
-                        <p className="mb-0 singleWineText"> <strong>Tipo: </strong>{vinoSeleccionado.tipo}</p>
-                        <p className="mb-0 singleWineText"> <strong>Cepa: </strong> {vinoSeleccionado.cepa}</p>
-                        <p className="mb-0 singleWineText"> <strong>Lugar de Origen:</strong> {vinoSeleccionado.provincia}</p>
-                        <p className="mb-0 singleWineText"> <strong>Graduación alcohólica:</strong> {vinoSeleccionado.alcohol}%</p>
-                        <p className="mb-0 singleWineText"> <strong>Descripción: </strong> {vinoSeleccionado.descripcion}</p>
-                        <p className="mb-0 singleWineText"> <strong>Stock: </strong>{vinoSeleccionado.stock}</p>
+                        <h3 className="mt-0 singleWineText"><strong>{vinoSeleccionado[0].nombre}</strong></h3>
+                        <Box className="card-header" component="fieldset" mb={3} borderColor="transparent">
+                            <Rating name="read-only" value={promedio} style={{ paddingLeft: "35%" }} readOnly />
+                        </Box>
+                        <p className="mb-0 singleWineText"> <strong>Bodega: </strong> {vinoSeleccionado[0].bodega}</p>
+                        <p className="mb-0 singleWineText"> <strong>Precio: </strong>${vinoSeleccionado[0].precio},00</p>
+                        <p className="mb-0 singleWineText"> <strong>Tipo: </strong>{vinoSeleccionado[0].tipo}</p>
+                        <p className="mb-0 singleWineText"> <strong>Cepa: </strong> {vinoSeleccionado[0].cepa}</p>
+                        <p className="mb-0 singleWineText"> <strong>Lugar de Origen:</strong> {vinoSeleccionado[0].provincia}</p>
+                        <p className="mb-0 singleWineText"> <strong>Graduación alcohólica:</strong> {vinoSeleccionado[0].alcohol}%</p>
+                        <p className="opinionmb-0 singleWineText"> <strong>Descripción: </strong> {vinoSeleccionado[0].descripcion}</p>
+                        <p className="mb-0 singleWineText"> <strong>Stock: </strong>{vinoSeleccionado[0].stock}</p>
                         <button onClick={handlerClick} className="btnComprar">Añadir al Carrito </button>
                         <center><img style={{ marginTop: "20px", width: "400px", height: "60px" }} src="https://cepadevinos.com/wp-content/uploads/2016/08/logos-tarjetas.jpg" /></center>
                     </div>
                 </div>
-                    <div>
-                        {
-                            nuevoCarrito ? (
-                                <>
-                                    {nuevoCarrito.map((carrito) => {
-                                        if (carrito.opinion === false) falsos.push(carrito)
-                                    })}
-                                    {falsos.length ? (
-                                        <Fragment>
-                                            <div className="not-Found container card mb-3">
-                                                <h3>Calificación del vino</h3>
-                                                <select class="form-control">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                                <h3>Dejanos un comentario del vino</h3>
-                                                <form>
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" />
-                                                        <div class="btn-group-toggle" data-toggle="buttons">
-                                                            <label class="btn btn-secondary active">
-                                                                <input type="checkbox" checked /> Checked
-  </label>
-                                                        </div>
 
 
-
-
-
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </Fragment>
-                                    ) : null}
-                                </>
-                            ) : null
-
-
-                        }
-                    </div>
-
-                    <ReviewContainer vinoSeleccionado={vinoSeleccionado} /> </Fragment>) : null
+                    <ReviewContainer wineId={wineId} /> </Fragment>) : null
             }
 
         </>

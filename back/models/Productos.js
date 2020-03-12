@@ -43,6 +43,10 @@ Producto.init({
         type: S.FLOAT,
         allowNull: false
     },
+    puntaje: {
+        type: S.FLOAT,
+        defaultValue: 0
+    },
     quantity: {
         type: S.INTEGER,
         defaultValue: 0
@@ -51,11 +55,6 @@ Producto.init({
         type: S.INTEGER,
         defaultValue: 0
     }
-
-
-
-
-
 
 
 }, { sequelize: db, modelName: 'producto' })

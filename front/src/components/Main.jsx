@@ -17,6 +17,7 @@ import UserProfileContainer from "../containers/UserProfileContainer"
 import { LogueoCoockie } from "../redux/actions/users"
 import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
+import finReview from "../components/finReview"
 import AdminFormsContainer from "../containers/AdminFormsContainer"
 import AdminUpdateContainer from "../containers/AdminUpdateContainer"
 import AdminDeleteContainer from "../containers/AdminDeleteContainer"
@@ -44,6 +45,7 @@ class Main extends React.Component {
                     <Route exact path="/wines/:id" component={SingleWineContainer}></Route>
                     <Route exact path="/cart" component={CartContainer}></Route>
                     <Route exact path="/category/red" component={CategoryTintoContainer}></Route>
+                    <Route exact path="/createReview" component={finReview}></Route>
                     <Route exact path="/category/white" component={CategoryBlancoContainer}></Route>
                     <Route exact path="/category/rose" component={CategoryRosadoContainer}></Route>
                     <Route exact path="/user/admin" component={UserAdminContainer}></Route>

@@ -1,5 +1,5 @@
 import axios from "axios"
-import { ADD_CART, SEARCH_CART, REMOVE_CART } from "../store/constants"
+import { ADD_CART, ALL_CART, SEARCH_CART, REMOVE_CART } from "../store/constants"
 
 export const addCart = (item) => ({
     type: ADD_CART,
@@ -21,6 +21,12 @@ export const stockCart = (stock) => ({
     stock
 
 });
+
+export const allCart = (carritos) => ({
+    type: ALL_CART,
+    carritos
+})
+
 
 export const recoverCart = (stock) => ({
     type: "RECOVER",
@@ -88,6 +94,15 @@ export const restarCantidad = (idProducto, precio, userId, cantidad) => {
     }
 }
 
+export const searchCarritos = (objeto) => {
+    return function (dispatch, getState) {
+        axios.get(`/api/wines/reviews/${objeto.idVinito}/${objeto.idUser}`)
+            .then(res => res.data)
+            .then(carritos => {
+                dispatch(allCart(carritos))
+            })
+    }
+}
 export const inputChange = (idProducto, valor, userId) => {
 
     return function (dispatch, getState) {
