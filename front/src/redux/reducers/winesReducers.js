@@ -1,4 +1,4 @@
-import { SEARCH_WINES, ALL_WINES, ALL_TINTOS, ALL_BLANCOS, ALL_ROSADOS } from "../store/constants"
+import { SINGLE_WINE, ALL_CART, SEARCH_WINES, ALL_WINES, ALL_TINTOS, ALL_BLANCOS, ALL_ROSADOS } from "../store/constants"
 
 
 
@@ -10,7 +10,8 @@ const initialUserState = {
     categoryBlancos: [],
     categoryRosados: [],
     singleWine: {},
-    singleCategory: {}
+    singleCategory: {},
+    vinoSeleccionado: []
 }
 
 export default function (state = initialUserState, action) {
@@ -47,6 +48,8 @@ export default function (state = initialUserState, action) {
                 singleCategory: action.category,
 
             });
+        case SINGLE_WINE:
+            return { ...state, vinoSeleccionado: [action.vinoSeleccionado] };
         default:
             return state;
     }

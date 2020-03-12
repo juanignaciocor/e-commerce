@@ -4,11 +4,13 @@ import userReducers from "./usersReducers"
 import cartReducers from "./cartReducer"
 import buyReducers from "./BuyReducer"
 import categoryReducers from "./categoryReducer"
+import reviewsReducers from "./reviews"
 
 export default combineReducers({
      userReducers: userReducers,
      winesReducers: winesReducers,
      cartReducers: cartReducers,
      buyReducers: buyReducers,
-     categoryReducers: categoryReducers
+     categoryReducers: categoryReducers,
+     reviewsReducers: reviewsReducers,
 });

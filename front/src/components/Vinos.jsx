@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import cart from "../../assets/cart.svg"
 import wineNotFound from "../../assets/hola.jpeg"
 import { useEffect, useState } from 'react';
+import Rating from '@material-ui/lab/Rating';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 
 export default ({ vinos, handlerClick }) => {
@@ -40,6 +43,9 @@ export default ({ vinos, handlerClick }) => {
                                     </Link>
                                     <figcaption>
                                         <p className="vino">{vino.nombre}</p>
+                                        <Box className="card-header" component="fieldset" mb={3} borderColor="transparent">
+                                            <Rating name="read-only" value={vino.puntaje} style={{ paddingLeft: "2%" }} readOnly />
+                                        </Box>
                                         <div className="precioCarrito">
                                             <p className="precio">$ {vino.precio},00</p>
                                             <button onClick={() => handlerClick(vino.id)} > Añadir a Carrito  <img className="imgCarrito" src={cart} /></button>
