@@ -7,15 +7,16 @@ const { Usuario } = require("../models/index")
 const wines = require("./wines")
 const cart = require("./cart")
 const user = require("./user")
-
+const category = require("./category")
 router.use('/api/user', user)
 router.use('/api/wines', wines)
 router.use('/api/cart', cart)
+router.use('/api/category', category)
+
 
 const loggedUser = function (req, res, next) {
     if (req.isAuthenticated()) {
         res.json(req.user)
-
 
     } else {
         res.json("")

@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react';
-import fbicon from "../../assets/facebook.svg"
-import googleicon from "../../assets/search.svg"
-export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
-    console.log(allCategory)
-    return (
+import { Link } from 'react-router-dom'
+export default ({ wine, handlerChange, submit }) => (
+    <Fragment>
         <div className="form-adm">
-            <h3>Crear un producto</h3>
-            <form onSubmit={submit}  >
+
+            <h2>Editar su producto</h2>
+            <form onSubmit={submit}>
 
                 <div>
                     <label>Nombre:</label>
@@ -14,6 +13,7 @@ export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
                         placeholder=" Nombre del vino"
                         name="nombre"
                         onChange={handlerChange}
+                        defaultValue={wine.nombre}
 
 
                     />
@@ -24,6 +24,8 @@ export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
                         placeholder=" Precio"
                         name="precio"
                         onChange={handlerChange}
+                        defaultValue={wine.precio}
+
 
                     />
                 </div>
@@ -33,6 +35,8 @@ export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
                         placeholder="Numero de tarjeta"
                         name="descripcion"
                         onChange={handlerChange}
+                        defaultValue={wine.descripcion}
+
 
 
                     />
@@ -43,6 +47,8 @@ export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
                         placeholder="Ingrese url de la imagen"
                         name="imagen"
                         onChange={handlerChange}
+                        defaultValue={wine.imagen}
+
 
                     />
                 </div>
@@ -52,6 +58,8 @@ export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
                         placeholder="Tipo de vino"
                         name="tipo"
                         onChange={handlerChange}
+                        defaultValue={wine.tipo}
+
 
 
                     />
@@ -62,6 +70,8 @@ export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
                         placeholder="Ejemplo : Malbec"
                         name="cepa"
                         onChange={handlerChange}
+                        defaultValue={wine.cepa}
+
 
 
                     />
@@ -72,6 +82,8 @@ export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
                         placeholder="Numero de stock"
                         name="stock"
                         onChange={handlerChange}
+                        defaultValue={wine.stock}
+
 
 
                     />
@@ -82,6 +94,7 @@ export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
                         placeholder="Ejemplo:Catena Zapata"
                         name="bodega"
                         onChange={handlerChange}
+                        defaultValue={wine.bodega}
 
 
                     />
@@ -91,6 +104,8 @@ export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
                     <input type="text"
                         name="provincia"
                         onChange={handlerChange}
+                        defaultValue={wine.provincia}
+
 
 
                     />
@@ -101,23 +116,15 @@ export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
                         placeholder="cantidad de alcohol"
                         name="alcohol"
                         onChange={handlerChange}
+                        defaultValue={wine.alcohol}
+
                     />
 
                 </div>
                 <div>
-                    {
-                        allCategory.map((categoria) => {
-                            return (
-                                <div key={categoria.id}>
-                                    <input type="checkbox" id={categoria.id} value={categoria.nombre} onChange={handleCheckbox} />
-                                    {categoria.nombre}
-                                </div>
-                            )
-
-
-                        })
-                    }
-
+                    <label>Categoria:</label>
+                    <input type="text"
+                        placeholder="Categoria" />
 
                 </div>
                 <input type="submit" value="enviar" />
@@ -126,19 +133,11 @@ export default ({ handlerChange, submit, allCategory, handleCheckbox }) => {
 
 
             </form>
-
         </div >
-    )
-};
 
+    </Fragment>
 
-
-
-
-
-
-
-
+);
 
 
 

@@ -1,7 +1,60 @@
 const { Producto } = require("./models/index")
+const Categoria = require("./models/Categorias")
+//-----------------------------CATEGORIAS-------------------------
+const categoria1 = Categoria.create({
 
+    nombre: "Espumantes"
+})
+const categoria2 = Categoria.create({
+
+    nombre: "Dulce"
+})
+const categoria3 = Categoria.create({
+
+    nombre: "Amargo"
+})
+const categoria4 = Categoria.create({
+
+    nombre: "Carton"
+})
+
+
+//https://http2.mlstatic.com/espumante-eclat-reserva-extra-brut-bodega-caelum-y-la-maison-D_NQ_NP_640396-MLA31922573604_082019-O.webp
 //---------------------------------------------TINTOS--------------------------------------------------
 // MALBEC
+const producto3 = Producto.create({
+    nombre: " Eclat Reserva",
+    descripcion: "Vino espumante de la casa",
+    precio: 1050,
+    imagen: "https://http2.mlstatic.com/espumante-eclat-reserva-extra-brut-bodega-caelum-y-la-maison-D_NQ_NP_640396-MLA31922573604_082019-O.webp",
+    tipo: "Tinto",
+    cepa: "Extra Brut Bodega",
+    stock: 5,
+    bodega: "Caelum ",
+    provincia: "Buenos Aires",
+    alcohol: 5
+
+})
+const producto1 = Producto.create({
+    nombre: "Termidor",
+    descripcion: "Buen vino para acompañar en cenas",
+    precio: 10,
+    imagen: "https://walmartar.vteximg.com.br/arquivos/ids/835937-1000-1000/Snacks-Queso-Doritos-305gr-636.jpg?v=636687441232900000",
+    tipo: "Tinto",
+    cepa: "Popular",
+    stock: 100,
+    bodega: "De barrio",
+    provincia: "Buenos Aires",
+    alcohol: 80.1
+
+})
+
+Promise.all([producto1, categoria1, producto3, categoria2, categoria3, categoria4]).then(([producto1, categoria1, producto3, categoria2, categoria3, categoria4]) => {
+    producto1.addCategoria([categoria4, categoria3])
+    producto3.addCategoria([categoria1, categoria2])
+
+
+})
 Producto.create({
     nombre: "Catena Zapata Malbec Argentino 2017. 750 ml",
     descripcion: "No importa cuál sea la cosecha, en realidad este vino posee más de 100 años de antigüedad. Representa el trayecto emprendido por una familia para producir un Malbec argentino que pudiese competir con los mejores vinos del mundo. Malbec Argentino es un corte de uvas provenientes de dos viñedos históricos de Malbec de la familia Catena: el Viñedo “Adrianna” y el Viñedo “Nicasia”.",
@@ -14,7 +67,6 @@ Producto.create({
     provincia: "Mendoza",
     alcohol: 14.5
 })
-
 Producto.create({
     nombre: "Love Malbec. 750 ml",
     descripcion: "Love Malbec de Fincas Las Moras es un 100% malbec. Presenta un color rojo intenso, tiene un paso por barrica de 9 meses le da aromas muy marcados a frutos rojos maduros con notas a vainilla y chocolate. En boca logra una gran equilibrio entre la fruta y la madera.",

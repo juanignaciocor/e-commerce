@@ -16,14 +16,14 @@ export default ({ total, creditCardChange, correo, cambiarCorreo, creditCard, or
                         />
                     </div>
                     <div className="hijitos">
-                        <label><strong>Direccion de entrega: </strong></label>
+                        <label><strong>Dirección de entrega: </strong></label>
                         <input className="inputHijitos" type="text"
                             placeholder=" Ingrese su dirección aquí"
                             onChange={cambiarDireccion}
                             value={direccion} />
                     </div>
                     <div className="hijitos">
-                        <label><strong>Ingrese numero de tarjeta: </strong></label>
+                        <label><strong>Ingrese número de tarjeta: </strong></label>
                         <input className="inputHijitos" type="text"
                             placeholder="   XXXXXXXXXXXXXXXX"
                             onChange={creditCardChange}
@@ -31,7 +31,7 @@ export default ({ total, creditCardChange, correo, cambiarCorreo, creditCard, or
                         />
                     </div>
                     <div className="hijitos">
-                        <label><strong>Ingrese su correo electronico: </strong></label>
+                        <label><strong>Ingrese su correo electrónico: </strong></label>
                         <input className="inputHijitos" type="text"
                             placeholder="mimail@ejemplo.com"
                             onChange={cambiarCorreo}

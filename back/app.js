@@ -62,19 +62,3 @@ db.sync({
         });
     })
     .catch(console.error)
-
-//ALEX -- MANDAR MAIL
-
-// using Twilio SendGrid's v3 Node.js Library
-// https://github.com/sendgrid/sendgrid-nodejs
-
-
-
-
-
-
-
-
-
-
-
