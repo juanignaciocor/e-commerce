@@ -4,59 +4,50 @@ import React from 'react';
 export default ({ total, creditCardChange, correo, cambiarCorreo, creditCard, orderCreate, cambiarUsuario, cambiarDireccion, direccion, usuarioCredito }) => {
 
     return (
-        <React.Fragment>
-            <div >
+        <div>
+            <div className="card" style={{ margin: "0px auto", maxWidth: "40%", padding: "2%", borderRadius: "30px" }}>
+                <div className="card-body">
+                    <div className="hijitos">
+                        <label><strong>Nombre del titular de la tarjeta: </strong></label>
+                        <input className="inputHijitos" type="text"
+                            placeholder=" Ingrese su nombre aquí"
+                            onChange={cambiarUsuario}
+                            value={usuarioCredito}
+                        />
+                    </div>
+                    <div className="hijitos">
+                        <label><strong>Dirección de entrega: </strong></label>
+                        <input className="inputHijitos" type="text"
+                            placeholder=" Ingrese su dirección aquí"
+                            onChange={cambiarDireccion}
+                            value={direccion} />
+                    </div>
+                    <div className="hijitos">
+                        <label><strong>Ingrese número de tarjeta: </strong></label>
+                        <input className="inputHijitos" type="text"
+                            placeholder="   XXXXXXXXXXXXXXXX"
+                            onChange={creditCardChange}
+                            value={creditCard}
+                        />
+                    </div>
+                    <div className="hijitos">
+                        <label><strong>Ingrese su correo electrónico: </strong></label>
+                        <input className="inputHijitos" type="text"
+                            placeholder="mimail@ejemplo.com"
+                            onChange={cambiarCorreo}
+                            value={correo}
+                        />
+                    </div>
+                    <div className="hijitos">
+                        <label><strong>Total de su compra: </strong></label>
+                        <input className="inputHijitos" type="text" value={total} />
 
-                <div>
-                    <label>Nombre del dueño de la tarjeta</label>
-                    <input type="text"
-                        placeholder=" Juan Gonzales"
-                        onChange={cambiarUsuario}
-                        value={usuarioCredito}
-                    />
+                    </div>
+                    <hr></hr>
+                    <button type="button" onClick={() => (orderCreate(total))} class="btnFinCompra btn btn-outline-primary btn-lg btn-block">Comprar</button>
                 </div>
-                <div>
-                    <label>Direccion de entrega</label>
-                    <input type="text"
-                        placeholder=" San Fernando 2039"
-                        onChange={cambiarDireccion}
-                        value={direccion} />
-                </div>
-                <div>
-                    <label>Ingrese numero de tarjeta :</label>
-                    <input type="text"
-                        placeholder="Numero de tarjeta"
-                        onChange={creditCardChange}
-                        value={creditCard}
-                    />
-                </div>
-                <div>
-                    <label>Ingrese su correo electronico:</label>
-                    <input type="text"
-                        placeholder="Correo electronico"
-                        onChange={cambiarCorreo}
-                        value={correo}
-                    />
-                </div>
-                <div>
-                    <label>Total de su compra</label>
-                    <input type="text" value={total} />
-
-                </div>
-                <button onClick={() => (orderCreate(total))}>Comprar</button>
-
-
-
-
-
-
-            </div >
-
-
-
-        </React.Fragment>
-
-
+            </div>
+        </div >
     )
 
 }

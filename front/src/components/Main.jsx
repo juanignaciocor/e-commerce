@@ -19,6 +19,7 @@ import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
 import finReview from "../components/finReview"
 import AdminFormsContainer from "../containers/AdminFormsContainer"
+import { FinCompra } from "../components/FinCompra.jsx"
 import AdminAllwinesContainer from "../containers/AdminAllwinesContainer"
 import AdminSingleWinesContainer from "../containers/AdminSingleWinesContainer"
 import subCategoryContainer from "../containers/subCategoryContainer"
@@ -52,6 +53,9 @@ class Main extends React.Component {
                     <Route exact path="/category/rose" component={CategoryRosadoContainer}></Route>
                     <Route exact path="/user/admin" component={UserAdminContainer}></Route>
                     <Route exact path="/user/admin/createProduct" component={AdminFormsContainer}></Route>
+                    {/* <Route exact path="/user/admin/deleteProduct" component={AdminDeleteContainer}></Route> */}
+                    <Route exact path="/endOrder" component={FinCompra}></Route>
+                    {/* <Route exact path="/user/admin/editProduct" component={AdminUpdateContainer}></Route> */}
                     <Route exact path="/user/admin/editProduct" component={AdminAllwinesContainer}></Route>
                     <Route exact path="/user/admin/edit/:id" component={AdminSingleWinesContainer}></Route>
                     <Route exact path="/subcategory/:nombre" component={subCategoryContainer}></Route>

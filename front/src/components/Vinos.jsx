@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import cart from "../../assets/cart.svg"
+// import cart from "../../assets/cart.svg"
 import wineNotFound from "../../assets/hola.jpeg"
 import { useEffect, useState } from 'react';
 import Rating from '@material-ui/lab/Rating';
@@ -48,7 +48,7 @@ export default ({ vinos, handlerClick }) => {
                                         </Box>
                                         <div className="precioCarrito">
                                             <p className="precio">$ {vino.precio},00</p>
-                                            <button onClick={() => handlerClick(vino.id)} > Añadir a Carrito  <img className="imgCarrito" src={cart} /></button>
+                                            <button onClick={() => handlerClick(vino.id)} > Añadir a Carrito  <img className="imgCarrito" src="/img/cart.svg" /></button>
                                         </div>
 
                                     </figcaption>

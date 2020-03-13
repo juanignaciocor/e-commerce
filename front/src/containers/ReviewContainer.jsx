@@ -9,7 +9,6 @@ class ReviewContainer extends Component {
         super(props)
     }
     componentDidMount() {
-        console.log("WINEIDDDDDDDDDDDDDDD", this.props.wineId)
         return (
             this.props.fetchReviews(this.props.wineId)
         )
