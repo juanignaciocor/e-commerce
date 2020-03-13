@@ -41,9 +41,9 @@ class CartContainer extends React.Component {
     }
 
 
-    removeClick(productoId, precio) {
+    removeClick(productoId, precio, cantidad) {
 
-        this.props.userRemoveCart(this.props.userId, productoId, precio, this.state.cantidad)
+        this.props.userRemoveCart(this.props.userId, productoId, precio, cantidad)
 
     }
 

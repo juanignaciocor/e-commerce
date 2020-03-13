@@ -33,11 +33,11 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                             <Link className="nav-link" to="/allWines">All Products </Link>
                         </li>
                         {user.typoUsuario === "admin" || user.typoUsuario === "superAdmin" ? (
-                            <li className="nav-item botones">
-                                <Link to="/user/admin">Admins</Link></li>) : (null)}
+                            <li >
+                                <Link className="nav-link" to="/user/admin">Admins</Link></li>) : (null)}
                         <li className="nav-item dropdown">
 
-                            <Dropdown className="d-inline-block" onMouseOver={onMouseEnter} onMouseLeave={onMouseLeave} isOpen={dropdownOpen} toggle={toggle} >
+                            <Dropdown style={{ marginLeft: "8%" }} className="d-inline-block" onMouseOver={onMouseEnter} onMouseLeave={onMouseLeave} isOpen={dropdownOpen} toggle={toggle} >
                                 <DropdownToggle caret className="btnCategNav">
                                     Categories
                                 </DropdownToggle>
@@ -59,23 +59,26 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                                 <Link to="/category/rose" className="dropdown-item">Rose</Link>
                             </div> */}
                         </li>
+                        <li>
+                            <div class=" dropdown">
+                                <button style={{ marginLeft: "45px" }} class=" btnCategNav btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    SubCategories
+                        </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    {allCategory.map((category) => {
+                                        return (
+
+                                            <div><Link to={`/subcategory/${category.id}`}>{category.nombre}</Link></div>
+                                        )
+
+                                    })}
+                                </div>
+                            </div>
+                        </li>
 
                     </ul>
 
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SubCategories
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            {allCategory.map((category) => {
-                                return (
 
-                                    <div><Link to={`/subcategory/${category.id}`}>{category.nombre}</Link></div>
-                                )
-
-                            })}
-                        </div>
-                    </div>
                     <Link to="/user/profile"> <button type="button" className="btnUserNav btn btn-secondary">  <img className="imgCarrito" src="/img/user.svg" />
                         <span id="btnText">
                             {user.email ? (

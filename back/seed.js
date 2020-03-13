@@ -26,7 +26,7 @@ const producto3 = Producto.create({
     nombre: " Eclat Reserva",
     descripcion: "Vino espumante de la casa",
     precio: 1050,
-    imagen: "https://http2.mlstatic.com/espumante-eclat-reserva-extra-brut-bodega-caelum-y-la-maison-D_NQ_NP_640396-MLA31922573604_082019-O.webp",
+    imagen: "https://cepadevinos.com/wp-content/uploads/2017/07/Atemporal_Extra_Brut_Rose_wrnoxf.jpg",
     tipo: "Tinto",
     cepa: "Extra Brut Bodega",
     stock: 5,

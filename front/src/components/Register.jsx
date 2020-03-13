@@ -9,14 +9,14 @@ export default ({ handleSubmit, handleChange, state, handleClickFb }) => (
             <div className="container"><h2>Registro de Usuario</h2></div>
             <hr></hr>
             <div className="container">
-                <div className="row">
+                {/* <div className="row">
                     <div className="col-md-6">
                         <button className="btn-facebook" onClick={handleClickFb}><img className="icono" src={fbicon} />Registrarse con Facebook</button>
                     </div>
                     <div className="col-md-6">
                         <button className="btn-google" ><img className="icono" src={googleicon} />Registrarse con Google</button>
                     </div>
-                </div>
+                </div> */}
             </div>
             <form className="container" onSubmit={handleSubmit}>
                 <div className="form-row">
@@ -31,7 +31,7 @@ export default ({ handleSubmit, handleChange, state, handleClickFb }) => (
                     <div className="col-md-4 mb-3">
                         <label for="validationServerUsername">Fecha de Nacimiento</label>
                         <div className="input-group">
-                            <input type="text" onChange={handleChange} name="fechaNacimiento" className="form-control" placeholder="DD/MM/AA" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required />
+                            <input type="date" onChange={handleChange} name="fechaNacimiento" className="form-control" placeholder="DD/MM/AA" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required />
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,9 @@ export default ({ handleSubmit, handleChange, state, handleClickFb }) => (
         </label>
                     </div>
                 </div>
-                <button className="btn btn-primary" type="submit">Registrarse</button>
+                <div>
+                    <button style={{ width: "50%", marginLeft: "20%" }} className="btn btn-primary" type="submit">Registrarse</button>
+                </div>
             </form>
             <label></label>
         </div>

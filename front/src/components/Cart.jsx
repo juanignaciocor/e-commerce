@@ -27,7 +27,7 @@ export default ({ user, total, cantidad, searchCart, togglearCompra, Restar, rem
                                                 <div className="card-body">
                                                     <h5 className="card-title">{`Bodega: ${item.producto.bodega}`}</h5>
                                                     <p className="card-text">{`Precio: ${item.producto.precio},00`}</p>
-                                                    <div style={{ display: "flex" }} >
+                                                    <div style={{ display: "flex", flexWrap: "wrap" }} >
                                                         <input className="form-control mr-sm-2" type="number" style={{ width: "fit-content" }}
                                                             min="0"
                                                             max={item.producto.stock}
@@ -54,7 +54,7 @@ export default ({ user, total, cantidad, searchCart, togglearCompra, Restar, rem
                                                             alignSelf: "flex-end"
                                                         }} type="button"
                                                             className="btn btn-outline-danger"
-                                                            onClick={() => removeClick(item.producto.id, item.producto.precio)}
+                                                            onClick={() => removeClick(item.producto.id, item.producto.precio, item.cantidad)}
                                                         >Remover del Carrito</button>
 
                                                     </div>

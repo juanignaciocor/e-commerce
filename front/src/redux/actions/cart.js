@@ -53,15 +53,14 @@ export const searchUserCart = (userId) => {
 export const userRemoveCart = (userId, productoId, precio, cantidad) => {
     return function (dispatch, getState) {
         return axios.delete((`/api/cart/removeCart/${userId}/${productoId}`))
+            .then((res) => {
+                let total = cantidad * precio
+                return dispatch(recoverCart(total))
+            })
             .then((data) => {
                 return dispatch(searchUserCart(userId))
 
             })
-
-
-
-
-
     }
 }
 

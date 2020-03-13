@@ -29,9 +29,11 @@ class AdminSingleWines extends React.Component {
 
     }
     handlerChange(e) {
+        e.preventDefault()
         this.setState({ [e.target.name]: e.target.value })
     }
-    submit() {
+    submit(e) {
+        e.preventDefault()
         this.props.admUpdate(this.state.nombre,
             this.state.precio,
             this.state.descripcion,
