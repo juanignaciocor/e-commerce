@@ -64804,7 +64804,8 @@ __webpack_require__.r(__webpack_exports__);
         className: "card-text"
       }, "Precio: ".concat(item.producto.precio, ",00")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
-          display: "flex"
+          display: "flex",
+          flexWrap: "wrap"
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control mr-sm-2",
@@ -64858,7 +64859,7 @@ __webpack_require__.r(__webpack_exports__);
         type: "button",
         className: "btn btn-outline-danger",
         onClick: function onClick() {
-          return removeClick(item.producto.id, item.producto.precio);
+          return removeClick(item.producto.id, item.producto.precio, item.cantidad);
         }
       }, "Remover del Carrito")))));
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -65108,7 +65109,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     for: "exampleInputEmail1"
-  }, "Correo Electronico"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, "Correo Electr\xF3nico"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     onChange: handleChange,
     type: "email",
     className: "form-control",
@@ -65133,8 +65134,12 @@ __webpack_require__.r(__webpack_exports__);
     class: "alert alert-danger",
     role: "alert"
   }, "Error: The email entered is not registered or the password is incorrect") : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    style: {
+      width: "50%",
+      margin: "0 auto"
+    },
     type: "submit",
-    className: "btn btn-secondary btn-lg btn-block"
+    className: "btn btn-primary btn-lg btn-block"
   }, "Log In")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       height: "350px"
@@ -65415,13 +65420,15 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     className: "nav-link",
     to: "/allWines"
-  }, "All Products ")), user.typoUsuario === "admin" || user.typoUsuario === "superAdmin" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item botones"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+  }, "All Products ")), user.typoUsuario === "admin" || user.typoUsuario === "superAdmin" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "nav-link",
     to: "/user/admin"
   }, "Admins")) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item dropdown"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Dropdown"], {
+    style: {
+      marginLeft: "8%"
+    },
     className: "d-inline-block",
     onMouseOver: onMouseEnter,
     onMouseLeave: onMouseLeave,
@@ -65443,10 +65450,13 @@ __webpack_require__.r(__webpack_exports__);
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/category/rose",
     className: "dropdown-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], null, "Rose")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "dropdown"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], null, "Rose"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: " dropdown"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    class: "btn btn-secondary dropdown-toggle",
+    style: {
+      marginLeft: "45px"
+    },
+    class: " btnCategNav btn btn-secondary dropdown-toggle",
     type: "button",
     id: "dropdownMenuButton",
     "data-toggle": "dropdown",
@@ -65459,7 +65469,7 @@ __webpack_require__.r(__webpack_exports__);
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       to: "/subcategory/".concat(category.id)
     }, category.nombre));
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/user/profile"
   }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
@@ -65524,24 +65534,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Registro de Usuario")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn-facebook",
-    onClick: handleClickFb
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "icono",
-    src: _assets_facebook_svg__WEBPACK_IMPORTED_MODULE_1__["default"]
-  }), "Registrarse con Facebook")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn-google"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "icono",
-    src: _assets_search_svg__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }), "Registrarse con Google")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "container",
     onSubmit: handleSubmit
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -65576,7 +65569,7 @@ __webpack_require__.r(__webpack_exports__);
   }, "Fecha de Nacimiento"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "text",
+    type: "date",
     onChange: handleChange,
     name: "fechaNacimiento",
     className: "form-control",
@@ -65648,10 +65641,14 @@ __webpack_require__.r(__webpack_exports__);
     required: true
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "form-check-label"
-  }, "Acepto los terminos y condiciones del sitio"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "Acepto los terminos y condiciones del sitio"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    style: {
+      width: "50%",
+      marginLeft: "20%"
+    },
     className: "btn btn-primary",
     type: "submit"
-  }, "Registrarse")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Registrarse"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       height: "140px"
     }
@@ -65945,6 +65942,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
@@ -65952,23 +65951,34 @@ __webpack_require__.r(__webpack_exports__);
       ToogleOrdenes = _ref.ToogleOrdenes,
       ToogleCategorias = _ref.ToogleCategorias,
       ToogleProductos = _ref.ToogleProductos;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _defineProperty({
+    className: "card mb-3",
     style: {
+      padding: "1%",
+      marginTop: "2%",
       color: "black",
-      textAlign: "center"
-    },
-    className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Bienvenido a la seccion de Admins"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Funcionalidades de Admin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      textAlign: "center",
+      backgroundColor: "white",
+      borderRadius: "30px",
+      width: "50%"
+    }
+  }, "className", "container"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "especial"
+  }, "Bienvenido a la secci\xF3n de Admins"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Funcionalidades de Admin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    style: {
+      width: "40%"
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     onClick: ToogleUsers
   }, "Ver y modificar usuarios"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     onClick: ToogleOrdenes
   }, "Ver lista de ordenes"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     onClick: ToogleCategorias
-  }, "Crear categoria"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Productos :", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "Crear categor\xEDa"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Productos :", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/user/admin/createProduct"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Crear")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/user/admin/editProduct"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Editar/eliminar"))))))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Editar/eliminar")))))))));
 });
 
 /***/ }),
@@ -66078,13 +66088,20 @@ __webpack_require__.r(__webpack_exports__);
       usuario = _ref.usuario;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
-      color: "black"
+      color: "black",
+      padding: "2%"
     },
     className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Informacion de todos los usuarios :"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "especial"
+  }, "Informaci\xF3n de todos los usuarios :"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "ViewUsers"
   }, allUsers.map(function (user) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, user.typoUsuario === "superAdmin" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        borderRadius: "30px",
+        padding: "1%"
+      },
       className: "card",
       key: user.id
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -66100,7 +66117,7 @@ __webpack_require__.r(__webpack_exports__);
       className: "card-text"
     }, "Domicilio:", " ".concat(user.domicilio)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "card-text"
-    }, "Tipo de Usuario:", " ".concat(user.typoUsuario)), usuario.typoUsuario === "admin" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, "Tipo de usuario:", " ".concat(user.typoUsuario)), usuario.typoUsuario === "admin" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "btn btn-primary",
       onClick: function onClick() {
         return changeAdmin(user.id);
@@ -66328,16 +66345,38 @@ __webpack_require__.r(__webpack_exports__);
   var newCategory = _ref.newCategory,
       handleCategory = _ref.handleCategory,
       nombreCategoria = _ref.nombreCategoria;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      color: "black",
+      margin: "0 auto",
+      padding: "1%"
+    },
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "especial"
+  }, "Crear una categor\xEDa: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card mb-3",
+    style: {
+      marginLeft: "30%",
+      padding: "1%",
+      color: "black",
+      textAlign: "center",
+      backgroundColor: "white",
+      borderRadius: "30px",
+      width: "50%"
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: "card",
     onSubmit: newCategory
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
-    placeholder: "Nombre de la categoria",
+    placeholder: "Nombre de la categor\xEDa",
     onChange: handleCategory,
     value: nombreCategoria
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "btnFinCompra",
     type: "submit"
-  })));
+  }))));
 });
 
 /***/ }),
@@ -66365,8 +66404,20 @@ __webpack_require__.r(__webpack_exports__);
       handleCheckbox = _ref.handleCheckbox;
   console.log(allCategory);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      margin: " 5% auto"
+    },
     className: "form-adm"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Crear un producto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "especial"
+  }, "Crear un producto:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card md-10",
+    style: {
+      padding: "10%",
+      borderRadius: "30px",
+      width: "100%"
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: submit
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Nombre:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
@@ -66378,9 +66429,9 @@ __webpack_require__.r(__webpack_exports__);
     placeholder: " Precio",
     name: "precio",
     onChange: handlerChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Descripcion:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Descripci\xF3n:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
-    placeholder: "Numero de tarjeta",
+    placeholder: "Descripci\xF3n del producto",
     name: "descripcion",
     onChange: handlerChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Imagen:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -66390,12 +66441,12 @@ __webpack_require__.r(__webpack_exports__);
     onChange: handlerChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Tipo:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
-    placeholder: "Tipo de vino",
+    placeholder: "Ejemplos: Tinto, Blanco o Rosado",
     name: "tipo",
     onChange: handlerChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Cepa:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
-    placeholder: "Ejemplo : Malbec",
+    placeholder: "Ejemplo: Malbec",
     name: "cepa",
     onChange: handlerChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Stock:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -66405,7 +66456,7 @@ __webpack_require__.r(__webpack_exports__);
     onChange: handlerChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Bodega:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
-    placeholder: "Ejemplo:Catena Zapata",
+    placeholder: "Ejemplo: Catena Zapata",
     name: "bodega",
     onChange: handlerChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Provincia:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -66414,7 +66465,7 @@ __webpack_require__.r(__webpack_exports__);
     onChange: handlerChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Alcohol:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
-    placeholder: "cantidad de alcohol",
+    placeholder: "Cantidad de alcohol",
     name: "alcohol",
     onChange: handlerChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, allCategory.map(function (categoria) {
@@ -66429,7 +66480,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "submit",
     value: "enviar"
-  })));
+  }))));
 });
 
 /***/ }),
@@ -66548,11 +66599,18 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       color: "black",
-      margin: "0 auto"
+      margin: "0 auto",
+      padding: "1%"
     },
     className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Ordenes de compra"), allOrder.map(function (order) {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "especial"
+  }, "Ordenes de compra:"), allOrder.map(function (order) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        padding: "2%",
+        borderRadius: "30px"
+      },
       className: "card",
       key: order.id
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -66561,42 +66619,58 @@ __webpack_require__.r(__webpack_exports__);
       className: "card-text"
     }, "Usuario de tarjeta: ", " ".concat(order.dueñoTarjeta)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "card-text"
-    }, " Direccion entrega: ", " ".concat(order.direccionEntrega)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, " Direcci\xF3n entrega: ", " ".concat(order.direccionEntrega)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "card-text"
-    }, "Numero de tarjeta: ", " ".concat(order.numeroTarjeta)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, "N\xFAmero de tarjeta: ", " ".concat(order.numeroTarjeta)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "card-text"
     }, "Total de la compra : ", " ".concat(order.total)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "card-text"
-    }, "Estado del envio: ", " ".concat(order.estado)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, "Estado del env\xEDo: ", " ".concat(order.estado)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "card-text"
-    }, "Correco electronico: ", "".concat(order.correoElectronico)), producto.map(function (o) {
+    }, "Correo electr\xF3nico: ", "".concat(order.correoElectronico)), producto.map(function (o) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         key: o.producto.id
       }, order.id === o.compraId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "card-text"
       }, "Nombre: ", " ".concat(o.producto.nombre)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "card-text"
-      }, " Descripcion: ", " ".concat(o.producto.descripcion)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, " Descripci\xF3n: ", " ".concat(o.producto.descripcion)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "card-text"
       }, "Precio: ", " ".concat(o.producto.precio)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "card-text"
       }, "Cantidad: ", " ".concat(o.cantidad))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null));
     }), order.estado === "Procesada" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      style: {
+        margin: "1%"
+      },
+      className: "btn btn-primary",
       name: "Completada",
       onClick: function onClick(e) {
         return changeInput(order.id, "Completada");
       }
     }, "Completar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      style: {
+        margin: "1%"
+      },
+      className: "btn btn-primary",
       name: "Cancelada",
       onClick: function onClick(e) {
         return changeInput(order.id, "Cancelada");
       }
     }, "Cancelar")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      style: {
+        margin: "1%"
+      },
+      className: "btn btn-primary",
       name: "Procesada",
       onClick: function onClick(e) {
         return changeInput(order.id, "Procesada");
       }
     }, "Procesar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      style: {
+        margin: "1%"
+      },
+      className: "btn btn-primary",
       name: "Cancelada",
       onClick: function onClick(e) {
         return changeInput(order.id, "Cancelada");
@@ -67117,11 +67191,13 @@ var AdminSingleWines = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handlerChange",
     value: function handlerChange(e) {
+      e.preventDefault();
       this.setState(_defineProperty({}, e.target.name, e.target.value));
     }
   }, {
     key: "submit",
-    value: function submit() {
+    value: function submit(e) {
+      e.preventDefault();
       this.props.admUpdate(this.state.nombre, this.state.precio, this.state.descripcion, this.state.tipo, this.state.cepa, this.state.stock, this.state.bodega, this.state.provincia, this.state.alcohol, this.props.id);
     }
   }, {
@@ -67302,8 +67378,8 @@ var CartContainer = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "removeClick",
-    value: function removeClick(productoId, precio) {
-      this.props.userRemoveCart(this.props.userId, productoId, precio, this.state.cantidad);
+    value: function removeClick(productoId, precio, cantidad) {
+      this.props.userRemoveCart(this.props.userId, productoId, precio, cantidad);
     }
   }, {
     key: "orderCreate",
@@ -69305,7 +69381,10 @@ var searchUserCart = function searchUserCart(userId) {
 };
 var userRemoveCart = function userRemoveCart(userId, productoId, precio, cantidad) {
   return function (dispatch, getState) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete("/api/cart/removeCart/".concat(userId, "/").concat(productoId)).then(function (data) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete("/api/cart/removeCart/".concat(userId, "/").concat(productoId)).then(function (res) {
+      var total = cantidad * precio;
+      return dispatch(recoverCart(total));
+    }).then(function (data) {
       return dispatch(searchUserCart(userId));
     });
   };
