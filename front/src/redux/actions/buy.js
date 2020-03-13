@@ -9,7 +9,7 @@ export const buyCart = (order) => ({
 
 
 export const createOrder = (userId, creditCard, total, direccion, dueñoTarjeta, correo) => dispatch => {
-    axios.post('/api/cart/buy', { userId, creditCard, total, direccion, dueñoTarjeta, correo })
+    return axios.post('/api/cart/buy', { userId, creditCard, total, direccion, dueñoTarjeta, correo })
         .then(res => res.data)
         .then(carrito => {
             dispatch(searchUserCart(userId))

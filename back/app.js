@@ -13,11 +13,11 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey("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");
 
 const msg = {
-  to: 'imercs96@gmail.com',
-  from: 'test@example.com',
-  subject: 'Sending with Twilio SendGrid is Fun',
-  text: 'and easy to do anywhere, even with Node.js',
-  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    to: 'imercs96@gmail.com',
+    from: 'test@example.com',
+    subject: 'Sending with Twilio SendGrid is Fun',
+    text: 'and easy to do anywhere, even with Node.js',
+    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
 };
 
 sgMail.send(msg);

@@ -21,6 +21,7 @@ import finReview from "../components/finReview"
 import AdminFormsContainer from "../containers/AdminFormsContainer"
 import AdminUpdateContainer from "../containers/AdminUpdateContainer"
 import AdminDeleteContainer from "../containers/AdminDeleteContainer"
+import { FinCompra } from "../components/FinCompra.jsx"
 
 class Main extends React.Component {
     constructor() {
@@ -52,7 +53,7 @@ class Main extends React.Component {
                     <Route exact path="/user/admin/createProduct" component={AdminFormsContainer}></Route>
                     <Route exact path="/user/admin/editProduct" component={AdminUpdateContainer}></Route>
                     <Route exact path="/user/admin/deleteProduct" component={AdminDeleteContainer}></Route>
-
+                    <Route exact path="/endOrder" component={FinCompra}></Route>
 
                     <Route exact path="/user/profile" component={UserProfileContainer}></Route>
                 </Switch>

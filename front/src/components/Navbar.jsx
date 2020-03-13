@@ -1,7 +1,7 @@
 import React, { useRef, Fragment } from "react";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { Link } from "react-router-dom";
-import cart from "../../assets/cart.svg"
+// import cart from "/img/cart.svg"
 import userIcon from "../../assets/user.svg"
 
 export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouseLeave, toggle, dropdownOpen, onMouseEnter }) => {
@@ -55,7 +55,7 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                             </div> */}
                         </li>
                     </ul>
-                    <Link to="/user/profile"> <button type="button" className="btnUserNav btn btn-secondary">  <img className="imgCarrito" src={userIcon} /> 
+                    <Link to="/user/profile"> <button type="button" className="btnUserNav btn btn-secondary">  <img className="imgCarrito" src="/img/user.svg" />
                         <span id="btnText">
                             {user.email ? (
                                 user.username
@@ -65,7 +65,7 @@ export default ({ onSearch, vinos, clearInput, onChange, user, onLogout, onMouse
                         </span>
                     </button>
                     </Link>
-                    <Link to="/cart"><button type="button" className="btn btn-secondary" id="btnCartNav">  <img className="imgCarrito" src={cart} /></button></Link>
+                    <Link to="/cart"><button type="button" className="btn btn-secondary" id="btnCartNav">  <img className="imgCarrito" src="/img/cart.svg" /></button></Link>
                     <form className="form-inline my-2 my-lg-0" onSubmit={onSearch}>
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ref={ref} value={clearInput} onChange={onChange}></input>
                         <button className="btn btn-outline-secondary my-2 my-sm-0" type="submit" >Search</button>

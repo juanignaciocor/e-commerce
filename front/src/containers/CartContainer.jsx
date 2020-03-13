@@ -7,6 +7,7 @@ import { createOrder } from "../redux/actions/buy"
 import CheckOut from "../components/checkOut"
 
 
+
 class CartContainer extends React.Component {
     constructor() {
         super()
@@ -48,7 +49,7 @@ class CartContainer extends React.Component {
 
     orderCreate(total) {
         this.props.createOrder(this.props.userId, this.state.creditCard, total, this.state.direccion, this.state.usuarioCredito, this.state.correo)
-
+            .then(() => this.props.history.push("/endOrder"))
     }
     creditCardChange(e) {
         e.preventDefault()
@@ -111,7 +112,7 @@ class CartContainer extends React.Component {
 
 
                 />
-                {this.state.toogleCompra ? (<CheckOut
+                <CheckOut
                     total={total}
                     creditCard={this.state.creditCard}
                     creditCardChange={this.creditCardChange}
@@ -123,7 +124,7 @@ class CartContainer extends React.Component {
                     usuarioCredito={usuarioCredito}
                     cambiarCorreo={this.cambiarCorreo}
                     correo={correo}
-                />) : (<React.Fragment></React.Fragment>)}
+                />)
 
             </div>
 

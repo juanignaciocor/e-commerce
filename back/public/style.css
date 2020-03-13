@@ -1,5 +1,12 @@
-
-
+body{
+	font-family: 'Merriweather', serif;
+}
+.especial{
+text-transform: capitalize;
+font-family: 'Merriweather', serif;
+font-size: 3rem;
+font-family: 'IM Fell English', serif;
+}
 .imgCarrito{
 	position: relative;
 	max-width: 40px;
@@ -199,3 +206,33 @@
 .newCard::-webkit-scrollbar {
 	overflow-y: auto;
   }
+
+/* COMPONENTE CART */
+.pasosCompra{
+	display: inline-block;
+}
+.pasosCompra2{
+	text-align: center;
+}
+#cardCarrito{
+	max-width: 800px;
+	border-radius: 30px;
+
+}
+#figure{
+	margin: 20px
+}
+.hijitos{
+	padding: 1%;
+}
+.inputHijitos{
+	margin-left: 1%;
+}
+.btnFinCompra{
+	width: 37.5%;
+	margin: auto
+}
+.btnFinCompra:hover{
+	background-color: #0A4185;
+}
+
