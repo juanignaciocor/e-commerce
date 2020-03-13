@@ -12,7 +12,9 @@ Usuario.hasMany(Compra, { as: 'compra' })
 Review.belongsTo(Usuario)
 Review.belongsTo(Producto)
 Review.belongsTo(Compra)
-Categoria.hasMany(Producto, { as: 'producto' })
+
+Producto.belongsToMany(Categoria, { through: "producto_categoria" })
+Categoria.belongsToMany(Producto, { through: "producto_categoria" })
 
 
 

@@ -82,16 +82,68 @@ router.post("/reviews/:idProducto/:idUsuario", function (req, res, next) {
 
 
 
+//rutas para el admin
+
+router.delete("/single/adm/destroy/:id", (req, res, next) => {
+    console.log(req.params.id, "djsakdhsakdj")
+    Producto.destroy({
+        where: {
+            id: req.params.id
+
+        }
+    })
+        .then((data) => res.json(data))
+
+})
 
 
+router.post('/single/adm/crear', (req, res, next) => {
+    Producto.create({
+        nombre: req.body.nombre,
+        precio: req.body.precio,
+        descripcion: req.body.descripcion,
+        tipo: req.body.tipo,
+        cepa: req.body.cepa,
+        stock: req.body.stock,
+        bodega: req.body.bodega,
+        provincia: req.body.provincia,
+        alcohol: req.body.alcohol,
+        imagen: req.body.imagen
 
+    })
+        .then((producto) => {
+            let arreglo = []
+            for (key in req.body.categoria) {
+                arreglo.push(req.body.categoria[key])
+            }
+            producto.addCategoria(arreglo)
+        })
+        .then((data) => res.sendStatus(200))
 
+})
+router.put("/single/adm/update", (req, res, next) => {
+    Producto.update({
+        nombre: req.body.nombre,
+        precio: req.body.precio,
+        descripcion: req.body.descripcion,
+        tipo: req.body.tipo,
+        cepa: req.body.cepa
+        , stock: req.body.stock,
+        bodega: req.body.bodega,
+        provincia: req.body.provincia,
+        alcohol: req.body.alcohol
+    }, { where: { id: req.body.idProducto } })
+        .then((data) => { res.sendStatus(200) })
 
+})
+router.get("/single/:idProducto", (req, res, next) => {
+    Producto.findByPk(req.params.idProducto)
+        .then((data) => {
+            res.json(data)
+        })
+})
 
-
-
-
-
+//
 router.get("/reviews/:id", function (req, res, next) {
     const id = req.params.id
     Review.findAll(

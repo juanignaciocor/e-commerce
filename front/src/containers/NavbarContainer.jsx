@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
 import { showsWines } from "../redux/actions/wines"
 import { logOut, LogueoCoockie } from "../redux/actions/users"
-
+import { fetchAllCategory } from "../redux/actions/category"
 
 class NavbarContainer extends Component {
   constructor(props) {
@@ -20,7 +20,9 @@ class NavbarContainer extends Component {
     this.onMouseEnter = this.onMouseEnter.bind(this);
     this.onMouseLeave = this.onMouseLeave.bind(this);
   }
-
+  componentDidMount() {
+    this.props.fetchAllCategory()
+  }
   onSearch(e) {
     e.preventDefault()
     this.props.showsWines(this.state.clearInput)
@@ -55,16 +57,29 @@ class NavbarContainer extends Component {
 
 
   render() {
-    const { vinos } = this.props
+    const { vinos, allCategory } = this.props
     return (
-      <Navbar user={this.props.user} onMouseLeave={this.onMouseLeave} toggle={this.toggle} dropdownOpen={this.state.dropdownOpen} onMouseEnter={this.onMouseEnter} onLogout={this.onLogout} onSearch={this.onSearch} vinos={vinos} onChange={this.onChange} clearInput={this.state.clearInput} onMouseOver={this.onMouseOver} />
+      <Navbar
+        user={this.props.user}
+        onMouseLeave={this.onMouseLeave} toggle={this.toggle}
+        dropdownOpen={this.state.dropdownOpen}
+        onMouseEnter={this.onMouseEnter}
+        onLogout={this.onLogout}
+        onSearch={this.onSearch}
+        vinos={vinos}
+        onChange={this.onChange}
+        clearInput={this.state.clearInput}
+        onMouseOver={this.onMouseOver}
+        allCategory={allCategory} />
     )
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    user: state.userReducers.logged
+    user: state.userReducers.logged,
+    allCategory: state.categoryReducers.allCategory
+
   }
 }
 
@@ -72,6 +87,8 @@ const matchDispatchToProps = function (dispatch, ownprops) {
   return {
     showsWines: (vino) => dispatch(showsWines(vino)),
     logOut: () => dispatch(logOut()),
+    fetchAllCategory: () => dispatch(fetchAllCategory())
+
 
 
 
