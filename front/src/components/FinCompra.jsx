@@ -18,7 +18,7 @@ export var FinCompra = () => {
                             <ul style={{ marginTop: "4%" }}>
                                 <li>  Para seguir comprando <Link to="/allWines"><span> haga click aqui</span>.</Link></li>
                                 <li>  Recibirá un correo electrónico con los detalles de su compra.</li>
-                                <li>  Recuerde que puede realizar comentarios de los productos adquiridos,Su opinión nos interesa.</li>
+                                <li>  Recuerde que puede realizar comentarios de los productos adquiridos, Su opinión nos interesa.</li>
 
                             </ul>
                         </div>
