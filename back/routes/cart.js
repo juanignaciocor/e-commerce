@@ -2,27 +2,32 @@ const express = require('express');
 const router = express.Router();
 const { Carrito, Producto, Usuario, Compra } = require("../models/index")
 
-const sendMail = function (dueñoTarjeta, numTarj, email, total, dir){
+const sendMail = function (dueñoTarjeta, numTarj, email, total, dir) {
     const nodemailer = require("nodemailer");
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-        user: "winesellectionp5@gmail.com",
-        pass: "plataforma5"
+            user: "winesellectionp5@gmail.com",
+            pass: "plataforma5"
         }
     });
     const mailOptions = {
         from: "winesellectionp5@gmail.com",
         to: `${email}`,
-        subject: "Confirmacion de tu compra",
-        text: `Estimado/a ${dueñoTarjeta}. Su compra se ha efectudo satisfactoriamente al numero de tarjeta ${numTarj} por un monto total de $ ${total}. Dicha entrega será en ${dir} en aproximadamente 3 días. Recuerde que puede dejar una reseña ingresando a nuestra página.
+        subject: "Confirmación de tu compra",
+        text: `Estimado/a ${dueñoTarjeta}.
+        Su compra se ha efectudo satisfactoriamente al número de tarjeta ${numTarj} por un monto total de $ ${total}. 
+        La entrega será en ${dir} en aproximadamente 3 días.
+        Recuerde que puede realizar comentarios de los productos adquiridos, Su opinión nos interesa.
+
+    
         Muchas gracias por elegirnos`
     };
-    transporter.sendMail(mailOptions, function(error, info) {
+    transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
-        console.log(error);
+            console.log(error);
         } else {
-        console.log("Se ha enviando el mail");
+            console.log("Se ha enviando el mail");
         }
     });
 }

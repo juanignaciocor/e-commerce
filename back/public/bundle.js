@@ -64951,7 +64951,7 @@ var FinCompra = function FinCompra() {
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "  Para seguir comprando ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/allWines"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " haga click aqui"), ".")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "  Recibir\xE1 un correo electr\xF3nico con los detalles de su compra."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "  Recuerde que puede realizar comentarios de los productos adquiridos,Su opini\xF3n nos interesa.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " haga click aqui"), ".")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "  Recibir\xE1 un correo electr\xF3nico con los detalles de su compra."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "  Recuerde que puede realizar comentarios de los productos adquiridos, Su opini\xF3n nos interesa.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       height: "450px"
     }
@@ -66419,65 +66419,98 @@ __webpack_require__.r(__webpack_exports__);
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: submit
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Nombre:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hijitos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Nombre:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "inputHijitos",
     type: "text",
     placeholder: " Nombre del vino",
     name: "nombre",
     onChange: handlerChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Precio:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hijitos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Precio:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "inputHijitos",
     type: "text",
     placeholder: " Precio",
     name: "precio",
     onChange: handlerChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Descripci\xF3n:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hijitos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Descripci\xF3n:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "inputHijitos",
     type: "text",
     placeholder: "Descripci\xF3n del producto",
     name: "descripcion",
     onChange: handlerChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Imagen:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hijitos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Imagen:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "inputHijitos",
     type: "text",
     placeholder: "Ingrese url de la imagen",
     name: "imagen",
     onChange: handlerChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Tipo:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hijitos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Tipo:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "inputHijitos",
     type: "text",
-    placeholder: "Ejemplos: Tinto, Blanco o Rosado",
+    placeholder: "Ejemplos: Tinto, Blanco, etc.",
     name: "tipo",
     onChange: handlerChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Cepa:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hijitos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Cepa:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "inputHijitos",
     type: "text",
     placeholder: "Ejemplo: Malbec",
     name: "cepa",
     onChange: handlerChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Stock:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hijitos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Stock:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "inputHijitos",
     type: "text",
     placeholder: "Numero de stock",
     name: "stock",
     onChange: handlerChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Bodega:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hijitos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Bodega:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "inputHijitos",
     type: "text",
     placeholder: "Ejemplo: Catena Zapata",
     name: "bodega",
     onChange: handlerChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Provincia:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hijitos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Provincia:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "inputHijitos",
     type: "text",
     name: "provincia",
     onChange: handlerChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Alcohol:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hijitos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Alcohol:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "inputHijitos",
     type: "text",
     placeholder: "Cantidad de alcohol",
     name: "alcohol",
     onChange: handlerChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, allCategory.map(function (categoria) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "hijitos",
       key: categoria.id
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      className: "inputHijitos",
       type: "checkbox",
       id: categoria.id,
       value: categoria.nombre,
       onChange: handleCheckbox
     }), categoria.nombre);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "btn btn-outline-secondary",
     type: "submit",
     value: "enviar"
   }))));
